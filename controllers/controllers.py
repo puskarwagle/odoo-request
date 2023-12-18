@@ -1,9 +1,9 @@
-from odoo import http
-from odoo.http import request
+# from odoo import http
+# from odoo.http import request
 
 
-class RaprapaController(http.Controller):
-    @http.route('/', type='http', website=True, auth="public")
-    def formpage(self):
-        return request.render('raprapa.index_form')
+# class ADBLController(http.Controller):
+    # @http.route('/', type='http', website=True, auth="public")
+    # def formpage(self):
+    #     return request.render('adbl.index_form')
 

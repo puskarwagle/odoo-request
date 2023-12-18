@@ -1,0 +1,44 @@
+<odoo>
+    <data>
+
+        <record id="cus_fiscal_view_form" model="ir.ui.view">
+            <field name="name">account.fiscal.year.form.inherit</field>
+            <field name="model">account.fiscal.year</field>
+            <field name="inherit_id" ref="om_fiscal_year.view_account_fiscal_year_form"/>
+            <field name="arch" type="xml">
+                <field name="company_id" position="after">
+                    <field name="start_date_bs" string="Start Date BS"/>
+                    <field name="end_date_bs" string="End Date BS"/>
+                </field>
+            </field>
+        </record>
+
+        <!-- Inheriting the existing tree view of account.fiscal.year -->
+        <record id="view_custom_fiscal_year_tree_inherit" model="ir.ui.view">
+            <field name="name">account.custom.fiscal.year.tree.inherit</field>
+            <field name="model">account.fiscal.year</field>
+            <field name="inherit_id" ref="om_fiscal_year.view_account_fiscal_year_tree"/>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="date_from"/>
+                    <field name="start_date_bs" string="Start Date BS"/>
+                    <field name="date_to"/>
+                    <field name="end_date_bs" string="End Date BS"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Action definition for the modified fiscal year (Tree view) -->
+        <record id="action_fiscal_year_topics_tree" model="ir.actions.act_window">
+            <field name="name">Fiscal Year</field>
+            <field name="res_model">account.fiscal.year</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_custom_fiscal_year_tree_inherit"/>
+        </record>
+
+        <!-- Menu item for the modified fiscal year (Tree view) -->
+        <menuitem id="menu_fiscal_year_tree" name="Fiscal Year" parent="mainly_menu" sequence="10"
+                  action="action_fiscal_year_topics_tree" groups="service-approval.group_central_users"/>
+
+    </data>
+</odoo>

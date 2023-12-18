@@ -1,0 +1,36 @@
+<odoo>
+    <data>
+        <!-- Top-level menu -->
+        <menuitem id="mainly_menu" name="Request/Approve" sequence="1"/>
+
+        <!-- Tree view for the branches model -->
+        <record id="view_service_branches_tree" model="ir.ui.view">
+            <field name="name">Branches</field>
+            <field name="model">service.branches</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="branch_name"/>
+                    <field name="location"/>
+                    <field name="phone"/>
+                    <field name="email"/>
+                    <field name="status"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Action for the sublevel menu -->
+        <record id="action_service_branches" model="ir.actions.act_window">
+            <field name="name">Branch Management</field>
+            <field name="res_model">service.branches</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_service_branches_tree"/>
+        </record>
+
+        <!-- Sub-level menu under top-level menu -->
+        <menuitem id="menu_service_branches_sub" name="Branches Management"
+                  parent="mainly_menu"
+                  sequence="10"
+                  action="action_service_branches"
+                  groups="service-approval.group_central_users"/>
+    </data>
+</odoo>

@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Raprapa",
+    'name': "Approvals",
 
     'summary': """
-        Final raprapa application""",
+        Petty Cash Management""",
 
     'description': """
-        Through this module u can create new members for rastriya prajatantra party
+        Through this module one can send request to central for funds
     """,
 
     'author': "Shangrila",
@@ -16,17 +16,26 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base', 'website'],
+    'depends': ['base', 'account', 'om_fiscal_year'],
 
     # always loaded
     'data': [
         'security/ir.model.access.csv',
-        'views/views.xml',
-        'views/index.xml',
-        'views/payment.xml',
-        'views/otp_verify.xml',
-        'views/otp_unverified.xml',
-        'views/id_card.xml',
+        'security/groups.xml',
+
+        'views/branch/branch_management.xml',
+
+        # 'views/topics/topics_for_approvals.xml',
+        # 'views/topics/topic_titles.xml',
+        # 'views/topics/request_topics.xml',
+
+        # 'views/approve/submitted_requests_to_approve.xml',
+        # 'views/approve/all_requests_to_approve.xml',
+
+        # 'views/request/create_new_request.xml',
+        # 'views/request/requests_to_submit.xml',
+        # 'views/request/my_requests.xml',
+        # 'views/request/fiscalyear.xml'/
     ],
     'installable': True,
     'auto_install': False,

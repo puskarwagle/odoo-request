@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Tree View -->
+        <record id="view_topictitle_tree" model="ir.ui.view">
+            <field name="name">service.topictitle.tree</field>
+            <field name="model">service.topictitle</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="topic_title"/>
+                    <field name="topic_description"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Form View -->
+        <record id="view_topictitle_form" model="ir.ui.view">
+            <field name="name">service.topictitle.form</field>
+            <field name="model">service.topictitle</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="topic_title"/>
+                        <field name="topic_description"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <!-- Action -->
+        <record id="action_topictitle" model="ir.actions.act_window">
+            <field name="name">Topic Titles</field>
+            <field name="res_model">service.topictitle</field>
+            <field name="view_mode">form,tree</field>
+            <field name="view_id" ref="view_topictitle_tree"/>
+        </record>
+
+        <!-- Sub-level menu under top-level menu -->
+        <menuitem id="topics_sub_level" name="Topics" parent="mainly_menu" sequence="1" groups="service-approval.group_central_users"/>
+
+        <menuitem id="menu_service_topictitle"
+                  name="Topic Titles"
+                  parent="topics_sub_level"
+                  sequence="2"
+                  action="action_topictitle"/>
+    </data>
+</odoo>
