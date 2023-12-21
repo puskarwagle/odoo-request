@@ -11,23 +11,11 @@ class Requests(models.Model):
 
     request_title = fields.Char(string='Request Title')
 
-    request_topic_id = fields.One2many(
-            'service.topics',
-            'request_sub_topic',
-            required=True,
-            string='Request Topic',
-            domain="[('request_state', '=', 'Approved')]"
+    req_topic_links = fields.One2many(
+        'service.reqtopiclink',
+        'request_id',
+        string='Request Topic Links',
     )
-    # max_amount = fields.Integer(
-    #     string='Maximum Amount',
-    #     related='request_topic_id.max_amount',
-    #     store=True
-    # )
-    # remaining_amount = fields.Integer(
-    #     string='Remaining Amount',
-    #     related='request_topic_id.remaining_amount',
-    #     store=True
-    # )
 
     select_branch = fields.Many2one(
         'service.branches',
@@ -35,18 +23,15 @@ class Requests(models.Model):
         string='Branch'
     )
 
-    amount = fields.Integer(string='Amount')
-
     description = fields.Text(string='Description')
 
     request_state = fields.Selection([
-        ('to_submit', 'To Submit'),
+        ('tosubmit', 'To Submit'),
         ('submitted', 'Submitted'),
-        ('Approved', 'Approved'),
-        ('Refused', 'Refused'),
+        ('resubmit', 'Resubmit'),
+        ('approved', 'Approved'),
+        ('refused', 'Refused'),
     ], string='Stage of Request', default='submitted')
-
-    # file_uploads = fields.Binary(string='Upload file')
 
     newreq_attachments = fields.One2many(
         'ir.attachment',
@@ -55,36 +40,42 @@ class Requests(models.Model):
         string='Add Attachments',
     )
 
+    @api.constrains('newreq_attachments')
+    def check_file_size_limit(self):
+        max_file_size = 5 * 1024 * 1024  # 5 MB
+
+        for attachment in self:
+            if attachment.datas and len(attachment.datas) > max_file_size:
+                raise ValidationError("File size cannot exceed 5 MB.")
+
+    requestdate_ad = fields.Datetime(string='Request Date AD')
+    requestdate_bs = fields.Char(string='Request Date BS')
+
     requested_by = fields.Char(
         string='Requested By',
         readonly=True,
+        tracking=True
     )
     approved_by = fields.Char(
         string='Approved By',
         readonly=True,
     )
 
-    remarks = fields.Text(string='Remarks')
-
-    # Limit
-    # @api.onchange('amount', 'request_topic')
-    # def _onchange_amount(self):
-    #     if self.amount > self.request_topic.max_amount:
-    #         return {'warning': {
-    #             'title': "Warning",
-    #             'message': f"The maximum amount allowed for the selected topic is {self.request_topic.max_amount}."
-    #         }}
+    remarks = fields.Text(string='Remarks',tracking=True)
 
     # Dont allow branch users to CREATE a new form with Approved or Refused
     # Populate requested_by and approved_by automatically
     @api.model
     def create(self, vals):
-        user_groups = self.env.user.groups_id.mapped('name')
         # Check if 'request_state' is present and is 'Approved' or 'Refused'
         if 'request_state' in vals and vals['request_state'] in ['Approved', 'Refused']:
             raise ValidationError("Cannot set request state to 'Approved' or 'Refused' during record creation.")
+
         # Automatically populate 'requested_by'
+        user_groups = self.env.user.groups_id.mapped('name')
         vals['requested_by'] = self.env.user.name if 'branchUsers' in user_groups else False
+        vals['requestdate_ad'] = fields.Datetime.now()
+
         record = super(Requests, self).create(vals)
         return record
 
@@ -95,10 +86,10 @@ class Requests(models.Model):
 
         # Users belonging to 'branchUsers'
         if 'branchUsers' in user_groups:
-            # Users can only edit the request_state to 'to_submit' or 'submitted'
-            if 'request_state' in values and values['request_state'] not in ['to_submit', 'submitted']:
+            # Users can only edit the request_state to 'tosubmit' or 'submitted'
+            if 'request_state' in values and values['request_state'] not in ['tosubmit', 'submitted']:
                 raise ValidationError(
-                    "Users in 'branchUsers' group can only set request_state to 'to_submit' or 'submitted'.")
+                    "Users in 'branchUsers' group can only set request_state to 'tosubmit' or 'submitted'.")
 
             # Users cannot edit the 'remarks' field
             if 'remarks' in values:
@@ -113,26 +104,26 @@ class Requests(models.Model):
                     "Users in 'centralApprovers' group can only edit 'request_state' and 'remarks' fields.")
 
             # 'centralApprovers' users can only set 'request_state' to 'Approved' or 'Refused'
-            if 'request_state' in values and values['request_state'] not in ['Approved', 'Refused']:
+            if 'request_state' in values and values['request_state'] not in ['approved', 'refused', 'resubmit']:
                 raise ValidationError(
-                    "Users in 'centralApprovers' group can only set request_state to 'Approved' or 'Refused'.")
+                    "Users in 'centralApprovers' group can only set request_state to 'Approved', 'Refused' or 'Resubmit'.")
+
+            if 'Approved' in values.get('request_state', []):
+                values['approved_by'] = self.env.user.name
 
         # Call the super method to perform the common write operation
         result = super(Requests, self).write(values)
-
-        # Update remaining_amount if request_state is 'Approved'
-        if 'request_state' in values and values['request_state'] == 'Approved':
-            for request in self.filtered(lambda r: r.request_state == 'Approved'):
-                request.request_topic_id.remaining_amount -= request.amount
-
         return result
 
     # Buttons
     def set_to_submit_new_requests(self):
-        self.write({'request_state': 'to_submit'})
+        self.write({'request_state': 'tosubmit'})
 
     def set_submitted_new_requests(self):
         self.write({'request_state': 'submitted'})
+
+    def set_resubmitted_new_requests(self):
+        self.write({'request_state': 'resubmit'})
 
     def set_approved_new_requests(self):
         self.write({'request_state': 'Approved'})

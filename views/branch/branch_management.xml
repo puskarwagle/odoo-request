@@ -1,8 +1,5 @@
 <odoo>
     <data>
-        <!-- Top-level menu -->
-        <menuitem id="mainly_menu" name="Request/Approve" sequence="1"/>
-
         <!-- Tree view for the branches model -->
         <record id="view_service_branches_tree" model="ir.ui.view">
             <field name="name">Branches</field>
@@ -25,6 +22,9 @@
             <field name="view_mode">tree,form</field>
             <field name="view_id" ref="view_service_branches_tree"/>
         </record>
+
+        <!-- Top-level menu -->
+        <menuitem id="mainly_menu" name="Request/Approve" sequence="1"/>
 
         <!-- Sub-level menu under top-level menu -->
         <menuitem id="menu_service_branches_sub" name="Branches Management"

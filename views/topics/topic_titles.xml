@@ -41,7 +41,7 @@
         <menuitem id="menu_service_topictitle"
                   name="Topic Titles"
                   parent="topics_sub_level"
-                  sequence="2"
+                  sequence="1"
                   action="action_topictitle"/>
     </data>
 </odoo>

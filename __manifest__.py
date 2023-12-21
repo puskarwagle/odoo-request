@@ -25,17 +25,18 @@
 
         'views/branch/branch_management.xml',
 
+        'views/topics/topic_titles.xml',
         # 'views/topics/topics_for_approvals.xml',
-        # 'views/topics/topic_titles.xml',
-        # 'views/topics/request_topics.xml',
+        'views/topics/request_topics.xml',
+        'views/request/fiscalyear.xml',
 
-        # 'views/approve/submitted_requests_to_approve.xml',
-        # 'views/approve/all_requests_to_approve.xml',
+        'views/approve/submitted_requests_to_approve.xml',
+        'views/approve/all_requests_to_approve.xml',
 
-        # 'views/request/create_new_request.xml',
-        # 'views/request/requests_to_submit.xml',
-        # 'views/request/my_requests.xml',
-        # 'views/request/fiscalyear.xml'/
+        'views/request/create_new_request.xml',
+        'views/request/my_requests.xml',
+        'views/request/requests_to_submit.xml',
+        'views/request/requests_to_resubmit.xml',
     ],
     'installable': True,
     'auto_install': False,

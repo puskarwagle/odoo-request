@@ -6,11 +6,9 @@
             <field name="model">service.requests</field>
             <field name="arch" type="xml">
                 <tree>
-                    <field name="request_topic_id" widget="many2many_tags"/>
                     <field name="create_uid"/>
                     <field name="create_date"/>
                     <field name="requested_by"/>
-                    <field name="amount"/>
                     <field name="description"/>
                     <field name="request_state"/>
                     <field name="approved_by" readonly="1"/>
@@ -30,55 +28,62 @@
                         <button string="Save" class="oe_highlight" type="object" name="set_to_submit_new_requests"
                                 groups="service-approval.group_branch_users"/>
                         <button string="Approv" class="oe_highlight"
-                                attrs="{'invisible': [('request_state', 'in', ['Approved', 'Refused'])]}" type="object"
+                                attrs="{'invisible': [('request_state', 'in', ['approved', 'refused'])]}" type="object"
                                 name="set_approved_new_requests" groups="service-approval.group_central_users"/>
                         <button string="Refuse" class="oe_highlight"
-                                attrs="{'invisible': [('request_state', 'in', ['Approved', 'Refused'])]}" type="object"
+                                attrs="{'invisible': [('request_state', 'in', ['approved', 'refused'])]}" type="object"
                                 name="set_refused_new_requests" groups="service-approval.group_central_users"/>
-                        <field name="request_state" widget="statusbar" statusbar_visible="submitted,Approved,Refused"/>
+
+                        <button string="Resubmit" class="oe_highlight"
+                                attrs="{'invisible': [('request_state', 'in', ['approved', 'refused'])]}" type="object"
+                                name="set_resubmitted_new_requests" groups="service-approval.group_central_users"/>
+
+                        <field name="request_state" widget="statusbar" statusbar_visible="submitted,approved,refused,resubmit"/>
                     </header>
                     <sheet>
                         <group>
-<!--                            <field name="request_topic" widget="many2many_tags" string="Request Topic"-->
-<!--                                   options="{'no_create': True}"-->
-<!--                                   domain="[('request_state', '=', 'Approved')]"-->
-<!--                                   attrs="{'readonly': [('request_state', 'in', ['Approved', 'Refused'])]}"/>-->
-                            <field name="request_topic_id"
-                                   options="{'no_create': True}"
-                                   domain="[('request_state', '=', 'Approved')]"
-                                   attrs="{'readonly': [('request_state', 'in', ['Approved', 'Refused'])]}">
+                            <!--                            <field name="request_topic" widget="many2many_tags" string="Request Topic"-->
+                            <!--                                   options="{'no_create': True}"-->
+                            <!--                                   domain="[('request_state', '=', 'Approved')]"-->
+                            <!--                                   attrs="{'readonly': [('request_state', 'in', ['Approved', 'Refused'])]}"/>-->
+                            <!--                            <field name="request_topic_id"-->
+                            <!--                                   options="{'no_create': True}"-->
+                            <!--                                   domain="[('request_state', '=', 'Approved')]"-->
+                            <!--                                   attrs="{'readonly': [('request_state', 'in', ['Approved', 'Refused'])]}">-->
+                            <!--                                <tree string="Sub-Topics" editable="top">-->
+                            <!--                                    <field name="request_sub_topic"/>-->
+                            <!--                                    <field name="max_amount" widget="float"/>-->
+                            <!--                                </tree>-->
+                            <!--                            </field>-->
+                            <field name="req_topic_links" string="Request"
+                            attrs="{'readonly': [('request_state', 'in', ['approved', 'refused'])]}">
                                 <tree string="Sub-Topics" editable="top">
-                                    <field name="request_sub_topic"/>
-                                    <field name="start_date_bs"/>
-                                    <field name="end_date_ad" widget="date"/>
-                                    <field name="account_id"/>
-<!--                                    <field name="max_amount" widget="float"/>-->
-<!--                                    <field name="remaining_amount"/>-->
-                                    <field name="end_date_bs"/>
-                                    <field name="start_date_ad" widget="date"/>
-                                    <field name="fiscal_year_id"/>
+                                    <field name="topic_id"/>
+                                    <field name="amount" widget="float"/>
+                                    <field name="remaining_amount" readonly="1"/>
+                                    <field name="max_amount" readonly="1"/>
                                 </tree>
                             </field>
+
                             <field name="request_title"
-                                   attrs="{'readonly': [('request_state', 'in', ['Approved', 'Refused'])]}"/>
+                                   attrs="{'readonly': [('request_state', 'in', ['approved', 'refused'])]}"/>
                             <field name="select_branch" options="{'no_create': True}"
-                                   attrs="{'readonly': [('request_state', 'in', ['Approved', 'Refused'])]}"/>
-<!--                            <field name="max_amount" readonly="1"/>-->
-<!--                            <field name="remaining_amount"/>-->
+                                   attrs="{'readonly': [('request_state', 'in', ['approved', 'refused'])]}"/>
+                            <field name="requestdate_ad" readonly="1"/>
+                            <field name="requestdate_bs" readonly="1"/>
                             <field name="create_uid" invisible="1"/>
                             <field name="create_date" invisible="1"/>
                         </group>
                     </sheet>
                     <sheet>
                         <group>
-                            <field name="amount"
-                                   attrs="{'readonly': [('request_state', 'in', ['Approved', 'Refused'])]}"/>
+                            <!--                            <field name="amount" attrs="{'readonly': [('request_state', 'in', ['Approved', 'Refused'])]}"/>-->
                             <field name="description" widget="text_area"
-                                   attrs="{'readonly': [('request_state', 'in', ['Approved', 'Refused'])]}"/>
+                                   attrs="{'readonly': [('request_state', 'in', ['approved', 'refused'])]}"/>
                             <field name="requested_by" groups="service-approval.group_central_users"/>
                             <field name="request_state" invisible="1"/>
                             <field name="newreq_attachments"
-                                   attrs="{'readonly': [('request_state', 'in', ['Approved', 'Refused'])]}"
+                                   attrs="{'readonly': [('request_state', 'in', ['approved', 'refused'])]}"
                                    widget="many2many_binary"/>
                             <field name="approved_by" groups="service-approval.group_central_users"/>
                             <field name="remarks" groups="service-approval.group_central_users"/>
@@ -97,10 +102,13 @@
         </record>
 
         <!-- Sub-level menu under top-level menu -->
-        <menuitem id="requests_sub_level" name="Requests" parent="mainly_menu" sequence="1"/>
+        <menuitem id="requests_sub_level"
+                  name="Requests" parent="mainly_menu"
+                  sequence="1" groups="service-approval.group_branch_users"/>
 
         <!-- 3rd-level menu under sub-level menu -->
-        <menuitem id="create_new_requests_third_level" name="New Request" parent="mainly_menu" sequence="2"
-                  action="action_create_new_requests" groups="service-approval.group_branch_users"/>
+        <menuitem id="create_new_requests_third_level" name="New Request"
+                  parent="requests_sub_level" sequence="2"
+                  action="action_create_new_requests"/>
     </data>
 </odoo>

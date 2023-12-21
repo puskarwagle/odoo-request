@@ -16,7 +16,8 @@ class Topics(models.Model):
     )
     request_sub_topic = fields.Char(string='Request Sub-topic')
 
-    max_amount = fields.Integer(string='Maximum Amount', required=True)
+    max_amount = fields.Float(string='Maximum Amount', required=True)
+
     description = fields.Text(string='Description')
     file_uploads_topics = fields.Image('Upload image file')
 
@@ -48,23 +49,12 @@ class Topics(models.Model):
         readonly=True,
     )
 
-    remaining_amount = fields.Integer(
+    remaining_amount = fields.Float(
         string='Remaining Amount',
-        compute='_compute_remaining_amount',
-        store=True
+        store=True,
     )
 
     _rec_name = 'request_sub_topic'
-
-    @api.depends('max_amount')
-    def _compute_remaining_amount(self):
-        for topic in self:
-            approved_requests = self.env['service.requests'].search([
-                ('request_topic_id', '=', topic.ids),
-                ('request_state', '=', 'Approved')
-            ])
-            used_amount = sum(approved_requests.mapped('amount'))
-            topic.remaining_amount = topic.max_amount - used_amount
 
     # Dont allow branch users to CREATE a new form with Approved or Refused
     # Populate requested_by and approved_by automatically
@@ -72,32 +62,15 @@ class Topics(models.Model):
     def create(self, vals):
         user_groups = self.env.user.groups_id.mapped('name')
 
-        # Check if 'request_state' is present and is 'Approved' or 'Refused'
-        # if 'request_state' in vals and vals['request_state'] in ['Approved', 'Refused']:
-        #     raise ValidationError("Cannot set request state to 'Approved' or 'Refused' during record creation.")
+        # Check if max_amount is more than 0
+        if 'max_amount' in vals and vals['max_amount'] <= 0:
+            raise ValidationError("Max Amount must be more than 0.")
 
         # Automatically populate 'requested_by' and 'approved_by'.
         vals['requested_by'] = self.env.user.name if 'branchUsers' in user_groups else False
 
         record = super(Topics, self).create(vals)
         return record
-
-    # Dont allow branch users to WRITE a new form with Approved or Refused
-    # @api.model
-    # def write(self, vals):
-    #     current_user = self.env.user
-    #     user_groups = current_user.groups_id.mapped('name')
-    #     _logger.info("User's Groups: %s", user_groups)
-    #
-    #     # Automatically populate 'requested_by' and 'approved_by'.
-    #     vals['approved_by'] = self.env.user.name if 'centralApprovers' in user_groups else False
-
-        # if 'request_state' in vals and vals['request_state'] in ['Approved', 'Refused']:
-        #     if 'branchUsers' in user_groups:
-        #         raise ValidationError(
-        #             "Users in the 'branchUsers' group cannot set request state to 'Approved' or 'Refused'.")
-        # result = super(Topics, self).write(vals)
-        # return result
 
     # Buttons
     def set_to_submit_topics(self):

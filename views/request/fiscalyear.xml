@@ -37,8 +37,9 @@
         </record>
 
         <!-- Menu item for the modified fiscal year (Tree view) -->
-        <menuitem id="menu_fiscal_year_tree" name="Fiscal Year" parent="mainly_menu" sequence="10"
-                  action="action_fiscal_year_topics_tree" groups="service-approval.group_central_users"/>
-
+        <menuitem id="menu_fiscal_year_tree"
+                  name="Fiscal Year" parent="topics_sub_level"
+                  sequence="3"
+                  action="action_fiscal_year_topics_tree"/>
     </data>
 </odoo>

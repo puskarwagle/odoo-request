@@ -1,5 +1,3 @@
 access_service_requests,service.requests,model_service_requests,base.group_user,1,1,1,1
 
 access_service_topics,service.topics,model_service_topics,base.group_user,1,1,1,1
-
-access_service_topicstitle,service.topictitle,model_service_topictitle,base.group_user,1,1,1,1

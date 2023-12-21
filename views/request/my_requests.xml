@@ -6,9 +6,8 @@
             <field name="model">service.requests</field>
             <field name="arch" type="xml">
                 <tree>
-                    <field name="request_topic_id" string="Request Topic"/>
+                    <field name="req_topic_links"/>
                     <field name="select_branch"/>
-                    <field name="amount"/>
                     <field name="description"/>
                     <field name="requested_by"/>
                     <field name="request_state"/>
@@ -29,15 +28,17 @@
                     </group>
                     <templates>
                         <t t-name="kanban-box">
-                            <div class="oe_kanban_content">
-                                <div class="oe_kanban_global_right">
-                                    <strong>
-                                        <field name="request_topic_id"/>
-                                    </strong>
-                                    <div>
-                                        <field name="requested_by"/>
-                                        <field name="amount"/>
-                                        <field name="description"/>
+                            <div class="oe_kanban_global_click d-flex">
+                                <div class="oe_kanban_content">
+                                    <div class="oe_kanban_global_right">
+                                        <strong>
+                                            <field name="requested_by"/>
+                                        </strong>
+                                        <ul>
+                                            <li><field name="req_topic_links"/></li>
+                                            <li><field name="request_title"/></li>
+                                            <li><field name="description"/></li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -52,10 +53,12 @@
             <field name="name">My Requests</field>
             <field name="res_model">service.requests</field>
             <field name="view_mode">kanban,tree</field>
+            <field name="view_id" ref="my_requests_kanban_view"/>
         </record>
 
         <!-- 3nd menu under sub-level menu -->
-        <menuitem id="my_requests_kanban_third" name="My Requests" parent="mainly_menu" sequence="1"
-                  action="action_service_requests_kanban" groups="service-approval.group_branch_users"/>
+        <menuitem id="my_requests_kanban_third"
+                  name="My Requests" parent="requests_sub_level"
+                  sequence="1" action="action_service_requests_kanban"/>
     </data>
 </odoo>

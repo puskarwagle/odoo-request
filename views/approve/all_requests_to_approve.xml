@@ -6,11 +6,9 @@
             <field name="model">service.requests</field>
             <field name="arch" type="xml">
                 <tree create="false">
-                    <field name="request_topic_id"/>
                     <field name="create_uid"/>
                     <field name="create_date"/>
                     <field name="requested_by"/>
-                    <field name="amount"/>
                     <field name="description"/>
                     <field name="request_state"/>
                     <field name="approved_by"/>

@@ -128,9 +128,9 @@
 
         <!-- 3rd-level menu under sub-level menu -->
         <menuitem id="requests_topics_third"
-                  name="Request Topics"
+                  name="Sub-Topics"
                   parent="topics_sub_level"
-                  sequence="3"
+                  sequence="2"
                   action="action_service_topics"/>
 
     </data>
