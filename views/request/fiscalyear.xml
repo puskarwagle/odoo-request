@@ -1,18 +1,5 @@
 <odoo>
     <data>
-
-        <record id="cus_fiscal_view_form" model="ir.ui.view">
-            <field name="name">account.fiscal.year.form.inherit</field>
-            <field name="model">account.fiscal.year</field>
-            <field name="inherit_id" ref="om_fiscal_year.view_account_fiscal_year_form"/>
-            <field name="arch" type="xml">
-                <field name="company_id" position="after">
-                    <field name="start_date_bs" string="Start Date BS"/>
-                    <field name="end_date_bs" string="End Date BS"/>
-                </field>
-            </field>
-        </record>
-
         <!-- Inheriting the existing tree view of account.fiscal.year -->
         <record id="view_custom_fiscal_year_tree_inherit" model="ir.ui.view">
             <field name="name">account.custom.fiscal.year.tree.inherit</field>
@@ -25,6 +12,20 @@
                     <field name="date_to"/>
                     <field name="end_date_bs" string="End Date BS"/>
                 </tree>
+            </field>
+        </record>
+
+        <record id="cus_fiscal_view_form" model="ir.ui.view">
+            <field name="name">account.fiscal.year.form.inherit</field>
+            <field name="model">account.fiscal.year</field>
+            <field name="inherit_id" ref="om_fiscal_year.view_account_fiscal_year_form"/>
+            <field name="arch" type="xml">
+                <field name="date_from" position="before">
+                    <field name="start_date_bs" string="Start Date BS" widget="nepali_datepicker"/>
+                </field>
+                <field name="date_to" position="before">
+                    <field name="end_date_bs" string="End Date BS" widget="nepali_datepicker"/>
+                </field>
             </field>
         </record>
 

@@ -1,7 +1,7 @@
 import logging
 from odoo import models, fields, api
 from odoo.exceptions import ValidationError
-
+import nepali_datetime
 _logger = logging.getLogger(__name__)
 
 
@@ -28,10 +28,62 @@ class Topics(models.Model):
 
     fiscal_year_id = fields.Many2one('account.fiscal.year', string='Fiscal Year')
 
-    start_date_ad = fields.Date(string='Start Date')
-    end_date_ad = fields.Date(string='End Date')
-    start_date_bs = fields.Char(string='Start Date BS')
-    end_date_bs = fields.Char(string='End Date BS')
+    start_date_ad = fields.Date(string='Start Date', compute="_compute_english_date_start", store=True, readonly=False)
+    end_date_ad = fields.Date(string='End Date', compute="_compute_english_date_end", store=True, readonly=False)
+    start_date_bs = fields.Char(string='Start Date BS', compute="_compute_nepali_date_start", store=True, readonly=False)
+    end_date_bs = fields.Char(string='End Date BS', compute="_compute_nepali_date_end", store=True, readonly=False)
+
+    @api.depends("start_date_ad")
+    def _compute_nepali_date_start(self):
+        for record in self:
+            if record.start_date_ad:
+                record.start_date_bs = nepali_datetime.date.from_datetime_date(record.start_date_ad)
+            else:
+                record.start_date_bs = record.start_date_bs
+
+    @api.depends("end_date_ad")
+    def _compute_nepali_date_end(self):
+        for record in self:
+            if record.end_date_ad:
+                record.end_date_bs = nepali_datetime.date.from_datetime_date(record.end_date_ad)
+            else:
+                record.end_date_bs = record.end_date_bs
+
+    @api.depends("start_date_bs")
+    def _compute_english_date_start(self):
+        for record in self:
+            if not (record.start_date_bs and record.end_date_bs):
+                record.start_date_ad = record.start_date_ad
+                record.end_date_ad = record.end_date_ad
+            else:
+                nepali_date_start = nepali_datetime.datetime.strptime(record.start_date_bs, '%Y-%m-%d')
+                nepali_date_end = nepali_datetime.datetime.strptime(record.end_date_bs, '%Y-%m-%d')
+                if nepali_date_end > nepali_date_start:
+                    english_date_start = nepali_date_start.to_datetime_date()
+                    english_date_end = nepali_date_end.to_datetime_date()
+                    record.start_date_ad = english_date_start
+                    record.end_date_ad = english_date_end
+                else:
+                    record.start_date_ad = record.start_date_ad
+                    record.end_date_ad = record.end_date_ad
+
+    @api.depends("end_date_bs")
+    def _compute_english_date_end(self):
+        for record in self:
+            if not (record.start_date_bs and record.end_date_bs):
+                record.start_date_ad = record.start_date_ad
+                record.end_date_ad = record.end_date_ad
+            else:
+                nepali_date_start = nepali_datetime.datetime.strptime(record.start_date_bs, '%Y-%m-%d')
+                nepali_date_end = nepali_datetime.datetime.strptime(record.end_date_bs, '%Y-%m-%d')
+                if nepali_date_end > nepali_date_start:
+                    english_date_start = nepali_date_start.to_datetime_date()
+                    english_date_end = nepali_date_end.to_datetime_date()
+                    record.start_date_ad = english_date_start
+                    record.end_date_ad = english_date_end
+                else:
+                    record.start_date_ad = record.start_date_ad
+                    record.end_date_ad = record.end_date_ad
 
     request_state = fields.Selection([
         ('to_submit', 'To Submit'),

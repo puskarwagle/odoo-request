@@ -1,3 +1,4 @@
+import base64
 import logging
 from odoo import models, fields, api
 from odoo.exceptions import ValidationError
@@ -40,13 +41,13 @@ class Requests(models.Model):
         string='Add Attachments',
     )
 
-    @api.constrains('newreq_attachments')
-    def check_file_size_limit(self):
-        max_file_size = 5 * 1024 * 1024  # 5 MB
-
-        for attachment in self:
-            if attachment.datas and len(attachment.datas) > max_file_size:
-                raise ValidationError("File size cannot exceed 5 MB.")
+    # @api.constrains('newreq_attachments')
+    # def check_file_size_limit(self):
+    #     max_file_size = 5 * 1024 * 1024  # 5 MB
+    #
+    #     for attachment in self.newreq_attachments:
+    #         if attachment.datas and len(base64.b64decode(attachment.datas)) > max_file_size:
+    #             raise ValidationError("File size cannot exceed 5 MB.")
 
     requestdate_ad = fields.Datetime(string='Request Date AD')
     requestdate_bs = fields.Char(string='Request Date BS')
