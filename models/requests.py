@@ -1,14 +1,15 @@
 import base64
 import logging
 from odoo import models, fields, api
+import nepali_datetime
 from odoo.exceptions import ValidationError
-
-_logger = logging.getLogger(__name__)
 
 
 class Requests(models.Model):
     _name = 'service.requests'
     _description = 'Service Requests'
+
+    _logger = logging.getLogger(__name__)
 
     request_title = fields.Char(string='Request Title')
 
@@ -41,16 +42,10 @@ class Requests(models.Model):
         string='Add Attachments',
     )
 
-    # @api.constrains('newreq_attachments')
-    # def check_file_size_limit(self):
-    #     max_file_size = 5 * 1024 * 1024  # 5 MB
-    #
-    #     for attachment in self.newreq_attachments:
-    #         if attachment.datas and len(base64.b64decode(attachment.datas)) > max_file_size:
-    #             raise ValidationError("File size cannot exceed 5 MB.")
-
-    requestdate_ad = fields.Datetime(string='Request Date AD')
-    requestdate_bs = fields.Char(string='Request Date BS')
+    requestdate_ad = fields.Date(string='Request Date')
+    requestdate_bs = fields.Char(string='Request Date(BS)', compute="_compute_req_nep_date")
+    approved_date_ad = fields.Date(string='Approved Date')
+    approved_date_bs = fields.Char(string='Approved Date(BS)', compute="_compute_app_nep_date")
 
     requested_by = fields.Char(
         string='Requested By',
@@ -109,12 +104,30 @@ class Requests(models.Model):
                 raise ValidationError(
                     "Users in 'centralApprovers' group can only set request_state to 'Approved', 'Refused' or 'Resubmit'.")
 
-            if 'Approved' in values.get('request_state', []):
+            if 'approved' in values.get('request_state', []):
                 values['approved_by'] = self.env.user.name
+
+            values['approved_date_ad'] = fields.Datetime.now()
 
         # Call the super method to perform the common write operation
         result = super(Requests, self).write(values)
         return result
+
+    @api.depends("requestdate_ad")
+    def _compute_req_nep_date(self):
+        for record in self:
+            if record.requestdate_ad:
+                record.requestdate_bs = nepali_datetime.date.from_datetime_date(record.requestdate_ad)
+            else:
+                record.requestdate_bs = record.requestdate_bs
+
+    @api.depends("approved_date_ad")
+    def _compute_app_nep_date(self):
+        for record in self:
+            if record.approved_date_ad:
+                record.approved_date_bs = nepali_datetime.date.from_datetime_date(record.approved_date_ad)
+            else:
+                record.approved_date_bs = record.approved_date_bs
 
     # Buttons
     def set_to_submit_new_requests(self):
@@ -127,10 +140,62 @@ class Requests(models.Model):
         self.write({'request_state': 'resubmit'})
 
     def set_approved_new_requests(self):
-        self.write({'request_state': 'Approved'})
+        self.write({'request_state': 'approved'})
 
     def set_refused_new_requests(self):
-        self.write({'request_state': 'Refused'})
+        self.write({'request_state': 'refused'})
+
+    # def open_new_journal_entry_form(self):
+    #     current_record = self.env['service.requests'].browse(self.id)
+    #     self._logger.info("Arguments received in open_new_journal_entry_form: %s", locals())
+    #     action = self.env.ref('account.action_move_journal_line').read()[0]
+    #     action.update({
+    #         'view_mode': 'form',
+    #         'views': [(False, 'form')],
+    #         'target': 'new',
+    #     })
+    #     default_values = {
+    #         'ref': current_record.request_title,
+    #         'line_ids': [(0, 0, {
+    #             'account_id': 1,
+    #         })],
+    #     }
+    #     action['context'] = {'default_' + key: value for key, value in default_values.items()}
+    #     return action
+
+    def open_new_journal_entry_form(self):
+        current_record = self.env['service.requests'].browse(self.id)
+        self._logger.info("Arguments received in open_new_journal_entry_form: %s", locals())
+        action = self.env.ref('account.action_move_journal_line').read()[0]
+
+        action.update({
+            'view_mode': 'form',
+            'views': [(False, 'form')],
+            # 'target': 'new',
+        })
+        line_ids_default = [
+            (0, 0, {
+                'account_id': link.topic_account_id.id,
+                'name': link.topic_id.request_sub_topic,
+                'debit': link.amount_monetary,
+                # 'debit': $500,
+                # 'currency_id': self.env.ref('base.USD').id,
+                # 'currency_id': link.currency_id,
+                'balance': link.amount_monetary,
+                'amount_currency': link.amount_monetary,
+            })
+            for link in current_record.req_topic_links
+        ]
+
+        default_values = {
+            'ref': current_record.request_title,
+            'line_ids': line_ids_default,
+        }
+        action['context'] = {'default_' + key: value for key, value in default_values.items()}
+
+        self._logger.info("line_ids_default: %s", line_ids_default)
+
+        return action
 
     # Send email when record created
     # @api.model

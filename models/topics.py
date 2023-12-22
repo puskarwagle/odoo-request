@@ -14,7 +14,7 @@ class Topics(models.Model):
         string='Service Topic Title',
         required=True
     )
-    request_sub_topic = fields.Char(string='Request Sub-topic')
+    request_sub_topic = fields.Char(string='Request Sub-topic', required=True)
 
     max_amount = fields.Float(string='Maximum Amount', required=True)
 

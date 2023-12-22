@@ -14,7 +14,6 @@ class CustomFiscalYear(models.Model):
             if record.date_from:
                 record.start_date_bs = nepali_datetime.date.from_datetime_date(record.date_from)
                 # record.start_date_bs = nepali_datetime.datetime.strptime(record.start_date_bs, '%Y/%M/%d')
-
             else:
                 record.start_date_bs = record.start_date_bs
 

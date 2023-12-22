@@ -63,10 +63,7 @@
                             <field name="start_date_ad" widget="date"/>
                         </group>
                         <group>
-                            <!--                            <field name="request_state" invisible="1"/>-->
                             <field name="description" widget="text"/>
-                            <!--                            <field name="requested_by" invisible="1" groups="service-approval.group_central_users"/>-->
-                            <!--                            <field name="approved_by" invisible="1" groups="service-approval.group_central_users"/>-->
                         </group>
                         <field string="Topic image" name="file_uploads_topics" filename="file_name" widget="binary"/>
                     </group>

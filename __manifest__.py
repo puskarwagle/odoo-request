@@ -32,6 +32,7 @@
 
         'views/approve/submitted_requests_to_approve.xml',
         'views/approve/all_requests_to_approve.xml',
+        'views/approve/approved_requests.xml',
 
         'views/request/create_new_request.xml',
         'views/request/my_requests.xml',

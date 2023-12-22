@@ -27,34 +27,21 @@
                                 groups="service-approval.group_branch_users"/>
                         <button string="Save" class="oe_highlight" type="object" name="set_to_submit_new_requests"
                                 groups="service-approval.group_branch_users"/>
-                        <button string="Approv" class="oe_highlight"
-                                attrs="{'invisible': [('request_state', 'in', ['approved', 'refused'])]}" type="object"
+
+                        <button string="Approve" class="oe_highlight"
+                                attrs="{'invisible': [('request_state', 'in', ['approved', 'refused', 'resubmit'])]}" type="object"
                                 name="set_approved_new_requests" groups="service-approval.group_central_users"/>
                         <button string="Refuse" class="oe_highlight"
-                                attrs="{'invisible': [('request_state', 'in', ['approved', 'refused'])]}" type="object"
+                                attrs="{'invisible': [('request_state', 'in', ['approved', 'refused', 'resubmit'])]}" type="object"
                                 name="set_refused_new_requests" groups="service-approval.group_central_users"/>
-
                         <button string="Resubmit" class="oe_highlight"
-                                attrs="{'invisible': [('request_state', 'in', ['approved', 'refused'])]}" type="object"
+                                attrs="{'invisible': [('request_state', 'in', ['approved', 'refused', 'resubmit'])]}" type="object"
                                 name="set_resubmitted_new_requests" groups="service-approval.group_central_users"/>
 
                         <field name="request_state" widget="statusbar" statusbar_visible="submitted,approved,refused,resubmit"/>
                     </header>
                     <sheet>
                         <group>
-                            <!--                            <field name="request_topic" widget="many2many_tags" string="Request Topic"-->
-                            <!--                                   options="{'no_create': True}"-->
-                            <!--                                   domain="[('request_state', '=', 'Approved')]"-->
-                            <!--                                   attrs="{'readonly': [('request_state', 'in', ['Approved', 'Refused'])]}"/>-->
-                            <!--                            <field name="request_topic_id"-->
-                            <!--                                   options="{'no_create': True}"-->
-                            <!--                                   domain="[('request_state', '=', 'Approved')]"-->
-                            <!--                                   attrs="{'readonly': [('request_state', 'in', ['Approved', 'Refused'])]}">-->
-                            <!--                                <tree string="Sub-Topics" editable="top">-->
-                            <!--                                    <field name="request_sub_topic"/>-->
-                            <!--                                    <field name="max_amount" widget="float"/>-->
-                            <!--                                </tree>-->
-                            <!--                            </field>-->
                             <field name="req_topic_links" string="Request"
                             attrs="{'readonly': [('request_state', 'in', ['approved', 'refused'])]}">
                                 <tree string="Sub-Topics" editable="top">
@@ -62,6 +49,7 @@
                                     <field name="amount" widget="float"/>
                                     <field name="remaining_amount" readonly="1"/>
                                     <field name="max_amount" readonly="1"/>
+                                    <field name="topic_account_id"/>
                                 </tree>
                             </field>
 
@@ -77,7 +65,6 @@
                     </sheet>
                     <sheet>
                         <group>
-                            <!--                            <field name="amount" attrs="{'readonly': [('request_state', 'in', ['Approved', 'Refused'])]}"/>-->
                             <field name="description" widget="text_area"
                                    attrs="{'readonly': [('request_state', 'in', ['approved', 'refused'])]}"/>
                             <field name="requested_by" groups="service-approval.group_central_users"/>

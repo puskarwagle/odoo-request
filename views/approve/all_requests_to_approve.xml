@@ -22,10 +22,12 @@
             <field name="res_model">service.requests</field>
             <field name="view_mode">tree,form</field>
             <field name="view_id" ref="all_requests_to_approve_tree"/>
+            <field name="domain">[('request_state', 'not in', ['tosubmit', 'resubmit'])]</field>
+
         </record>
 
         <!-- 3rd-level menu under sub-level menu -->
-        <menuitem id="all_requests_to_approve_third" name="All Requests" parent="approval_sub_level" sequence="10"
+        <menuitem id="all_requests_to_approve_third" name="All Requests" parent="approval_sub_level" sequence="1"
                   action="action_all_requests_to_approve"/>
     </data>
 </odoo>
