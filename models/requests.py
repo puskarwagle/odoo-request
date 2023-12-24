@@ -3,7 +3,7 @@ import logging
 from odoo import models, fields, api
 import nepali_datetime
 from odoo.exceptions import ValidationError
-
+_logger = logging.getLogger(__name__)
 
 class Requests(models.Model):
     _name = 'service.requests'
@@ -57,7 +57,9 @@ class Requests(models.Model):
         readonly=True,
     )
 
-    remarks = fields.Text(string='Remarks',tracking=True)
+    journal_created = fields.Boolean(string='Journal Entry Created', default=False)
+
+    remarks = fields.Text(string='Remarks', tracking=True)
 
     # Dont allow branch users to CREATE a new form with Approved or Refused
     # Populate requested_by and approved_by automatically
@@ -145,24 +147,6 @@ class Requests(models.Model):
     def set_refused_new_requests(self):
         self.write({'request_state': 'refused'})
 
-    # def open_new_journal_entry_form(self):
-    #     current_record = self.env['service.requests'].browse(self.id)
-    #     self._logger.info("Arguments received in open_new_journal_entry_form: %s", locals())
-    #     action = self.env.ref('account.action_move_journal_line').read()[0]
-    #     action.update({
-    #         'view_mode': 'form',
-    #         'views': [(False, 'form')],
-    #         'target': 'new',
-    #     })
-    #     default_values = {
-    #         'ref': current_record.request_title,
-    #         'line_ids': [(0, 0, {
-    #             'account_id': 1,
-    #         })],
-    #     }
-    #     action['context'] = {'default_' + key: value for key, value in default_values.items()}
-    #     return action
-
     def open_new_journal_entry_form(self):
         current_record = self.env['service.requests'].browse(self.id)
         self._logger.info("Arguments received in open_new_journal_entry_form: %s", locals())
@@ -173,28 +157,36 @@ class Requests(models.Model):
             'views': [(False, 'form')],
             # 'target': 'new',
         })
+
+        # List for debit entries
         line_ids_default = [
             (0, 0, {
                 'account_id': link.topic_account_id.id,
                 'name': link.topic_id.request_sub_topic,
                 'debit': link.amount_monetary,
-                # 'debit': $500,
-                # 'currency_id': self.env.ref('base.USD').id,
-                # 'currency_id': link.currency_id,
                 'balance': link.amount_monetary,
-                'amount_currency': link.amount_monetary,
             })
             for link in current_record.req_topic_links
         ]
 
+        # Additional tuple for credit entry
+        credit_entry = (0, 0, {
+            'account_id': 42,
+            'name': 'Credit Entry',
+            # 'credit': amount_for_credit,
+        })
+
+        # Add the credit entry tuple to the list
+        line_ids_default.append(credit_entry)
+
         default_values = {
             'ref': current_record.request_title,
             'line_ids': line_ids_default,
+            'request_id': current_record.id,
         }
+
         action['context'] = {'default_' + key: value for key, value in default_values.items()}
-
         self._logger.info("line_ids_default: %s", line_ids_default)
-
         return action
 
     # Send email when record created
@@ -228,3 +220,32 @@ class Requests(models.Model):
     #     requested_by_email = self.requested_by.email
     #     logger = logging.getLogger(__name__)
     #     logger.info(f"Email address of requested user: {requested_by_email}")
+
+
+class AccountMove(models.Model):
+    _inherit = 'account.move'
+
+    request_id = fields.Many2one('service.requests', string='Related Request')
+
+    @api.onchange('request_id')
+    def _update_journal_bool(self):
+        for move in self:
+            if move.request_id:
+                move.request_id.write({'journal_created': True})
+                _logger.info("Updated journal_created for service.requests record %s", move.request_id.id)
+
+    def create(self, vals):
+        move = super(AccountMove, self).create(vals)
+        if move.request_id:
+            move.request_id.write({'journal_created': True})
+            _logger.info("Updated journal_created for service.requests record %s", move.request_id.id)
+        return move
+
+    def write(self, vals):
+        result = super(AccountMove, self).write(vals)
+        for move in self:
+            if move.request_id:
+                move.request_id.write({'journal_created': True})
+                _logger.info("Updated journal_created for service.requests record %s", move.request_id.id)
+        return result
+

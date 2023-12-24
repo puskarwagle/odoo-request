@@ -23,6 +23,8 @@
         'security/ir.model.access.csv',
         'security/groups.xml',
 
+        # 'data/ir_actions_server.xml',
+
         'views/branch/branch_management.xml',
 
         'views/topics/topic_titles.xml',

@@ -16,7 +16,9 @@
                     <field name="approved_date_bs"/>
                     <field name="req_topic_links"/>
                     <field name="description"/>
-                    <button string="Journal" type="object" name="open_new_journal_entry_form"/>
+                    <field name="journal_created"/>
+                    <button string="Journal" type="object" name="open_new_journal_entry_form"
+    attrs="{'invisible': [('journal_created', '=', True)]}"/>
                 </tree>
             </field>
         </record>
