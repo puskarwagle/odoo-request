@@ -14,4 +14,12 @@ class Branches(models.Model):
     position_of_contact_person = fields.Char(string='Position')
     mobile_no = fields.Char(string="Mobile No")
 
+    users_ids = fields.Many2many('res.users', string='Users')
+
     _rec_name = 'branch_name'
+
+
+class User(models.Model):
+    _inherit = 'res.users'
+
+    branch_ids = fields.Many2many('service.branches', string='Branches')

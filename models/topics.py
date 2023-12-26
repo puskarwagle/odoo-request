@@ -33,6 +33,56 @@ class Topics(models.Model):
     start_date_bs = fields.Char(string='Start Date BS', compute="_compute_nepali_date_start", store=True, readonly=False)
     end_date_bs = fields.Char(string='End Date BS', compute="_compute_nepali_date_end", store=True, readonly=False)
 
+    secure_sequence_id = fields.Many2one(
+        'ir.sequence',
+        help='Sequence to use to ensure the securisation of data',
+        check_company=True,
+        readonly=True,
+        copy=False
+    )
+    company_id = fields.Many2one(
+        'res.company',
+        string='Company',
+        store=True,
+        readonly=True
+    )
+
+    @api.model
+    def name_get(self):
+        result = []
+        for topic in self:
+            name = f"{topic.secure_sequence_id.name}/{topic.secure_sequence_id.id}/{topic.topic_name or 'Topic'}"
+            result.append((topic.id, name))
+        return result
+
+    @api.model
+    def _create_secure_sequence(self):
+        """This function creates a secure sequence for the topic if not already present."""
+        for topic in self:
+            if not topic.secure_sequence_id:
+                now = fields.Datetime.now()
+                year = now.strftime('%y')
+                hour = now.strftime('%H')
+                minute = now.strftime('%M')
+                second = now.strftime('%S')
+
+                seq_name = f'TOPIC/{year}/{hour}{minute}{second}'
+                secure_sequence = self.env['ir.sequence'].search([('name', '=', seq_name)], limit=1)
+                if not secure_sequence:
+                    seq_vals = {
+                        'name': seq_name,
+                        'code': f'SECURE-TOPIC-{year}-{hour}-{minute}-{second}',
+                        'implementation': 'no_gap',
+                        'prefix': '',
+                        'suffix': '',
+                        'padding': 0,
+                        'company_id': topic.company_id.id
+                    }
+                    secure_sequence = self.env['ir.sequence'].create(seq_vals)
+
+                # Update the secure_sequence_id field in the topic
+                topic.secure_sequence_id = secure_sequence
+
     @api.depends("start_date_ad")
     def _compute_nepali_date_start(self):
         for record in self:
@@ -108,22 +158,6 @@ class Topics(models.Model):
 
     _rec_name = 'request_sub_topic'
 
-    # Dont allow branch users to CREATE a new form with Approved or Refused
-    # Populate requested_by and approved_by automatically
-    @api.model
-    def create(self, vals):
-        user_groups = self.env.user.groups_id.mapped('name')
-
-        # Check if max_amount is more than 0
-        if 'max_amount' in vals and vals['max_amount'] <= 0:
-            raise ValidationError("Max Amount must be more than 0.")
-
-        # Automatically populate 'requested_by' and 'approved_by'.
-        vals['requested_by'] = self.env.user.name if 'branchUsers' in user_groups else False
-
-        record = super(Topics, self).create(vals)
-        return record
-
     # Buttons
     def set_to_submit_topics(self):
         self.write({'request_state': 'to_submit'})
@@ -160,3 +194,25 @@ class Topics(models.Model):
         else:
             _logger.info("User is in the 'branchUsers' group. Denying permission.")
             raise ValidationError("You do not have permission to set request state to 'Refused'.")
+
+        # Dont allow branch users to CREATE a new form with Approved or Refused
+        # Populate requested_by and approved_by automatically
+        @api.model
+        def create(self, vals):
+            # Additional logic from the provided create method
+            user_groups = self.env.user.groups_id.mapped('name')
+
+            # Check if max_amount is more than 0
+            if 'max_amount' in vals and vals['max_amount'] <= 0:
+                raise ValidationError("Max Amount must be more than 0.")
+
+            # Automatically populate 'requested_by' and 'approved_by'.
+            vals['requested_by'] = self.env.user.name if 'branchUsers' in user_groups else False
+
+            # Call the create method from the Topics model
+            topic = super(Topics, self).create(vals)
+
+            # Call the custom _create_secure_sequence method
+            topic._create_secure_sequence()
+
+            return topic

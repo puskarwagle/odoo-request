@@ -45,7 +45,7 @@
                             <field name="req_topic_links" string="Request"
                             attrs="{'readonly': [('request_state', 'in', ['approved', 'refused'])]}">
                                 <tree string="Sub-Topics" editable="top">
-                                    <field name="topic_id"/>
+                                    <field name="topic_id" options="{'no_create': True}"/>
                                     <field name="amount" widget="float"/>
                                     <field name="remaining_amount" readonly="1"/>
                                     <field name="max_amount" readonly="1"/>
@@ -55,8 +55,7 @@
 
                             <field name="request_title"
                                    attrs="{'readonly': [('request_state', 'in', ['approved', 'refused'])]}"/>
-                            <field name="select_branch" options="{'no_create': True}"
-                                   attrs="{'readonly': [('request_state', 'in', ['approved', 'refused'])]}"/>
+                            <field name="select_branch" readonly="1"/>
                             <field name="requestdate_ad" readonly="1"/>
                             <field name="requestdate_bs" readonly="1"/>
                             <field name="create_uid" invisible="1"/>

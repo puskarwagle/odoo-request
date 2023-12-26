@@ -1,3 +1,44 @@
-access_service_requests,service.requests,model_service_requests,base.group_user,1,1,1,1
+    def open_new_journal_entry_form(self):
+        current_record = self.env['service.requests'].browse(self.id)
+        self._logger.info("Arguments received in open_new_journal_entry_form: %s", locals())
+        action = self.env.ref('account.action_move_journal_line').read()[0]
 
-access_service_topics,service.topics,model_service_topics,base.group_user,1,1,1,1
+        action.update({
+            'view_mode': 'form',
+            'views': [(False, 'form')],
+            # 'target': 'new',
+        })
+
+        # List for debit entries
+        line_ids_default = [
+            (0, 0, {
+                'account_id': link.topic_account_id.id,
+                'name': link.topic_id.request_sub_topic,
+                'debit': link.amount_monetary,
+                'balance': link.amount_monetary,
+                # 'currency_id': 2
+            })
+            for link in current_record.req_topic_links
+        ]
+
+        # Additional tuple for credit entry
+        credit_entry = (0, 0, {
+            'account_id': 42,
+            'name': 'Credit Entry',
+            # 'currency_id': 2,
+            # 'credit': amount_for_credit,
+        })
+
+        # Add the credit entry tuple to the list
+        line_ids_default.append(credit_entry)
+
+        default_values = {
+            'ref': current_record.request_title,
+            'line_ids': line_ids_default,
+            'request_id': current_record.id,
+            # 'company_id': 1
+        }
+
+        action['context'] = {'default_' + key: value for key, value in default_values.items()}
+        self._logger.info("line_ids_default: %s", line_ids_default)
+        return action

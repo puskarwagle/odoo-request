@@ -15,6 +15,24 @@
             </field>
         </record>
 
+        <record id="view_service_branches_form" model="ir.ui.view">
+            <field name="name">service.branches.form</field>
+            <field name="model">service.branches</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="branch_name"/>
+                        <field name="location"/>
+                        <field name="phone"/>
+                        <field name="email"/>
+                        <field name="status"/>
+                        <field name="users_ids" widget="many2many_tags" options="{'no_create_edit': True}"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+
         <!-- Action for the sublevel menu -->
         <record id="action_service_branches" model="ir.actions.act_window">
             <field name="name">Branch Management</field>
