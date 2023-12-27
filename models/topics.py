@@ -2,6 +2,7 @@ import logging
 from odoo import models, fields, api
 from odoo.exceptions import ValidationError
 import nepali_datetime
+
 _logger = logging.getLogger(__name__)
 
 
@@ -30,7 +31,8 @@ class Topics(models.Model):
 
     start_date_ad = fields.Date(string='Start Date', compute="_compute_english_date_start", store=True, readonly=False)
     end_date_ad = fields.Date(string='End Date', compute="_compute_english_date_end", store=True, readonly=False)
-    start_date_bs = fields.Char(string='Start Date BS', compute="_compute_nepali_date_start", store=True, readonly=False)
+    start_date_bs = fields.Char(string='Start Date BS', compute="_compute_nepali_date_start", store=True,
+                                readonly=False)
     end_date_bs = fields.Char(string='End Date BS', compute="_compute_nepali_date_end", store=True, readonly=False)
 
     secure_sequence_id = fields.Many2one(
@@ -51,7 +53,7 @@ class Topics(models.Model):
     def name_get(self):
         result = []
         for topic in self:
-            name = f"{topic.secure_sequence_id.name}/{topic.secure_sequence_id.id}/{topic.topic_name or 'Topic'}"
+            name = f"{topic.request_sub_topic}/{topic.secure_sequence_id.name}/{topic.secure_sequence_id.id}"
             result.append((topic.id, name))
         return result
 
@@ -66,7 +68,7 @@ class Topics(models.Model):
                 minute = now.strftime('%M')
                 second = now.strftime('%S')
 
-                seq_name = f'TOPIC/{year}/{hour}{minute}{second}'
+                seq_name = f'{year}/{hour}{minute}{second}'
                 secure_sequence = self.env['ir.sequence'].search([('name', '=', seq_name)], limit=1)
                 if not secure_sequence:
                     seq_vals = {
@@ -197,22 +199,17 @@ class Topics(models.Model):
 
         # Dont allow branch users to CREATE a new form with Approved or Refused
         # Populate requested_by and approved_by automatically
-        @api.model
-        def create(self, vals):
-            # Additional logic from the provided create method
-            user_groups = self.env.user.groups_id.mapped('name')
+    @api.model
+    def create(self, vals):
+        # Additional logic from the provided create method
+        user_groups = self.env.user.groups_id.mapped('name')
 
-            # Check if max_amount is more than 0
-            if 'max_amount' in vals and vals['max_amount'] <= 0:
-                raise ValidationError("Max Amount must be more than 0.")
+        # Check if max_amount is more than 0
+        if 'max_amount' in vals and vals['max_amount'] <= 0.00:
+            raise ValidationError("Max Amount must be more than 0.")
 
-            # Automatically populate 'requested_by' and 'approved_by'.
-            vals['requested_by'] = self.env.user.name if 'branchUsers' in user_groups else False
-
-            # Call the create method from the Topics model
-            topic = super(Topics, self).create(vals)
-
-            # Call the custom _create_secure_sequence method
-            topic._create_secure_sequence()
-
-            return topic
+        # Automatically populate 'requested_by' and 'approved_by'.
+        vals['requested_by'] = self.env.user.name if 'branchUsers' in user_groups else False
+        topic = super(Topics, self).create(vals)
+        topic._create_secure_sequence()
+        return topic

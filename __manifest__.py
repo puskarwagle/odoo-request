@@ -16,12 +16,13 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base', 'account', 'om_fiscal_year'],
+    'depends': ['base_setup', 'account', 'om_fiscal_year'],
 
     # always loaded
     'data': [
         'security/ir.model.access.csv',
         'security/groups.xml',
+        # 'security/sequenceAccessToBranch.xml',
 
         # 'data/ir_actions_server.xml',
 

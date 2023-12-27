@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sequence_access_rule_branch_users" model="ir.rule">
+        <field name="name">Sequence Access Rule for branchUsers</field>
+        <field name="model_id" ref="model_ir_sequence"/>
+        <field name="groups" eval="[(4, ref('Approvals.group_branch_users'))]"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="True"/>
+        <field name="perm_create" eval="True"/>
+        <field name="perm_unlink" eval="True"/>
+    </record>
+</odoo>

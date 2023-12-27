@@ -28,7 +28,7 @@ class TopicTitle(models.Model):
     def name_get(self):
         result = []
         for topictitle in self:
-            name = f"{topictitle.secure_sequence_id.name}/{topictitle.secure_sequence_id.id}/{topictitle.topic_title or 'Topic'}"
+            name = f"{topictitle.topic_title}/{topictitle.secure_sequence_id.name}/{topictitle.secure_sequence_id.id}"
             result.append((topictitle.id, name))
         return result
 
@@ -43,7 +43,7 @@ class TopicTitle(models.Model):
                 minute = now.strftime('%M')
                 second = now.strftime('%S')
 
-                seq_name = f'TOPIC/{year}/{hour}{minute}{second}'
+                seq_name = f'{year}/{hour}{minute}{second}'
                 secure_sequence = self.env['ir.sequence'].search([('name', '=', seq_name)], limit=1)
                 if not secure_sequence:
                     seq_vals = {
