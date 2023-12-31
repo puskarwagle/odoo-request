@@ -6,12 +6,16 @@
             <field name="model">service.requests</field>
             <field name="arch" type="xml">
                 <tree create="false">
-                    <field name="create_uid"/>
-                    <field name="create_date"/>
+                    <field name="secure_sequence_id" string="Req No"/>
+                    <field name="select_branch"/>
                     <field name="requested_by"/>
-                    <field name="description"/>
+                    <field name="requestdate_bs"/>
                     <field name="request_state"/>
                     <field name="approved_by"/>
+                    <field name="approved_date_bs"/>
+                    <field name="req_topic_links"/>
+                    <field name="description"/>
+                    <field name="journal_created"/>
                 </tree>
             </field>
         </record>

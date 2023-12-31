@@ -52,7 +52,7 @@
         <record id="action_service_requests_kanban" model="ir.actions.act_window">
             <field name="name">My Requests</field>
             <field name="res_model">service.requests</field>
-            <field name="view_mode">kanban,tree</field>
+            <field name="view_mode">kanban,form,tree</field>
             <field name="view_id" ref="my_requests_kanban_view"/>
         </record>
 

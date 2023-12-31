@@ -5,8 +5,8 @@ class TopicTitle(models.Model):
     _name = 'service.topictitle'
     _description = 'Service Topic Name'
 
-    topic_title = fields.Char(string='Topic Title')
-    topic_description = fields.Char(string='Topic description')
+    topic_title = fields.Char(string='Title')
+    topic_description = fields.Char(string='Description')
 
     secure_sequence_id = fields.Many2one(
         'ir.sequence',
@@ -24,13 +24,13 @@ class TopicTitle(models.Model):
 
     _rec_name = 'topic_title'
 
-    @api.model
-    def name_get(self):
-        result = []
-        for topictitle in self:
-            name = f"{topictitle.topic_title}/{topictitle.secure_sequence_id.name}/{topictitle.secure_sequence_id.id}"
-            result.append((topictitle.id, name))
-        return result
+    # @api.model
+    # def name_get(self):
+    #     result = []
+    #     for topictitle in self:
+    #         name = f"{topictitle.topic_title}/{topictitle.secure_sequence_id.name}/{topictitle.secure_sequence_id.id}"
+    #         result.append((topictitle.id, name))
+    #     return result
 
     @api.model
     def _create_secure_sequence(self):
@@ -65,6 +65,6 @@ class TopicTitle(models.Model):
         # Your custom logic goes here
         # For example, you can call the _create_secure_sequence method before creating the record
         topictitle = super(TopicTitle, self).create(vals)
-        topictitle._create_secure_sequence()
+        # topictitle._create_secure_sequence()
         return topictitle
 

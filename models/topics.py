@@ -12,10 +12,10 @@ class Topics(models.Model):
 
     service_topic_id = fields.Many2one(
         'service.topictitle',
-        string='Service Topic Title',
+        string='Topic Title',
         required=True
     )
-    request_sub_topic = fields.Char(string='Request Sub-topic', required=True)
+    request_sub_topic = fields.Char(string='Name', required=True)
 
     max_amount = fields.Float(string='Maximum Amount', required=True)
 
@@ -27,13 +27,22 @@ class Topics(models.Model):
         string=' Account',
         domain="[('account_type', '=', 'expense')]")
 
-    fiscal_year_id = fields.Many2one('account.fiscal.year', string='Fiscal Year')
+    fiscal_year_id = fields.Many2one(
+        'account.fiscal.year',
+        string='Fiscal Year',
+        default=lambda self: self.get_default_fiscal_year()
+    )
+
+    def get_default_fiscal_year(self):
+        param_value = self.env['ir.config_parameter'].sudo().get_param('account.fiscal.year')
+        fiscal_year = self.env['account.fiscal.year'].search([('id', '=', param_value)], limit=1)
+        return fiscal_year.id if fiscal_year else False
 
     start_date_ad = fields.Date(string='Start Date', compute="_compute_english_date_start", store=True, readonly=False)
     end_date_ad = fields.Date(string='End Date', compute="_compute_english_date_end", store=True, readonly=False)
-    start_date_bs = fields.Char(string='Start Date BS', compute="_compute_nepali_date_start", store=True,
-                                readonly=False)
-    end_date_bs = fields.Char(string='End Date BS', compute="_compute_nepali_date_end", store=True, readonly=False)
+    start_date_bs = fields.Char(string='Start Date(BS)', compute="_compute_nepali_date_start", store=True,
+                                )
+    end_date_bs = fields.Char(string='End Date(BS)', compute="_compute_nepali_date_end", store=True, readonly=False)
 
     secure_sequence_id = fields.Many2one(
         'ir.sequence',
@@ -49,13 +58,13 @@ class Topics(models.Model):
         readonly=True
     )
 
-    @api.model
-    def name_get(self):
-        result = []
-        for topic in self:
-            name = f"{topic.request_sub_topic}/{topic.secure_sequence_id.name}/{topic.secure_sequence_id.id}"
-            result.append((topic.id, name))
-        return result
+    # @api.model
+    # def name_get(self):
+    #     result = []
+    #     for topic in self:
+    #         name = f"{topic.request_sub_topic}/{topic.secure_sequence_id.name}/{topic.secure_sequence_id.id}"
+    #         result.append((topic.id, name))
+    #     return result
 
     @api.model
     def _create_secure_sequence(self):
@@ -211,5 +220,5 @@ class Topics(models.Model):
         # Automatically populate 'requested_by' and 'approved_by'.
         vals['requested_by'] = self.env.user.name if 'branchUsers' in user_groups else False
         topic = super(Topics, self).create(vals)
-        topic._create_secure_sequence()
+        # topic._create_secure_sequence()
         return topic

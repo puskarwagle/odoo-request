@@ -1,0 +1,543 @@
+<odoo>
+	<data noupdate='1'>
+	<record id='location_district_1' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_5'/>
+		<field name='district_name'>Arghakhanchi</field>
+		<field name='district_name_np'>अर्घाखाँची</field>
+		<field name='reference_id'>2058</field>
+		<field name='reference_code'>2058</field> 
+	</record>
+	<record id='location_district_2' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_4'/>
+		<field name='district_name'>Humla</field>
+		<field name='district_name_np'>हुम्ला</field>
+		<field name='reference_id'>2071</field>
+		<field name='reference_code'>2071</field>
+	</record>
+	<record id='location_district_3' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_5'/>
+		<field name='district_name'>Gulmi</field>
+		<field name='district_name_np'>गुल्मी</field>
+		<field name='reference_id'>2059</field>
+		<field name='reference_code'>2059</field>
+	</record>
+	<record id='location_district_4' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_4'/>
+		<field name='district_name'>Kalikot</field>
+		<field name='district_name_np'>कालिकोट</field>
+		<field name='reference_id'>2072</field>
+		<field name='reference_code'>2072</field>
+	</record>
+	<record id='location_district_5' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_4'/>
+		<field name='district_name'>Jajarkot</field>
+		<field name='district_name_np'>जाजरकोट</field>
+		<field name='reference_id'>2073</field>
+		<field name='reference_code'>2073</field>
+	</record>
+	<record id='location_district_6' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_4'/>
+		<field name='district_name'>Dailekh</field>
+		<field name='district_name_np'>दैलेख</field>
+		<field name='reference_id'>2074</field>
+		<field name='reference_code'>2074</field>
+	</record>
+	<record id='location_district_7' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_7'/>
+		<field name='district_name'>Taplejung</field>
+		<field name='district_name_np'>ताप्लेजुङ्ग</field>
+		<field name='reference_id'>2008</field>
+		<field name='reference_code'>2008</field>
+	</record>
+	<record id='location_district_8' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_7'/>
+		<field name='district_name'>Panchthar</field>
+		<field name='district_name_np'>पाँचथर</field>
+		<field name='reference_id'>2009</field>
+		<field name='reference_code'>2009</field>
+	</record>
+	<record id='location_district_9' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_7'/>
+		<field name='district_name'>Ilam</field>
+		<field name='district_name_np'>इलाम</field>
+		<field name='reference_id'>2010</field>
+		<field name='reference_code'>2010</field>
+	</record>
+	<record id='location_district_10' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_7'/>
+		<field name='district_name'>Sankhuwasabha</field>
+		<field name='district_name_np'>संखुवासभा</field>
+		<field name='reference_id'>2011</field>
+		<field name='reference_code'>2011</field>
+	</record>
+	<record id='location_district_11' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_7'/>
+		<field name='district_name'>Terhathum</field>
+		<field name='district_name_np'>तेह्रथुम</field>
+		<field name='reference_id'>2012</field>
+		<field name='reference_code'>2012</field>
+	</record>
+	<record id='location_district_12' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_7'/>
+		<field name='district_name'>Dhankuta</field>
+		<field name='district_name_np'>धनकुटा</field>
+		<field name='reference_id'>2013</field>
+		<field name='reference_code'>2013</field>
+	</record>
+	<record id='location_district_13' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_7'/>
+		<field name='district_name'>Bhojpur</field>
+		<field name='district_name_np'>भोजपुर</field>
+		<field name='reference_id'>2014</field>
+		<field name='reference_code'>2014</field>
+	</record>
+	<record id='location_district_14' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_7'/>
+		<field name='district_name'>Khotang</field>
+		<field name='district_name_np'>खोटाङ</field>
+		<field name='reference_id'>2015</field>
+		<field name='reference_code'>2015</field>
+	</record>
+	<record id='location_district_15' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_7'/>
+		<field name='district_name'>Solukhumbu</field>
+		<field name='district_name_np'>सोलुखुम्बु</field>
+		<field name='reference_id'>2016</field>
+		<field name='reference_code'>2016</field>
+	</record>
+	<record id='location_district_16' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_7'/>
+		<field name='district_name'>Okhaldhunga</field>
+		<field name='district_name_np'>ओखलढुङ्गा</field>
+		<field name='reference_id'>2017</field>
+		<field name='reference_code'>2017</field>
+	</record>
+	<record id='location_district_17' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_7'/>
+		<field name='district_name'>Udayapur</field>
+		<field name='district_name_np'>उदयपुर</field>
+		<field name='reference_id'>2018</field>
+		<field name='reference_code'>2018</field>
+	</record>
+	<record id='location_district_18' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_7'/>
+		<field name='district_name'>Jhapa</field>
+		<field name='district_name_np'>झापा</field>
+		<field name='reference_id'>2019</field>
+		<field name='reference_code'>2019</field>
+	</record>
+	<record id='location_district_19' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_7'/>
+		<field name='district_name'>Morang</field>
+		<field name='district_name_np'>मोरङ</field>
+		<field name='reference_id'>2020</field>
+		<field name='reference_code'>2020</field>
+	</record>
+	<record id='location_district_20' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_7'/>
+		<field name='district_name'>Sunsari</field>
+		<field name='district_name_np'>सुनसरी</field>
+		<field name='reference_id'>2021</field>
+		<field name='reference_code'>2021</field>
+	</record>
+	<record id='location_district_21' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_6'/>
+		<field name='district_name'>Saptari</field>
+		<field name='district_name_np'>सप्तरी</field>
+		<field name='reference_id'>2022</field>
+		<field name='reference_code'>2022</field>
+	</record>
+	<record id='location_district_22' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_6'/>
+		<field name='district_name'>Siraha</field>
+		<field name='district_name_np'>सिराहा</field>
+		<field name='reference_id'>2023</field>
+		<field name='reference_code'>2023</field>
+	</record>
+	<record id='location_district_23' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_6'/>
+		<field name='district_name'>Dhanusha</field>
+		<field name='district_name_np'>धनुषा</field>
+		<field name='reference_id'>2024</field>
+		<field name='reference_code'>2024</field>
+	</record>
+	<record id='location_district_24' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_6'/>
+		<field name='district_name'>Mahottari</field>
+		<field name='district_name_np'>महोत्तरी</field>
+		<field name='reference_id'>2025</field>
+		<field name='reference_code'>2025</field>
+	</record>
+	<record id='location_district_25' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_6'/>
+		<field name='district_name'>Sarlahi</field>
+		<field name='district_name_np'>सर्लाही</field>
+		<field name='reference_id'>2026</field>
+		<field name='reference_code'>2026</field>
+	</record>
+	<record id='location_district_26' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_6'/>
+		<field name='district_name'>Rautahat</field>
+		<field name='district_name_np'>रौतहट</field>
+		<field name='reference_id'>2027</field>
+		<field name='reference_code'>2027</field>
+	</record>
+	<record id='location_district_27' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_6'/>
+		<field name='district_name'>Bara</field>
+		<field name='district_name_np'>बारा</field>
+		<field name='reference_id'>2028</field>
+		<field name='reference_code'>2028</field>
+	</record>
+	<record id='location_district_28' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_6'/>
+		<field name='district_name'>Parsa</field>
+		<field name='district_name_np'>पर्सा</field>
+		<field name='reference_id'>2029</field>
+		<field name='reference_code'>2029</field>
+	</record>
+	<record id='location_district_29' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_3'/>
+		<field name='district_name'>Dolakha</field>
+		<field name='district_name_np'>दोलखा</field>
+		<field name='reference_id'>2030</field>
+		<field name='reference_code'>2030</field>
+	</record>
+	<record id='location_district_30' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_3'/>
+		<field name='district_name'>Ramechhap</field>
+		<field name='district_name_np'>रामेछाप</field>
+		<field name='reference_id'>2031</field>
+		<field name='reference_code'>2031</field>
+	</record>
+	<record id='location_district_31' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_3'/>
+		<field name='district_name'>Sindhuli</field>
+		<field name='district_name_np'>सिन्धुली</field>
+		<field name='reference_id'>2032</field>
+		<field name='reference_code'>2032</field>
+	</record>
+	<record id='location_district_32' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_3'/>
+		<field name='district_name'>Kavrepalanchok</field>
+		<field name='district_name_np'>काभ्रेपलाञ्चोक</field>
+		<field name='reference_id'>2033</field>
+		<field name='reference_code'>2033</field>
+	</record>
+	<record id='location_district_33' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_3'/>
+		<field name='district_name'>Sindhupalchok</field>
+		<field name='district_name_np'>सिन्धुपाल्चोक</field>
+		<field name='reference_id'>2034</field>
+		<field name='reference_code'>2034</field>
+	</record>
+	<record id='location_district_34' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_3'/>
+		<field name='district_name'>Rasuwa</field>
+		<field name='district_name_np'>रसुवा</field>
+		<field name='reference_id'>2035</field>
+		<field name='reference_code'>2035</field>
+	</record>
+	<record id='location_district_35' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_3'/>
+		<field name='district_name'>Nuwakot</field>
+		<field name='district_name_np'>नुवाकोट</field>
+		<field name='reference_id'>2036</field>
+		<field name='reference_code'>2036</field>
+	</record>
+	<record id='location_district_36' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_3'/>
+		<field name='district_name'>Dhading</field>
+		<field name='district_name_np'>धादिङ</field>
+		<field name='reference_id'>2037</field>
+		<field name='reference_code'>2037</field>
+	</record>
+	<record id='location_district_37' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_3'/>
+		<field name='district_name'>Chitwan</field>
+		<field name='district_name_np'>चितवन</field>
+		<field name='reference_id'>2038</field>
+		<field name='reference_code'>2038</field>
+	</record>
+	<record id='location_district_38' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_3'/>
+		<field name='district_name'>Makawanpur</field>
+		<field name='district_name_np'>मकवानपुर</field>
+		<field name='reference_id'>2039</field>
+		<field name='reference_code'>2039</field>
+	</record>
+	<record id='location_district_39' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_3'/>
+		<field name='district_name'>Bhaktapur</field>
+		<field name='district_name_np'>भक्तपुर</field>
+		<field name='reference_id'>2040</field>
+		<field name='reference_code'>2040</field>
+	</record>
+	<record id='location_district_40' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_3'/>
+		<field name='district_name'>Lalitpur</field>
+		<field name='district_name_np'>ललितपुर</field>
+		<field name='reference_id'>2041</field>
+		<field name='reference_code'>2041</field>
+	</record>
+	<record id='location_district_41' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_2'/>
+		<field name='district_name'>Gorkha</field>
+		<field name='district_name_np'>गोरखा</field>
+		<field name='reference_id'>2043</field>
+		<field name='reference_code'>2043</field>
+	</record>
+	<record id='location_district_42' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_2'/>
+		<field name='district_name'>Lamjung</field>
+		<field name='district_name_np'>लमजुङ</field>
+		<field name='reference_id'>2044</field>
+		<field name='reference_code'>2044</field>
+	</record>
+	<record id='location_district_43' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_2'/>
+		<field name='district_name'>Tanahun</field>
+		<field name='district_name_np'>तनहुँ</field>
+		<field name='reference_id'>2045</field>
+		<field name='reference_code'>2045</field>
+	</record>
+	<record id='location_district_44' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_2'/>
+		<field name='district_name'>Kaski</field>
+		<field name='district_name_np'>कास्की</field>
+		<field name='reference_id'>2046</field>
+		<field name='reference_code'>2046</field>
+	</record>
+	<record id='location_district_45' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_2'/>
+		<field name='district_name'>Manang</field>
+		<field name='district_name_np'>मनाङ</field>
+		<field name='reference_id'>2047</field>
+		<field name='reference_code'>2047</field>
+	</record>
+	<record id='location_district_46' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_2'/>
+		<field name='district_name'>Mustang</field>
+		<field name='district_name_np'>मुस्ताङ</field>
+		<field name='reference_id'>2048</field>
+		<field name='reference_code'>2048</field>
+	</record>
+	<record id='location_district_47' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_2'/>
+		<field name='district_name'>Parbat</field>
+		<field name='district_name_np'>पर्वत</field>
+		<field name='reference_id'>2049</field>
+		<field name='reference_code'>2049</field>
+	</record>
+	<record id='location_district_48' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_2'/>
+		<field name='district_name'>Syangja</field>
+		<field name='district_name_np'>स्याङजा</field>
+		<field name='reference_id'>2050</field>
+		<field name='reference_code'>2050</field>
+	</record>
+	<record id='location_district_49' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_2'/>
+		<field name='district_name'>Myagdi</field>
+		<field name='district_name_np'>म्याग्दी</field>
+		<field name='reference_id'>2051</field>
+		<field name='reference_code'>2051</field>
+	</record>
+	<record id='location_district_50' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_2'/>
+		<field name='district_name'>Baglung</field>
+		<field name='district_name_np'>बाग्लुङ</field>
+		<field name='reference_id'>2052</field>
+		<field name='reference_code'>2052</field>
+	</record>
+	<record id='location_district_51' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_2'/>
+		<field name='district_name'>Nawalparasi (Eastern Part from Bardaghat Susta)</field>
+		<field name='district_name_np'>नवलपरासी (बर्दघाट सुस्ता पूर्व)</field>
+		<field name='reference_id'>2053</field>
+		<field name='reference_code'>2053</field>
+	</record>
+	<record id='location_district_52' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_5'/>
+		<field name='district_name'>Nawalparasi (Western Part from Bardaghat Susta)</field>
+		<field name='district_name_np'>नवलपरासी (बर्दघाट सुस्ता पश्चिम)</field>
+		<field name='reference_id'>2054</field>
+		<field name='reference_code'>2054</field>
+	</record>
+	<record id='location_district_53' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_5'/>
+		<field name='district_name'>Rupandehi</field>
+		<field name='district_name_np'>रूपन्देही</field>
+		<field name='reference_id'>2055</field>
+		<field name='reference_code'>2055</field>
+	</record>
+	<record id='location_district_54' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_5'/>
+		<field name='district_name'>Kapilvastu</field>
+		<field name='district_name_np'>कपिलबस्तु</field>
+		<field name='reference_id'>2056</field>
+		<field name='reference_code'>2056</field>
+	</record>
+	<record id='location_district_55' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_5'/>
+		<field name='district_name'>Palpa</field>
+		<field name='district_name_np'>पाल्पा</field>
+		<field name='reference_id'>2057</field>
+		<field name='reference_code'>2057</field>
+	</record>
+	<record id='location_district_56' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_5'/>
+		<field name='district_name'>Rukum (Eastern Part)</field>
+		<field name='district_name_np'>रूकुम (पूर्वी भाग)</field>
+		<field name='reference_id'>2060</field>
+		<field name='reference_code'>2060</field>
+	</record>
+	<record id='location_district_57' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_5'/>
+		<field name='district_name'>Rolpa</field>
+		<field name='district_name_np'>रोल्पा</field>
+		<field name='reference_id'>2061</field>
+		<field name='reference_code'>2061</field>
+	</record>
+	<record id='location_district_58' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_5'/>
+		<field name='district_name'>Pyuthan</field>
+		<field name='district_name_np'>प्यूठान</field>
+		<field name='reference_id'>2062</field>
+		<field name='reference_code'>2062</field>
+	</record>
+	<record id='location_district_59' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_5'/>
+		<field name='district_name'>Dang</field>
+		<field name='district_name_np'>दाङ</field>
+		<field name='reference_id'>2063</field>
+		<field name='reference_code'>2063</field>
+	</record>
+	<record id='location_district_60' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_5'/>
+		<field name='district_name'>Banke</field>
+		<field name='district_name_np'>बाँके</field>
+		<field name='reference_id'>2064</field>
+		<field name='reference_code'>2064</field>
+	</record>
+	<record id='location_district_61' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_5'/>
+		<field name='district_name'>Bardiya</field>
+		<field name='district_name_np'>बर्दिया</field>
+		<field name='reference_id'>2065</field>
+		<field name='reference_code'>2065</field>
+	</record>
+	<record id='location_district_62' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_4'/>
+		<field name='district_name'>Rukum (Western Part)</field>
+		<field name='district_name_np'>रूकुम (पश्चिम भाग)</field>
+		<field name='reference_id'>2066</field>
+		<field name='reference_code'>2066</field>
+	</record>
+	<record id='location_district_63' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_4'/>
+		<field name='district_name'>Salyan</field>
+		<field name='district_name_np'>सल्यान</field>
+		<field name='reference_id'>2067</field>
+		<field name='reference_code'>2067</field>
+	</record>
+	<record id='location_district_64' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_4'/>
+		<field name='district_name'>Dolpa</field>
+		<field name='district_name_np'>डोल्पा</field>
+		<field name='reference_id'>2068</field>
+		<field name='reference_code'>2068</field>
+	</record>
+	<record id='location_district_65' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_4'/>
+		<field name='district_name'>Jumla</field>
+		<field name='district_name_np'>जुम्ला</field>
+		<field name='reference_id'>2069</field>
+		<field name='reference_code'>2069</field>
+	</record>
+	<record id='location_district_66' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_4'/>
+		<field name='district_name'>Mugu</field>
+		<field name='district_name_np'>मुगु</field>
+		<field name='reference_id'>2070</field>
+		<field name='reference_code'>2070</field>
+	</record>
+	<record id='location_district_67' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_4'/>
+		<field name='district_name'>Surkhet</field>
+		<field name='district_name_np'>सुर्खेत</field>
+		<field name='reference_id'>2075</field>
+		<field name='reference_code'>2075</field>
+	</record>
+	<record id='location_district_68' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_1'/>
+		<field name='district_name'>Bajura</field>
+		<field name='district_name_np'>बाजुरा</field>
+		<field name='reference_id'>2076</field>
+		<field name='reference_code'>2076</field>
+	</record>
+	<record id='location_district_69' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_1'/>
+		<field name='district_name'>Bajhang</field>
+		<field name='district_name_np'>बझाङ</field>
+		<field name='reference_id'>2077</field>
+		<field name='reference_code'>2077</field>
+	</record>
+	<record id='location_district_70' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_1'/>
+		<field name='district_name'>Doti</field>
+		<field name='district_name_np'>डोटी</field>
+		<field name='reference_id'>2078</field>
+		<field name='reference_code'>2078</field>
+	</record>
+	<record id='location_district_71' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_1'/>
+		<field name='district_name'>Achham</field>
+		<field name='district_name_np'>अछाम</field>
+		<field name='reference_id'>2079</field>
+		<field name='reference_code'>2079</field>
+	</record>
+	<record id='location_district_72' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_1'/>
+		<field name='district_name'>Darchula</field>
+		<field name='district_name_np'>दार्चुला</field>
+		<field name='reference_id'>2080</field>
+		<field name='reference_code'>2080</field>
+	</record>
+	<record id='location_district_73' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_1'/>
+		<field name='district_name'>Baitadi</field>
+		<field name='district_name_np'>बैतडी</field>
+		<field name='reference_id'>2081</field>
+		<field name='reference_code'>2081</field>
+	</record>
+	<record id='location_district_74' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_1'/>
+		<field name='district_name'>Dadeldhura</field>
+		<field name='district_name_np'>डडेल्धुरा</field>
+		<field name='reference_id'>2082</field>
+		<field name='reference_code'>2082</field>
+	</record>
+	<record id='location_district_75' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_1'/>
+		<field name='district_name'>Kanchanpur</field>
+		<field name='district_name_np'>कञ्चनपुर</field>
+		<field name='reference_id'>2083</field>
+		<field name='reference_code'>2083</field>
+	</record>
+	<record id='location_district_76' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_1'/>
+		<field name='district_name'>Kailali</field>
+		<field name='district_name_np'>कैलाली</field>
+		<field name='reference_id'>2084</field>
+		<field name='reference_code'>2084</field>
+	</record>
+	<record id='location_district_77' model='location.district'>
+		<field name='province_name' ref='service-approval.location_province_3'/>
+		<field name='district_name'>Kathmandu</field>
+		<field name='district_name_np'>काठमाडौं</field>
+		<field name='reference_id'>2042</field>
+		<field name='reference_code'>2042</field>
+	</record>
+	</data>
+</odoo>

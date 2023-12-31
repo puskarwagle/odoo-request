@@ -10,3 +10,11 @@ access_service_topics,service.topics,model_service_topics,base.group_user,1,1,1,
 access_service_requests,service.requests,model_service_requests,base.group_user,1,1,1,1
 
 access_req_topic_link,service.reqtopiclink,model_service_reqtopiclink,base.group_user,1,1,1,1
+
+
+
+access_location_province,access_location_province_app,model_location_province,base.group_user,1,1,1,1
+access_location_district,access_location_district_app,model_location_district,base.group_user,1,1,1,1
+access_location_palika,access_location_palika_app,model_location_palika,base.group_user,1,1,1,1
+access_location_tole,access_location_tole_app,model_location_tole,base.group_user,1,1,1,1
+

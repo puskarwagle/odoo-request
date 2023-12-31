@@ -4,8 +4,6 @@ from odoo import models, fields, api, _
 import nepali_datetime
 from odoo.exceptions import ValidationError
 
-_logger = logging.getLogger(__name__)
-
 
 class Requests(models.Model):
     _name = 'service.requests'
@@ -13,12 +11,13 @@ class Requests(models.Model):
 
     _logger = logging.getLogger(__name__)
 
-    request_title = fields.Char(string='Request Title')
+    request_title = fields.Char(string='Request Title', default='Petty Cash')
 
     req_topic_links = fields.One2many(
         'service.reqtopiclink',
         'request_id',
         string='Request Topic Links',
+        required=True,
     )
 
     select_branch = fields.Many2one(
@@ -36,7 +35,7 @@ class Requests(models.Model):
         ('resubmit', 'Resubmit'),
         ('approved', 'Approved'),
         ('refused', 'Refused'),
-    ], string='Stage of Request', default='submitted')
+    ], string='Stage of Request', default='tosubmit')
 
     newreq_attachments = fields.One2many(
         'ir.attachment',
@@ -51,7 +50,7 @@ class Requests(models.Model):
     approved_date_bs = fields.Char(string='Approved Date(BS)', compute="_compute_app_nep_date")
 
     requested_by = fields.Char(
-        string='Requested By',
+        string='Request By',
         readonly=True,
         tracking=True
     )
@@ -73,29 +72,28 @@ class Requests(models.Model):
         readonly=True
     )
 
+    fiscal_year_id = fields.Many2one(
+        'account.fiscal.year',
+        string='Fiscal Year',
+        default=lambda self: self.get_default_fiscal_year()
+    )
+
+    def get_default_fiscal_year(self):
+        param_value = self.env['ir.config_parameter'].sudo().get_param('account.fiscal.year')
+        fiscal_year = self.env['account.fiscal.year'].search([('id', '=', param_value)], limit=1)
+        return fiscal_year.id if fiscal_year else False
+
     journal_created = fields.Boolean(string='Journal Entry Created', default=False)
     account_move_id = fields.Many2one('account.move', string='Related Journal Entry')
+    is_centraluser = fields.Boolean(compute='_compute_is_centraluser', default=False, store=False)
 
     remarks = fields.Text(string='Remarks', tracking=True)
 
-    # Dont allow branch users to CREATE a new form with Approved or Refused
-    # Populate requested_by and approved_by automatically
-    @api.model
-    def create(self, vals):
-        # Your original logic for checking 'request_state'
-        if 'request_state' in vals and vals['request_state'] in ['Approved', 'Refused']:
-            raise ValidationError("Cannot set request state to 'Approved' or 'Refused' during record creation.")
-
-        # Your original logic for populating 'requested_by' and 'requestdate_ad'
-        user_groups = self.env.user.groups_id.mapped('name')
-        vals['requested_by'] = self.env.user.name if 'branchUsers' in user_groups else False
-        vals['requestdate_ad'] = fields.Datetime.now()
-
-        # Call the method to create and associate secure sequence
-        request = super(Requests, self).create(vals)
-        request._create_secure_sequence()
-
-        return request
+    # Compute method to determine if the user is a central user
+    def _compute_is_centraluser(self):
+        for record in self:
+            user = self.env.user
+            record.is_centraluser = user.has_group('service-approval.group_central_users')
 
     def name_get(self):
         result = []
@@ -108,18 +106,19 @@ class Requests(models.Model):
         """This function creates a secure sequence for the request if not already present."""
         for request in self:
             if not request.secure_sequence_id:
+                fiscal_year = request.fiscal_year_id.name
+
                 now = fields.Datetime.now()
-                year = now.strftime('%y')
                 hour = now.strftime('%H')
                 minute = now.strftime('%M')
                 second = now.strftime('%S')
 
-                seq_name = f'REQ/{year}/{hour}{minute}{second}'
+                seq_name = f'REQ/{fiscal_year}/{hour}{minute}{second}'
                 secure_sequence = self.env['ir.sequence'].search([('name', '=', seq_name)], limit=1)
                 if not secure_sequence:
                     seq_vals = {
                         'name': seq_name,
-                        'code': f'SECURE{year}-{hour}-{minute}-{second}',
+                        'code': f'SECURE{fiscal_year}-{hour}-{minute}-{second}',
                         'implementation': 'no_gap',
                         'prefix': '',
                         'suffix': '',
@@ -150,7 +149,7 @@ class Requests(models.Model):
         # Users belonging to 'centralApprovers'
         elif 'centralApprovers' in user_groups:
             # Users can only edit the 'request_state' and 'remarks' fields
-            allowed_fields = {'request_state', 'remarks', 'journal_created'}
+            # allowed_fields = {'request_state', 'remarks', 'journal_created'}
             # if not set(values.keys()).issubset(allowed_fields):
             #     raise ValidationError(
             #         "Users in 'centralApprovers' group can only edit 'request_state' and 'remarks' fields.")
@@ -162,6 +161,11 @@ class Requests(models.Model):
 
             if 'approved' in values.get('request_state', []):
                 values['approved_by'] = self.env.user.name
+
+            # if 'request_state' in values and values['request_state'] in ['refused', 'resubmit']:
+            #     if 'remarks' not in values:
+            #         raise ValidationError(
+            #             "Users in 'centralApprovers' group must fill in the 'remarks' field when request_state is 'refused' or 'resubmit'.")
 
             values['approved_date_ad'] = fields.Datetime.now()
 
@@ -193,13 +197,26 @@ class Requests(models.Model):
         self.write({'request_state': 'submitted'})
 
     def set_resubmitted_new_requests(self):
+        self._validate_remarks_required()
         self.write({'request_state': 'resubmit'})
+
+    def set_refused_new_requests(self):
+        self._validate_remarks_required()
+        self.write({'request_state': 'refused'})
+
+    def _validate_remarks_required(self):
+        """Validation method to check if 'remarks' field is filled."""
+        user_groups = self.env.user.groups_id.mapped('name')
+
+        if 'centralApprovers' in user_groups:
+            if not self.remarks:
+                raise ValidationError("Remarks field must be filled for resubmitting or refusing requests.")
 
     def set_approved_new_requests(self):
         self.write({'request_state': 'approved'})
 
-    def set_refused_new_requests(self):
-        self.write({'request_state': 'refused'})
+    def print_approved_request(self):
+        return
 
     def open_new_journal_entry_form(self):
         current_record = self.env['service.requests'].browse(self.id)
@@ -225,8 +242,13 @@ class Requests(models.Model):
         ]
 
         # Additional tuple for credit entry
+        accounts_info = self.env['account.account'].search([('code', '=', 'PETTYCPS0001')], limit=1)
+
+        if accounts_info:
+            account_info_id = accounts_info.id
+
         credit_entry = (0, 0, {
-            'account_id': 42,
+            'account_id': account_info_id,
             'name': 'Credit Entry',
             'credit': sum(link.amount_monetary for link in current_record.req_topic_links),
         })
@@ -262,38 +284,63 @@ class Requests(models.Model):
         self._logger.info("line_ids_default: %s", line_ids_default)
         return action
 
+    @api.model
+    def create(self, vals):
+        # Your original logic for checking 'request_state'
+        if 'request_state' in vals and vals['request_state'] in ['Approved', 'Refused']:
+            raise ValidationError("Cannot set request state to 'Approved' or 'Refused' during record creation.")
+
+        # Your original logic for populating 'requested_by' and 'requestdate_ad'
+        user_groups = self.env.user.groups_id.mapped('name')
+        vals['requested_by'] = self.env.user.name if 'branchUsers' in user_groups else False
+        vals['requestdate_ad'] = fields.Datetime.now()
+
+        # Check if the state is 'submitted'
+        if 'request_state' in vals and vals['request_state'] == 'submitted':
+            group_id = self.env.ref('service-approval.group_central_users')
+            if group_id:
+                group_users = group_id.users
+                followers = [(4, user.id) for user in group_users]
+
+                # Post a message to the followers
+                message = "A new record has been submitted: %s" % vals['request_title']
+                # self.env['service.requests'].message_post(body=message, subtype='mt_comment', followers=followers)
+                self.env.user.notify_info(message='My information message')
+
+        # Call the method to create and associate secure sequence
+        request = super(Requests, self).create(vals)
+        request._create_secure_sequence()
+
+        return request
+
 
 class AccountMove(models.Model):
     _inherit = 'account.move'
 
     request_id = fields.Many2one('service.requests', string='Related Request')
 
-    # move_id = fields.Many2one(
-    #     comodel_name='account.move',
-    #     string='Journal Entry',
-    #     required=True,
-    #     readonly=True,
-    #     index=True,
-    #     auto_join=True,
-    #     ondelete="cascade",
-    #     check_company=True,
-    #     compute="_compute_request_voucher"
-    # )
 
-    # @api.depends('journal_id', 'posted_before')
-    # def _compute_request_voucher(self):
-    #     for move in self:
-    #         if move.journal_id.id and not move.posted_before and move.request_id.id:
-    #             move.request_id.write({'journal_created': True})
-    #             _logger.info("Updated journal_created for service.requests record %s", move.request_id.id)
 
-# @api.depends('journal_id')
-#     def _update_journal_bool(self):
-#         for move in self:
-#             _logger.info("Updated journal_created for service.requests record %s", move.request_id.id)
-#             if move.request_id.id:
-#                 move.request_id.write({'journal_created': True})
-#                 _logger.info("Updated journal_created for service.requests record %s", move.request_id.id)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # def create(self, vals):
 #     move = super(AccountMove, self).create(vals)

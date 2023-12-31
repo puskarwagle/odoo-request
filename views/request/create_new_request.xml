@@ -24,8 +24,10 @@
                 <form>
                     <header>
                         <button string="Submit" class="oe_highlight" type="object" name="set_submitted_new_requests"
+                                attrs="{'invisible': [('request_state', 'in', ['approved', 'refused', 'resubmit', 'submitted'])]}"
                                 groups="service-approval.group_branch_users"/>
                         <button string="Save" class="oe_highlight" type="object" name="set_to_submit_new_requests"
+                                attrs="{'invisible': [('request_state', 'in', ['approved', 'refused', 'resubmit', 'submitted'])]}"
                                 groups="service-approval.group_branch_users"/>
 
                         <button string="Approve" class="oe_highlight"
@@ -43,36 +45,38 @@
                     <sheet>
                         <group>
                             <field name="req_topic_links" string="Request"
-                            attrs="{'readonly': [('request_state', 'in', ['approved', 'refused'])]}">
+                            attrs="{'readonly': [('request_state', 'in', ['approved', 'refused', 'submitted'])]}">
                                 <tree string="Sub-Topics" editable="top">
                                     <field name="topic_id" options="{'no_create': True}"/>
                                     <field name="amount" widget="float"/>
                                     <field name="remaining_amount" readonly="1"/>
                                     <field name="max_amount" readonly="1"/>
                                     <field name="topic_account_id"/>
+                                    <field name="attachment_ids" widget="many2many_binary" string="Attachment"/>
                                 </tree>
                             </field>
 
                             <field name="request_title"
-                                   attrs="{'readonly': [('request_state', 'in', ['approved', 'refused'])]}"/>
-                            <field name="select_branch" readonly="1"/>
+                                   attrs="{'readonly': [('request_state', 'in', ['approved', 'refused', 'submitted'])]}"/>
+                            <field name="select_branch" readonly="1" style="pointer-events:none;"/>
                             <field name="requestdate_ad" readonly="1"/>
                             <field name="requestdate_bs" readonly="1"/>
                             <field name="create_uid" invisible="1"/>
                             <field name="create_date" invisible="1"/>
+                            <field name="request_state" invisible="1"/>
+                            <field name="is_centraluser" invisible="1"/>
                         </group>
                     </sheet>
                     <sheet>
                         <group>
-                            <field name="description" widget="text_area"
-                                   attrs="{'readonly': [('request_state', 'in', ['approved', 'refused'])]}"/>
+                            <field name="description" widget="text_area" attrs="{'readonly': ['|', ('is_centraluser', '=', True), ('request_state', 'in', ['approved', 'refused', 'submitted'])]}"/>
                             <field name="requested_by" groups="service-approval.group_central_users"/>
                             <field name="request_state" invisible="1"/>
-                            <field name="newreq_attachments"
-                                   attrs="{'readonly': [('request_state', 'in', ['approved', 'refused'])]}"
+                            <field name="newreq_attachments" invisible="1"
+                                   attrs="{'readonly': [('request_state', 'in', ['approved', 'refused', 'submitted'])]}"
                                    widget="many2many_binary"/>
                             <field name="approved_by" groups="service-approval.group_central_users"/>
-                            <field name="remarks" groups="service-approval.group_central_users"/>
+                            <field name="remarks" attrs="{'readonly': [('is_centraluser', '=', False)]}"/>
                         </group>
                     </sheet>
                 </form>

@@ -6,6 +6,9 @@
             <field name="model">service.branches</field>
             <field name="arch" type="xml">
                 <tree>
+                    <field name="users_ids" widget="many2many_tags" string="Branch employees"
+                               options="{'no_create_edit': True}"
+                               domain="[('groups_id.name', '=', 'branchUsers')]"/>
                     <field name="branch_name"/>
                     <field name="location"/>
                     <field name="phone"/>
@@ -21,13 +24,26 @@
             <field name="arch" type="xml">
                 <form>
                     <group>
-                        <field name="branch_name"/>
+                        <field name="branch_name" string="Name"/>
                         <field name="location"/>
                         <field name="phone"/>
                         <field name="email"/>
-                        <field name="status"/>
-                        <field name="users_ids" widget="many2many_tags" options="{'no_create_edit': True}"/>
+                        <field name="contact_person" widget="many2many_tags" string="Representative"/>
+                        <field name="users_ids" widget="many2many_tags" string="Employees"
+                               options="{'no_create_edit': True}"
+                               domain="[('groups_id.name', '=', 'branchUsers')]"/>
+                        <field name="status" string="Status"/>
                     </group>
+
+                    <separator name="adbl_branch_address" string="Address" colspan="2"/>
+                    <field name="farm_province" options="{'no_create': True}"/>
+                    <field name="farm_district" domain="[('province_name', '=', farm_province)]"
+                           options="{'no_create': True}"/>
+                    <field name="farm_palika" domain="[('district_name', '=', farm_district)]"
+                           options="{'no_create': True}"/>
+                    <field name="farm_ward_no"/>
+                    <field name="farm_tole" domain="[('palika_name', '=', farm_palika)]" options="{'no_create': True}"/>
+
                 </form>
             </field>
         </record>
@@ -44,11 +60,22 @@
         <!-- Top-level menu -->
         <menuitem id="mainly_menu" name="Request/Approve" sequence="1"/>
 
+        <!-- Configuration Menu -->
+        <menuitem id="configuration_submenu"
+            name="Configuration"
+            parent="mainly_menu"
+            groups="service-approval.group_central_users"
+            sequence="3"/>
+
+        <menuitem id="branch_submenu"
+                  name="Branch Management"
+                  parent="configuration_submenu"
+                  sequence="2"/>
+
         <!-- Sub-level menu under top-level menu -->
         <menuitem id="menu_service_branches_sub" name="Branches Management"
-                  parent="mainly_menu"
-                  sequence="10"
-                  action="action_service_branches"
-                  groups="service-approval.group_central_users"/>
+                  parent="branch_submenu"
+                  action="action_service_branches"/>
+
     </data>
 </odoo>

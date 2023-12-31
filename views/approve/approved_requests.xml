@@ -7,18 +7,21 @@
             <field name="model">service.requests</field>
             <field name="arch" type="xml">
                 <tree create="false">
-                    <field name="request_title"/>
+                    <field name="secure_sequence_id" string="Req No"/>
+                    <field name="select_branch"/>
                     <field name="requested_by"/>
                     <field name="requestdate_bs"/>
-                    <field name="request_state"/>
+                    <field name="request_state" string="State"/>
                     <field name="approved_by"/>
-                    <field name="approved_date_ad"/>
                     <field name="approved_date_bs"/>
-                    <field name="req_topic_links"/>
+                    <field name="req_topic_links" widget="many2many_tags"/>
                     <field name="description"/>
                     <field name="journal_created"/>
-                    <button string="Journal" type="object" name="open_new_journal_entry_form"/>
-<!--                    attrs="{'invisible': [('journal_created', '=', True)]}"-->
+                    <button string="Journal" type="object" name="open_new_journal_entry_form"
+                            attrs="{'invisible': [('journal_created', '=', True)]}"/>
+
+                    <button string="Print" class="oe_highlight" type="object" name="print_approved_request"
+                                groups="service-approval.group_central_users"/>
                 </tree>
             </field>
         </record>

@@ -7,7 +7,7 @@
             <field name="arch" type="xml">
                 <tree>
                     <!--                    <field name="requested_by"/>-->
-                    <field name="create_date"/>
+                    <!--                    <field name="create_date"/>-->
                     <field name="service_topic_id" string="Topic Title"/>
                     <field name="request_sub_topic"/>
                     <field name="account_id"/>
@@ -50,17 +50,18 @@
                     <!--                    </header>-->
                     <group>
                         <group>
-                            <field name="service_topic_id" string="Topic Title" widget="many2one_tags" options="{'no_create': True}"/>
+                            <field name="service_topic_id" string="Topic Title" widget="many2one_tags"
+                                   options="{'no_create': True}"/>
                             <field name="max_amount" widget="float"/>
                             <field name="start_date_bs" widget="nepali_datepicker"/>
-                            <field name="end_date_ad" widget="date"/>
+                            <field name="start_date_ad" widget="date"/>
                             <field name="account_id"/>
                         </group>
                         <group>
                             <field name="request_sub_topic"/>
                             <field name="fiscal_year_id"/>
                             <field name="end_date_bs" widget="nepali_datepicker"/>
-                            <field name="start_date_ad" widget="date"/>
+                            <field name="end_date_ad" widget="date"/>
                         </group>
                         <group>
                             <field name="description" widget="text"/>
@@ -116,7 +117,7 @@
 
         <!-- Action for the sub-level menu -->
         <record id="action_service_topics" model="ir.actions.act_window">
-            <field name="name">Request Topics</field>
+            <field name="name">Sub-Topics</field>
             <field name="res_model">service.topics</field>
             <field name="view_mode">tree,form,kanban</field>
             <field name="view_id" ref="requests_topics_kanban"/>

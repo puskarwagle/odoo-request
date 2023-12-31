@@ -5,8 +5,10 @@ import nepali_datetime
 class CustomFiscalYear(models.Model):
     _inherit = 'account.fiscal.year'
 
-    start_date_bs = fields.Char(string='Start Date BS', compute="_compute_nepali_date_start", store=True, readonly=False)
-    end_date_bs = fields.Char(string='End Date BS', compute="_compute_nepali_date_end", store=True, readonly=False)
+    start_date_bs = fields.Char(string='Start Date BS', compute="_compute_nepali_date_start", store=True)
+    end_date_bs = fields.Char(string='End Date BS', compute="_compute_nepali_date_end", store=True)
+
+    _rec_name = 'name'
 
     @api.depends("date_from")
     def _compute_nepali_date_start(self):
