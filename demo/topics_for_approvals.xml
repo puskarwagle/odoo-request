@@ -1,0 +1,32 @@
+<odoo>
+    <data>
+        <!-- Tree view for Create new TOPICS -->
+        <record id="requests_topics_for_approval_tree" model="ir.ui.view">
+            <field name="name">Service Topics</field>
+            <field name="model">service.topics</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="approved_by"/>
+                    <field name="service_topic_id"/>
+                    <field name="description"/>
+                    <field name="max_amount"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Action for the sub-level menu -->
+        <record id="action_service_topics_for_approval" model="ir.actions.act_window">
+            <field name="name">Request Topics</field>
+            <field name="res_model">service.topics</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="requests_topics_for_approval_tree"/>
+        </record>
+
+        <!-- 3rd-level menu under sub-level menu -->
+        <menuitem id="requests_topics_third_for_approval"
+                  name="Approve Topics"
+                  parent="topics_sub_level"
+                  sequence="3"
+                  action="action_service_topics_for_approval"/>
+    </data>
+</odoo>

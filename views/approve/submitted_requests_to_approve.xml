@@ -1,0 +1,40 @@
+<odoo>
+    <data>
+
+        <!-- Tree -->
+        <record id="submitted_requests_tree" model="ir.ui.view">
+            <field name="name">Submitted Requests</field>
+            <field name="model">service.requests</field>
+            <field name="arch" type="xml">
+                <tree default_order="create_date asc">
+                    <field name="secure_sequence_id" string="Req No"/>
+                    <field name="requested_by"/>
+                    <field name="requestdate_bs"/>
+                    <field name="request_state" string="State" widget="badge"  decoration-info="request_state == 'submitted'"
+                           decoration-warning="request_state in ('resubmit','refused')" decoration-success="request_state == 'approved'"/>
+                    <field name="approved_by"/>
+                    <field name="approved_date_bs"/>
+                    <field name="req_topic_links"/>
+                    <field name="description"/>
+                    <field name="journal_created"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Action for the sublevel menu -->
+        <record id="submitted_only_requests_to_approve" model="ir.actions.act_window">
+            <field name="name">Submitted Requests</field>
+            <field name="res_model">service.requests</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="submitted_requests_tree"/>
+            <field name="domain">[('request_state', '=', 'submitted')]</field>
+        </record>
+
+        <!-- Sub-level menu under top-level menu -->
+        <menuitem id="approval_sub_level" name="Approvals" parent="mainly_menu" sequence="2" groups="service-approval.group_central_users"/>
+
+        <!-- 3rd-level menu under sub-level menu -->
+        <menuitem id="submitted_request_to_approve_third" name="To Approve" parent="approval_sub_level" sequence="3"
+                  action="submitted_only_requests_to_approve"/>
+    </data>
+</odoo>

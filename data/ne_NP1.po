@@ -1,0 +1,954 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* service-approval
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-12-31 10:51+0000\n"
+"PO-Revision-Date: 2024-01-05 10:25+0545\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ne_NP\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.4.1\n"
+
+#. module: service-approval
+#: model:ir.model.fields,field_description:service-approval.field_service_topics__account_id
+msgid " Account"
+msgstr "खाता"
+
+#. module: service-approval
+#: model:ir.model.fields,field_description:service-approval.field_service_reqtopiclink__topic_account_id
+#: model_terms:ir.ui.view,arch_db:service-approval.view_request_summary_search_filter
+msgid "Account"
+msgstr "लेखा"
+
+#. module: service-approval
+#: model_terms:ir.ui.view,arch_db:service-approval.requests_topics_kanban
+msgid "Account:-"
+msgstr "लेखा:-"
+
+#. module: service-approval
+#: model:ir.model.fields,field_description:service-approval.field_service_requests__newreq_attachments
+msgid "Add Attachments"
+msgstr "संलग्नहरू थप्नुहोस्"
+
+#. module: service-approval
+#: model_terms:ir.ui.view,arch_db:service-approval.view_service_branches_form
+msgid "Address"
+msgstr "ठेगाना"
+
+#. module: service-approval
+#: model:ir.actions.act_window,name:service-approval.action_all_requests_to_approve
+#: model:ir.ui.menu,name:service-approval.all_requests_to_approve_third
+msgid "All Requests"
+msgstr "सबै अनुरोध"
+
+#. module: service-approval
+#: model:ir.model.fields,field_description:service-approval.field_service_reqtopiclink__amount
+msgid "Amount"
+msgstr "रकम"
+
+#. module: service-approval
+#: model:ir.model.fields,field_description:service-approval.field_service_reqtopiclink__amount_monetary
+msgid "Amount in Currency"
+msgstr "रकम मुद्रामा"
+
+#. module: service-approval
+#: model:ir.model.fields,field_description:service-approval.field_service_reqtopiclink__rquest_approve_date_bs
+msgid "Appr Date(Bs)"
+msgstr "स्वीकृत मिति (वि.स.)"
+
+#. module: service-approval
+#: model:ir.ui.menu,name:service-approval.approval_sub_level
+msgid "Approvals"
+msgstr "अनुमोदनहरू"
+
+#. module: service-approval
+#: model_terms:ir.ui.view,arch_db:service-approval.create_new_requests_form
+msgid "Approve"
+msgstr "स्वीकृत"
+
+#. module: service-approval
+#: model:ir.model.fields.selection,name:service-approval.selection__service_requests__request_state__approved
+#: model:ir.model.fields.selection,name:service-approval.selection__service_topics__request_state__approved
+msgid "Approved"
+msgstr "स्वीकृत"
+
+#. module: service-approval
+#: model:ir.model.fields,field_description:service-approval.field_service_reqtopiclink__rquest_approved_by
+#: model:ir.model.fields,field_description:service-approval.field_service_requests__approved_by
+#: model:ir.model.fields,field_description:service-approval.field_service_topics__approved_by
+msgid "Approved By"
+msgstr "स्वीकृत गर्ने"
+
+#. module: service-approval
+#: model:ir.model.fields,field_description:service-approval.field_service_requests__approved_date_ad
+msgid "Approved Date"
+msgstr "स्वीकृत मिति"
+
+#. module: service-approval
+#: model:ir.model.fields,field_description:service-approval.field_service_requests__approved_date_bs
+msgid "Approved Date(BS)"
+msgstr "स्वीकृत मिति वि.स."
+
+#. module: service-approval
+#: model:ir.actions.act_window,name:service-approval.approved_only_requests_to_approve
+#: model:ir.ui.menu,name:service-approval.approved_request_to_approve_third
+msgid "Approved Requests"
+msgstr "स्वीकृत अनुरोध"
+
+#. module: service-approval
+#. odoo-python
+#: code:addons/service-approval/models/reqTopicLink.py:0
+#: code:addons/service-approval/reqTopicLink.py:0
+#, python-format
+msgid "Attach Documents"
+msgstr "संलग्न कागजात"
+
+#. module: service-approval
+#: model:ir.model.fields,field_description:service-approval.field_service_reqtopiclink__request_attachment_ids
+msgid "Attach File"
+msgstr "संलग्न फाइल"
+
+#. module: service-approval
+#: model_terms:ir.ui.view,arch_db:service-approval.create_new_requests_form
+msgid "Attachment"
+msgstr "संलग्न"
+
+#. module: service-approval
+#: model:ir.model.fields,field_description:service-approval.field_service_reqtopiclink__attachment_ids
+msgid "Attachments"
+msgstr "संलग्न"
+
+#. module: service-approval
+#: model_terms:ir.ui.view,arch_db:service-approval.requests_topics_kanban
+msgid "Avatar"
+msgstr "अवतार"
+
+#. module: service-approval
+#: model:ir.model.fields,field_description:service-approval.field_service_reqtopiclink__rquest_branch_id
+#: model:ir.model.fields,field_description:service-approval.field_service_requests__select_branch
+msgid "Branch"
+msgstr "शाखा"
+
+#. module: service-approval
+#: model:ir.model.fields,field_description:service-approval.field_service_branches__users_ids
+msgid "Branch Employees"
+msgstr "शाखा कर्मचारीहरू"
+
+#. module: service-approval
+#: model:ir.actions.act_window,name:service-approval.action_service_branches
+#: model:ir.ui.menu,name:service-approval.branch_submenu
+msgid "Branch Management"
+msgstr "शाखा व्यवस्थापन"
+
+#. module: service-approval
+#: model:ir.model.fields,field_description:service-approval.field_service_branches__branch_name
+msgid "Branch Name"
+msgstr "शाखाको नाम"
+
+#. module: service-approval
+#: model:ir.model.fields,field_description:service-approval.field_service_branches__contact_person
+msgid "Branch Representative"
+msgstr "शाखा प्रतिनिधि"
+
+#. module: service-approval
+#: model:ir.model.fields,field_description:service-approval.field_service_branches__status
+msgid "Branch Status"
+msgstr "शाखा स्थिति"
+
+#. module: service-approval
+#: model_terms:ir.ui.view,arch_db:service-approval.view_service_branches_tree
+msgid "Branch employees"
+msgstr "शाखा कर्मचारीहरु"
+
+#. module: service-approval
+#: model:ir.model.fields,field_description:service-approval.field_res_users__branch_ids
+msgid "Branches"
+msgstr "शाखाहरू"
+
+#. module: service-approval
+#: model:ir.ui.menu,name:service-approval.menu_service_branches_sub
+msgid "Branches Management"
+msgstr "शाखा व्यवस्थापन"
+
+#. module: service-approval
+#: model:ir.module.category,name:service-approval.module_category_cps
+msgid "CPS Groups"
+msgstr "CPS समूहहरू"
+
+#. module: service-approval
+#: model:ir.module.category,description:service-approval.module_category_cps
+msgid "CPS Groups access rights"
+msgstr "CPS समूह पहुँच अधिकार"
+
+#. module: service-approval
+#: model:ir.model.fields,field_description:service-approval.field_location_district__company_id
+#: model:ir.model.fields,field_description:service-approval.field_location_palika__company_id
+#: model:ir.model.fields,field_description:service-approval.field_location_province__company_id
+#: model:ir.model.fields,field_description:service-approval.field_location_tole__company_id
+#: model:ir.model.fields,field_description:service-approval.field_service_requests__company_id
+#: model:ir.model.fields,field_description:service-approval.field_service_topics__company_id
+#: model:ir.model.fields,field_description:service-approval.field_service_topictitle__company_id
+msgid "Company"
+msgstr "कम्पनी"
+
+#. module: service-approval
+#: model:ir.model,name:service-approval.model_res_config_settings
+msgid "Config Settings"
+msgstr "कन्फिग सेटिङहरू"
+
+#. module: service-approval
+#: model:ir.ui.menu,name:service-approval.configuration_submenu
+msgid "Configuration"
+msgstr "कन्फिगरेसन"
+
+#. module: service-approval
+#: model:ir.model.fields,field_description:service-approval.field_location_district__create_uid
+#: model:ir.model.fields,field_description:service-approval.field_location_palika__create_uid
+#: model:ir.model.fields,field_description:service-approval.field_location_province__create_uid
+#: model:ir.model.fields,field_description:service-approval.field_location_tole__create_uid
+#: model:ir.model.fields,field_description:service-approval.field_service_branches__create_uid
+#: model:ir.model.fields,field_description:service-approval.field_service_reqtopiclink__create_uid
+#: model:ir.model.fields,field_description:service-approval.field_service_requests__create_uid
+#: model:ir.model.fields,field_description:service-approval.field_service_topics__create_uid
+#: model:ir.model.fields,field_description:service-approval.field_service_topictitle__create_uid
+msgid "Created by"
+msgstr "थप गर्ने"
+
+#. module: service-approval
+#: model:ir.model.fields,field_description:service-approval.field_location_district__create_date
+#: model:ir.model.fields,field_description:service-approval.field_location_palika__create_date
+#: model:ir.model.fields,field_description:service-approval.field_location_province__create_date
+#: model:ir.model.fields,field_description:service-approval.field_location_tole__create_date
+#: model:ir.model.fields,field_description:service-approval.field_service_branches__create_date
+#: model:ir.model.fields,field_description:service-approval.field_service_reqtopiclink__create_date
+#: model:ir.model.fields,field_description:service-approval.field_service_requests__create_date
+#: model:ir.model.fields,field_description:service-approval.field_service_topics__create_date
+#: model:ir.model.fields,field_description:service-approval.field_service_topictitle__create_date
+msgid "Created on"
+msgstr "थप गरियो"
+
+#. module: service-approval
+#: model:ir.model.fields,field_description:service-approval.field_service_reqtopiclink__currency_id
+#: model_terms:ir.ui.view,arch_db:service-approval.view_request_summary_line_tree
+msgid "Currency"
+msgstr "मुद्रा"
+
+#. module: service-approval
+#: model:ir.model.fields,field_description:service-approval.field_service_requests__description
+#: model:ir.model.fields,field_description:service-approval.field_service_topics__description
+#: model:ir.model.fields,field_description:service-approval.field_service_topictitle__topic_description
+msgid "Description"
+msgstr "विवरण"
+
+#. module: service-approval
+#: model_terms:ir.ui.view,arch_db:service-approval.requests_topics_kanban
+msgid "Description:-"
+msgstr "विवरण:-"
+
+#. module: service-approval
+#: model:ir.model.fields,field_description:service-approval.field_location_district__display_name
+#: model:ir.model.fields,field_description:service-approval.field_location_palika__display_name
+#: model:ir.model.fields,field_description:service-approval.field_location_province__display_name
+#: model:ir.model.fields,field_description:service-approval.field_location_tole__display_name
+#: model:ir.model.fields,field_description:service-approval.field_service_branches__display_name
+#: model:ir.model.fields,field_description:service-approval.field_service_reqtopiclink__display_name
+#: model:ir.model.fields,field_description:service-approval.field_service_requests__display_name
+#: model:ir.model.fields,field_description:service-approval.field_service_topics__display_name
+#: model:ir.model.fields,field_description:service-approval.field_service_topictitle__display_name
+msgid "Display Name"
+msgstr "देखाउने नाम"
+
+#. module: service-approval
+#. odoo-python
+#: code:addons/service-approval/models/branches.py:0
+#: code:addons/service-approval/models/location_model.py:0
+#: model:ir.model.fields,field_description:service-approval.field_location_district__district_name
+#: model:ir.model.fields,field_description:service-approval.field_location_palika__district_name
+#: model:ir.model.fields,field_description:service-approval.field_service_branches__farm_district
+#, python-format
+msgid "District"
+msgstr "जिल्ला"
+
+#. module: service-approval
+#. odoo-python
+#: code:addons/service-approval/models/location_model.py:0
+#: model:ir.model.fields,field_description:service-approval.field_location_district__district_name_np
+#, python-format
+msgid "District(NEP)"
+msgstr "जिल्ला (नेपाली)"
+
+#. module: service-approval
+#: model_terms:ir.ui.view,arch_db:service-approval.view_request_summary_line_tree
+msgid "Documents"
+msgstr "कागजातहरू"
+
+#. module: service-approval
+#: model_terms:ir.ui.view,arch_db:service-approval.view_request_summary_line_tree
+msgid "Edit"
+msgstr "सम्पादन"
+
+#. module: service-approval
+#: model:ir.actions.act_window,name:service-approval.action_service_requests_re_submit
+msgid "Edit Requests to Resubmit"
+msgstr "पुन: पेश गर्नुहोस्"
+
+#. module: service-approval
+#: model:ir.actions.act_window,name:service-approval.action_service_requests_to_submit
+msgid "Edit Requests to submit"
+msgstr "सम्पादन गर्नुहोस्"
+
+#. module: service-approval
+#: model:ir.model.fields,field_description:service-approval.field_service_branches__email
+msgid "Email"
+msgstr "इमेल"
+
+#. module: service-approval
+#: model_terms:ir.ui.view,arch_db:service-approval.view_service_branches_form
+msgid "Employees"
+msgstr "कर्मचारीहरु"
+
+#. module: service-approval
+#: model:ir.model.fields,field_description:service-approval.field_service_topics__end_date_ad
+msgid "End Date"
+msgstr "अन्त्य मिति"
+
+#. module: service-approval
+#: model:ir.model.fields,field_description:service-approval.field_account_fiscal_year__end_date_bs
+#: model_terms:ir.ui.view,arch_db:service-approval.cus_fiscal_view_form
+#: model_terms:ir.ui.view,arch_db:service-approval.view_custom_fiscal_year_tree_inherit
+msgid "End Date BS"
+msgstr "अन्त्य मिति (वि.स.)"
+
+#. module: service-approval
+#: model:ir.model.fields,field_description:service-approval.field_service_topics__end_date_bs
+msgid "End Date(BS)"
+msgstr "अन्त्य मिति (वि.स.)"
+
+#. module: service-approval
+#: model_terms:ir.ui.view,arch_db:service-approval.res_config_settings_view_form
+msgid "Fiscal Np"
+msgstr "आर्थिक वर्ष"
+
+#. module: service-approval
+#: model:ir.actions.act_window,name:service-approval.action_fiscal_year_topics_tree
+#: model:ir.model,name:service-approval.model_account_fiscal_year
+#: model:ir.model.fields,field_description:service-approval.field_service_reqtopiclink__rquest_fiscal_year
+#: model:ir.model.fields,field_description:service-approval.field_service_requests__fiscal_year_id
+#: model:ir.model.fields,field_description:service-approval.field_service_topics__fiscal_year_id
+#: model:ir.ui.menu,name:service-approval.fiscal_submenu
+#: model:ir.ui.menu,name:service-approval.menu_fiscal_year_tree
+msgid "Fiscal Year"
+msgstr "आर्थिक वर्ष"
+
+#. module: service-approval
+#: model:ir.model.fields,field_description:service-approval.field_res_config_settings__fynpid
+msgid "Fynpid"
+msgstr "Fynpid"
+
+#. module: service-approval
+#: model_terms:ir.ui.view,arch_db:service-approval.view_request_summary_search_filter
+msgid "Group By"
+msgstr "समूह"
+
+#. module: service-approval
+#: model:ir.model.fields,field_description:service-approval.field_location_district__id
+#: model:ir.model.fields,field_description:service-approval.field_location_palika__id
+#: model:ir.model.fields,field_description:service-approval.field_location_province__id
+#: model:ir.model.fields,field_description:service-approval.field_location_tole__id
+#: model:ir.model.fields,field_description:service-approval.field_service_branches__id
+#: model:ir.model.fields,field_description:service-approval.field_service_reqtopiclink__id
+#: model:ir.model.fields,field_description:service-approval.field_service_requests__id
+#: model:ir.model.fields,field_description:service-approval.field_service_topics__id
+#: model:ir.model.fields,field_description:service-approval.field_service_topictitle__id
+msgid "ID"
+msgstr "आईडी"
+
+#. module: service-approval
+#: model:ir.model.fields,field_description:service-approval.field_service_requests__is_centraluser
+msgid "Is Centraluser"
+msgstr "केन्द्रीय प्रयोगकर्ता हो"
+
+#. module: service-approval
+#: model_terms:ir.ui.view,arch_db:service-approval.approved_requests_tree
+msgid "Journal"
+msgstr "साधारण"
+
+#. module: service-approval
+#: model:ir.model,name:service-approval.model_account_move
+msgid "Journal Entry"
+msgstr "साधारण प्रविष्टि"
+
+#. module: service-approval
+#: model:ir.model.fields,field_description:service-approval.field_service_requests__journal_created
+msgid "Journal Entry Created"
+msgstr "साधारण प्रविष्टि थपियो"
+
+#. module: service-approval
+#: model_terms:ir.ui.view,arch_db:service-approval.my_requests_kanban_view
+msgid "Kanban"
+msgstr "Kanban"
+
+#. module: service-approval
+#: model:ir.model.fields,field_description:service-approval.field_location_district____last_update
+#: model:ir.model.fields,field_description:service-approval.field_location_palika____last_update
+#: model:ir.model.fields,field_description:service-approval.field_location_province____last_update
+#: model:ir.model.fields,field_description:service-approval.field_location_tole____last_update
+#: model:ir.model.fields,field_description:service-approval.field_service_branches____last_update
+#: model:ir.model.fields,field_description:service-approval.field_service_reqtopiclink____last_update
+#: model:ir.model.fields,field_description:service-approval.field_service_requests____last_update
+#: model:ir.model.fields,field_description:service-approval.field_service_topics____last_update
+#: model:ir.model.fields,field_description:service-approval.field_service_topictitle____last_update
+msgid "Last Modified on"
+msgstr "पछिल्लो पटक परिमार्जित"
+
+#. module: service-approval
+#: model:ir.model.fields,field_description:service-approval.field_location_district__write_uid
+#: model:ir.model.fields,field_description:service-approval.field_location_palika__write_uid
+#: model:ir.model.fields,field_description:service-approval.field_location_province__write_uid
+#: model:ir.model.fields,field_description:service-approval.field_location_tole__write_uid
+#: model:ir.model.fields,field_description:service-approval.field_service_branches__write_uid
+#: model:ir.model.fields,field_description:service-approval.field_service_reqtopiclink__write_uid
+#: model:ir.model.fields,field_description:service-approval.field_service_requests__write_uid
+#: model:ir.model.fields,field_description:service-approval.field_service_topics__write_uid
+#: model:ir.model.fields,field_description:service-approval.field_service_topictitle__write_uid
+msgid "Last Updated by"
+msgstr "पछिल्लो अपडेट"
+
+#. module: service-approval
+#: model:ir.model.fields,field_description:service-approval.field_location_district__write_date
+#: model:ir.model.fields,field_description:service-approval.field_location_palika__write_date
+#: model:ir.model.fields,field_description:service-approval.field_location_province__write_date
+#: model:ir.model.fields,field_description:service-approval.field_location_tole__write_date
+#: model:ir.model.fields,field_description:service-approval.field_service_branches__write_date
+#: model:ir.model.fields,field_description:service-approval.field_service_reqtopiclink__write_date
+#: model:ir.model.fields,field_description:service-approval.field_service_requests__write_date
+#: model:ir.model.fields,field_description:service-approval.field_service_topics__write_date
+#: model:ir.model.fields,field_description:service-approval.field_service_topictitle__write_date
+msgid "Last Updated on"
+msgstr "पछिल्लो अपडेट"
+
+#. module: service-approval
+#: model:ir.model.fields,field_description:service-approval.field_service_branches__location
+#: model:ir.ui.menu,name:service-approval.location_submenu
+msgid "Location"
+msgstr "स्थान"
+
+#. module: service-approval
+#: model:ir.actions.act_window,name:service-approval.location_district
+msgid "Location District"
+msgstr "स्थान जिल्ला"
+
+#. module: service-approval
+#: model:ir.model,name:service-approval.model_location_district
+#: model:ir.ui.menu,name:service-approval.location_district_menu
+msgid "Location District Information"
+msgstr "स्थान जिल्ला जानकारी"
+
+#. module: service-approval
+#: model:ir.actions.act_window,name:service-approval.location_palika
+msgid "Location Palika"
+msgstr "स्थान पालिका"
+
+#. module: service-approval
+#: model:ir.model,name:service-approval.model_location_palika
+#: model:ir.ui.menu,name:service-approval.location_palika_menu
+msgid "Location Palika Information"
+msgstr "स्थान पालिका जानकारी"
+
+#. module: service-approval
+#: model:ir.actions.act_window,name:service-approval.location_tole
+msgid "Location Tole"
+msgstr "स्थान टोल"
+
+#. module: service-approval
+#: model:ir.model,name:service-approval.model_location_tole
+#: model:ir.ui.menu,name:service-approval.location_tole_menu
+msgid "Location Tole Information"
+msgstr "स्थान टोल जानकारी"
+
+#. module: service-approval
+#: model:ir.model.fields,field_description:service-approval.field_service_reqtopiclink__max_amount
+msgid "Max Amount"
+msgstr "अधिकतम रकम"
+
+#. module: service-approval
+#: model_terms:ir.ui.view,arch_db:service-approval.requests_topics_kanban
+msgid "Max-amount:-"
+msgstr "अधिकतम रकम:-"
+
+#. module: service-approval
+#: model:ir.model.fields,field_description:service-approval.field_service_topics__max_amount
+msgid "Maximum Amount"
+msgstr "अधिकतम रकम"
+
+#. module: service-approval
+#: model:ir.model.fields,field_description:service-approval.field_service_branches__mobile_no
+msgid "Mobile No"
+msgstr "मोबाइल नम्बर"
+
+#. module: service-approval
+#: model:ir.actions.act_window,name:service-approval.action_service_requests_kanban
+#: model:ir.ui.menu,name:service-approval.my_requests_kanban_third
+msgid "My Requests"
+msgstr "मेरा अनुरोधहरू"
+
+#. module: service-approval
+#: model:ir.model.fields,field_description:service-approval.field_service_topics__request_sub_topic
+#: model_terms:ir.ui.view,arch_db:service-approval.view_service_branches_form
+msgid "Name"
+msgstr "नाम"
+
+#. module: service-approval
+#: model:ir.actions.act_window,name:service-approval.action_create_new_requests
+#: model:ir.ui.menu,name:service-approval.create_new_requests_third_level
+msgid "New Request"
+msgstr "नयाँ अनुरोध"
+
+#. module: service-approval
+#. odoo-python
+#: code:addons/service-approval/models/branches.py:0
+#: code:addons/service-approval/models/location_model.py:0
+#: model:ir.model.fields,field_description:service-approval.field_location_palika__palika_name
+#: model:ir.model.fields,field_description:service-approval.field_location_tole__palika_name
+#: model:ir.model.fields,field_description:service-approval.field_service_branches__farm_palika
+#, python-format
+msgid "Palika"
+msgstr "पालिका"
+
+#. module: service-approval
+#. odoo-python
+#: code:addons/service-approval/models/location_model.py:0
+#: model:ir.model.fields,field_description:service-approval.field_location_palika__palika_name_np
+#, python-format
+msgid "Palika(NEP)"
+msgstr "पालिका (नेपा)"
+
+#. module: service-approval
+#: model:ir.model.fields,field_description:service-approval.field_service_branches__phone
+msgid "Phone No"
+msgstr "फोन नं"
+
+#. module: service-approval
+#: model:ir.model.fields,field_description:service-approval.field_service_branches__position
+msgid "Position"
+msgstr "स्थिति"
+
+#. module: service-approval
+#: model_terms:ir.ui.view,arch_db:service-approval.approved_requests_tree
+msgid "Print"
+msgstr "प्रिन्ट"
+
+#. module: service-approval
+#. odoo-python
+#: code:addons/service-approval/models/branches.py:0
+#: code:addons/service-approval/models/location_model.py:0
+#: model:ir.model.fields,field_description:service-approval.field_location_district__province_name
+#: model:ir.model.fields,field_description:service-approval.field_service_branches__farm_province
+#, python-format
+msgid "Province"
+msgstr "प्रदेश"
+
+#. module: service-approval
+#. odoo-python
+#: code:addons/service-approval/models/location_model.py:0
+#: model:ir.model,name:service-approval.model_location_province
+#: model:ir.model.fields,field_description:service-approval.field_location_province__name
+#, python-format
+msgid "Province Name"
+msgstr "प्रदेश नाम"
+
+#. module: service-approval
+#. odoo-python
+#: code:addons/service-approval/models/location_model.py:0
+#: model:ir.model.fields,field_description:service-approval.field_location_province__name_np
+#, python-format
+msgid "Province Name NEP"
+msgstr "प्रदेश नाम नेपालीमा"
+
+#. module: service-approval
+#: model:ir.ui.menu,name:service-approval.my_requests_to_resubmit
+msgid "ReSubmit"
+msgstr "पुन: पेश"
+
+#. module: service-approval
+#: model:ir.model.fields,field_description:service-approval.field_location_district__reference_code
+#: model:ir.model.fields,field_description:service-approval.field_location_palika__reference_code
+#: model:ir.model.fields,field_description:service-approval.field_location_province__reference_code
+#: model:ir.model.fields,field_description:service-approval.field_location_tole__reference_code
+msgid "Reference Code"
+msgstr "सन्दर्भ कोड"
+
+#. module: service-approval
+#: model:ir.model.fields,field_description:service-approval.field_location_district__reference_id
+#: model:ir.model.fields,field_description:service-approval.field_location_palika__reference_id
+#: model:ir.model.fields,field_description:service-approval.field_location_province__reference_id
+#: model:ir.model.fields,field_description:service-approval.field_location_tole__reference_id
+msgid "Reference ID"
+msgstr "सन्दर्भ आईडी"
+
+#. module: service-approval
+#: model_terms:ir.ui.view,arch_db:service-approval.create_new_requests_form
+msgid "Refuse"
+msgstr "अस्वीकार"
+
+#. module: service-approval
+#: model:ir.model.fields.selection,name:service-approval.selection__service_requests__request_state__refused
+#: model:ir.model.fields.selection,name:service-approval.selection__service_topics__request_state__refused
+msgid "Refused"
+msgstr "अस्वीकार"
+
+#. module: service-approval
+#: model:ir.model.fields,field_description:service-approval.field_service_requests__account_move_id
+msgid "Related Journal Entry"
+msgstr "सम्बन्धित साधारण प्रविष्टि"
+
+#. module: service-approval
+#: model:ir.model.fields,field_description:service-approval.field_account_bank_statement_line__request_id
+#: model:ir.model.fields,field_description:service-approval.field_account_move__request_id
+#: model:ir.model.fields,field_description:service-approval.field_account_payment__request_id
+msgid "Related Request"
+msgstr "सम्बन्धित अनुरोध"
+
+#. module: service-approval
+#: model:ir.model.fields,field_description:service-approval.field_service_reqtopiclink__remaining_amount
+#: model:ir.model.fields,field_description:service-approval.field_service_topics__remaining_amount
+msgid "Remaining Amount"
+msgstr "बाँकी रकम"
+
+#. module: service-approval
+#: model:ir.model.fields,field_description:service-approval.field_service_requests__remarks
+msgid "Remarks"
+msgstr "कैफियत"
+
+#. module: service-approval
+#: model_terms:ir.ui.view,arch_db:service-approval.view_service_branches_form
+msgid "Representative"
+msgstr "प्रतिनिधि"
+
+#. module: service-approval
+#: model:ir.model.fields,field_description:service-approval.field_service_reqtopiclink__rquest_request_date_bs
+msgid "Req Date(Bs)"
+msgstr "अनुरोध मिति (Bs)"
+
+#. module: service-approval
+#: model_terms:ir.ui.view,arch_db:service-approval.all_requests_to_approve_tree
+#: model_terms:ir.ui.view,arch_db:service-approval.approved_requests_tree
+#: model_terms:ir.ui.view,arch_db:service-approval.submitted_requests_tree
+msgid "Req No"
+msgstr "अनुरोध नं"
+
+#. module: service-approval
+#: model:ir.model.fields,field_description:service-approval.field_service_reqtopiclink__request_id
+#: model_terms:ir.ui.view,arch_db:service-approval.create_new_requests_form
+#: model_terms:ir.ui.view,arch_db:service-approval.view_request_summary_search_filter
+msgid "Request"
+msgstr "अनुरोध"
+
+#. module: service-approval
+#: model:ir.model.fields,field_description:service-approval.field_service_requests__requested_by
+msgid "Request By"
+msgstr "अनुरोध गर्ने"
+
+#. module: service-approval
+#: model:ir.model.fields,field_description:service-approval.field_service_requests__requestdate_ad
+msgid "Request Date"
+msgstr "अनुरोध मिति"
+
+#. module: service-approval
+#: model:ir.model.fields,field_description:service-approval.field_service_requests__requestdate_bs
+msgid "Request Date(BS)"
+msgstr "अनुरोध मिति (BS)"
+
+#. module: service-approval
+#: model_terms:ir.ui.view,arch_db:service-approval.view_request_summary_line_tree
+msgid "Request Items"
+msgstr "अनुरोध वस्तुहरू"
+
+#. module: service-approval
+#: model:ir.actions.act_window,name:service-approval.request_summary_action
+msgid "Request Summary"
+msgstr "अनुरोध सारांश"
+
+#. module: service-approval
+#: model:ir.model.fields,field_description:service-approval.field_service_requests__request_title
+msgid "Request Title"
+msgstr "शीर्षक अनुरोध"
+
+#. module: service-approval
+#: model:ir.model,name:service-approval.model_service_reqtopiclink
+msgid "Request Topic Link"
+msgstr "विषय लिङ्क अनुरोध"
+
+#. module: service-approval
+#: model:ir.model.fields,field_description:service-approval.field_service_requests__req_topic_links
+msgid "Request Topic Links"
+msgstr "विषय लिङ्कहरू अनुरोध"
+
+#. module: service-approval
+#: model:ir.ui.menu,name:service-approval.mainly_menu
+msgid "Request/Approve"
+msgstr "अनुरोध/अनुमोदन गर्नुहोस्"
+
+#. module: service-approval
+#: model:ir.model.fields,field_description:service-approval.field_service_reqtopiclink__rquest_requested_by
+#: model:ir.model.fields,field_description:service-approval.field_service_topics__requested_by
+msgid "Requested By"
+msgstr "अनुरोध गर्नुभएको"
+
+#. module: service-approval
+#: model:ir.ui.menu,name:service-approval.requests_sub_level
+msgid "Requests"
+msgstr "अनुरोधहरू"
+
+#. module: service-approval
+#: model:ir.ui.menu,name:service-approval.request_summary_menu
+msgid "Requests(summary)"
+msgstr "अनुरोध (सारांश)"
+
+#. module: service-approval
+#: model:ir.model.fields.selection,name:service-approval.selection__service_requests__request_state__resubmit
+#: model_terms:ir.ui.view,arch_db:service-approval.create_new_requests_form
+msgid "Resubmit"
+msgstr "पुन: पेश गर्नुहोस्"
+
+#. module: service-approval
+#: model_terms:ir.ui.view,arch_db:service-approval.create_new_requests_form
+msgid "Save"
+msgstr "सुरक्षित"
+
+#. module: service-approval
+#: model_terms:ir.ui.view,arch_db:service-approval.view_request_summary_search_filter
+msgid "Search Request Items"
+msgstr "विवरण खोज्नुहोस"
+
+#. module: service-approval
+#: model:ir.model.fields,field_description:service-approval.field_service_requests__secure_sequence_id
+#: model:ir.model.fields,field_description:service-approval.field_service_topics__secure_sequence_id
+#: model:ir.model.fields,field_description:service-approval.field_service_topictitle__secure_sequence_id
+msgid "Secure Sequence"
+msgstr "सुरक्षित अनुक्रम"
+
+#. module: service-approval
+#: model:ir.model.fields,help:service-approval.field_service_requests__secure_sequence_id
+#: model:ir.model.fields,help:service-approval.field_service_topics__secure_sequence_id
+#: model:ir.model.fields,help:service-approval.field_service_topictitle__secure_sequence_id
+msgid "Sequence to use to ensure the securisation of data"
+msgstr "डेटाको सुरक्षा सुनिश्चित गर्न प्रयोग गर्ने अनुक्रम"
+
+#. module: service-approval
+#: model:ir.model,name:service-approval.model_service_branches
+msgid "Service Branches"
+msgstr "सेवा शाखाहरू"
+
+#. module: service-approval
+#: model:ir.model,name:service-approval.model_service_requests
+msgid "Service Requests"
+msgstr "सेवा अनुरोधहरू"
+
+#. module: service-approval
+#: model:ir.model,name:service-approval.model_service_topictitle
+msgid "Service Topic Name"
+msgstr "सेवा शीर्षक नाम"
+
+#. module: service-approval
+#: model:ir.model,name:service-approval.model_service_topics
+msgid "Service Topics"
+msgstr "सेवा विषयहरू"
+
+#. module: service-approval
+#: model:ir.actions.act_window,name:service-approval.action_request_config
+#: model:ir.ui.menu,name:service-approval.menu_account_config
+msgid "Settings"
+msgstr "सेटिङहरू"
+
+#. module: service-approval
+#: model:ir.model.fields,field_description:service-approval.field_service_reqtopiclink__rquest_request_state
+#: model:ir.model.fields,field_description:service-approval.field_service_requests__request_state
+#: model:ir.model.fields,field_description:service-approval.field_service_topics__request_state
+msgid "Stage of Request"
+msgstr "अनुरोध को चरण"
+
+#. module: service-approval
+#: model:ir.model.fields,field_description:service-approval.field_service_topics__start_date_ad
+msgid "Start Date"
+msgstr "सुरू मिति"
+
+#. module: service-approval
+#: model:ir.model.fields,field_description:service-approval.field_account_fiscal_year__start_date_bs
+#: model_terms:ir.ui.view,arch_db:service-approval.cus_fiscal_view_form
+#: model_terms:ir.ui.view,arch_db:service-approval.view_custom_fiscal_year_tree_inherit
+msgid "Start Date BS"
+msgstr "सुरु मिति(वि.स)"
+
+#. module: service-approval
+#: model:ir.model.fields,field_description:service-approval.field_service_topics__start_date_bs
+msgid "Start Date(BS)"
+msgstr "सुरु मिति BS"
+
+#. module: service-approval
+#: model_terms:ir.ui.view,arch_db:service-approval.approved_requests_tree
+msgid "State"
+msgstr "राज्य"
+
+#. module: service-approval
+#: model_terms:ir.ui.view,arch_db:service-approval.view_service_branches_form
+msgid "Status"
+msgstr "स्थिति"
+
+#. module: service-approval
+#: model:ir.actions.act_window,name:service-approval.action_service_topics
+#: model:ir.ui.menu,name:service-approval.requests_topics_third
+#: model_terms:ir.ui.view,arch_db:service-approval.create_new_requests_form
+msgid "Sub-Topics"
+msgstr "उप-समुह"
+
+#. module: service-approval
+#: model_terms:ir.ui.view,arch_db:service-approval.create_new_requests_form
+msgid "Submit"
+msgstr "पेश"
+
+#. module: service-approval
+#: model:ir.model.fields.selection,name:service-approval.selection__service_requests__request_state__submitted
+#: model:ir.model.fields.selection,name:service-approval.selection__service_topics__request_state__submitted
+msgid "Submitted"
+msgstr "पेश गरियो"
+
+#. module: service-approval
+#: model:ir.actions.act_window,name:service-approval.submitted_only_requests_to_approve
+msgid "Submitted Requests"
+msgstr "पेश गरिएका अनुरोधहरू"
+
+#. module: service-approval
+#: model:ir.model.fields,field_description:service-approval.field_service_topictitle__topic_title
+#: model_terms:ir.ui.view,arch_db:service-approval.view_request_summary_line_tree
+msgid "Title"
+msgstr "शीर्षक"
+
+#. module: service-approval
+#: model:ir.ui.menu,name:service-approval.submitted_request_to_approve_third
+msgid "To Approve"
+msgstr "स्वीकृत गर्ने"
+
+#. module: service-approval
+#: model:ir.model.fields.selection,name:service-approval.selection__service_requests__request_state__tosubmit
+#: model:ir.model.fields.selection,name:service-approval.selection__service_topics__request_state__to_submit
+#: model:ir.ui.menu,name:service-approval.my_requests_to_submit
+msgid "To Submit"
+msgstr "पेश गर्ने"
+
+#. module: service-approval
+#. odoo-python
+#: code:addons/service-approval/models/branches.py:0
+#: code:addons/service-approval/models/location_model.py:0
+#: model:ir.model.fields,field_description:service-approval.field_location_tole__tole_name
+#: model:ir.model.fields,field_description:service-approval.field_service_branches__farm_tole
+#, python-format
+msgid "Tole"
+msgstr "टोल"
+
+#. module: service-approval
+#. odoo-python
+#: code:addons/service-approval/models/location_model.py:0
+#: model:ir.model.fields,field_description:service-approval.field_location_tole__tole_name_np
+#, python-format
+msgid "Tole(NEP)"
+msgstr "टोल नेपालीमा"
+
+#. module: service-approval
+#: model:ir.model.fields,field_description:service-approval.field_service_reqtopiclink__topic_id
+#: model_terms:ir.ui.view,arch_db:service-approval.view_request_summary_search_filter
+msgid "Topic"
+msgstr "विषय"
+
+#. module: service-approval
+#: model:ir.model.fields,field_description:service-approval.field_service_reqtopiclink__topic_root_id
+msgid "Topic Root"
+msgstr "विषय रूट"
+
+#. module: service-approval
+#: model:ir.model.fields,field_description:service-approval.field_service_topics__service_topic_id
+#: model_terms:ir.ui.view,arch_db:service-approval.requests_topics_form
+#: model_terms:ir.ui.view,arch_db:service-approval.requests_topics_tree
+msgid "Topic Title"
+msgstr "विषय शीर्षक"
+
+#. module: service-approval
+#: model_terms:ir.ui.view,arch_db:service-approval.requests_topics_form
+msgid "Topic image"
+msgstr "विषय ईमेज"
+
+#. module: service-approval
+#: model:ir.actions.act_window,name:service-approval.action_topictitle
+#: model:ir.ui.menu,name:service-approval.menu_service_topictitle
+#: model:ir.ui.menu,name:service-approval.topics_sub_level
+msgid "Topics"
+msgstr "विषय"
+
+#. module: service-approval
+#: model_terms:ir.ui.view,arch_db:service-approval.view_request_summary_line_tree
+msgid "Total Amount"
+msgstr "जम्मा रकम"
+
+#. module: service-approval
+#: model_terms:ir.ui.view,arch_db:service-approval.view_request_summary_line_tree
+msgid "Total Max Amount"
+msgstr "कुल अधिकतम रकम"
+
+#. module: service-approval
+#: model_terms:ir.ui.view,arch_db:service-approval.view_request_summary_line_tree
+msgid "Total Rem Amount"
+msgstr "कुल Rem रकम"
+
+#. module: service-approval
+#: model:ir.model.fields,field_description:service-approval.field_location_palika__type
+msgid "Type"
+msgstr "प्रकार"
+
+#. module: service-approval
+#: model:ir.model.fields,field_description:service-approval.field_location_palika__type_np
+msgid "Type NEP"
+msgstr "प्रकार नेपालीमा"
+
+#. module: service-approval
+#: model:ir.model.fields,field_description:service-approval.field_service_topics__file_uploads_topics
+msgid "Upload image file"
+msgstr "फायल अपलोड"
+
+#. module: service-approval
+#: model:ir.model,name:service-approval.model_res_users
+msgid "User"
+msgstr "प्रयोगकर्ता"
+
+#. module: service-approval
+#. odoo-python
+#: code:addons/service-approval/models/branches.py:0
+#: model:ir.model.fields,field_description:service-approval.field_service_branches__farm_ward_no
+#, python-format
+msgid "Ward No"
+msgstr "वडा नं"
+
+#. module: service-approval
+#. odoo-python
+#: code:addons/service-approval/models/location_model.py:0
+#: model:ir.model.fields,field_description:service-approval.field_location_tole__ward_number
+#, python-format
+msgid "Ward Number"
+msgstr "वडा नम्बर"
+
+#. module: service-approval
+#: model:res.groups,name:service-approval.group_branch_users
+msgid "branchUsers"
+msgstr "शाखा प्रयोगकर्ताहरू"
+
+#. module: service-approval
+#: model:res.groups,name:service-approval.group_central_users
+msgid "centralApprovers"
+msgstr "केन्द्रीय अनुमोदनकर्ताहरू"

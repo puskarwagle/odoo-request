@@ -1,0 +1,46 @@
+<odoo>
+	<data noupdate='1'>
+	<record id='location_province_1' model='location.province'>
+		<field name='name'>Sudur Paschim Province</field>
+		<field name='name_np'>सुदूर पश्चिम प्रदेश</field>
+		<field name='reference_id'>2007</field>
+		<field name='reference_code'>2007</field>
+	</record>
+	<record id='location_province_2' model='location.province'>
+		<field name='name'>Gandaki Province</field>
+		<field name='name_np'>गण्डकी प्रदेश</field>
+		<field name='reference_id'>2004</field>
+		<field name='reference_code'>2004</field>
+	</record>
+	<record id='location_province_3' model='location.province'>
+		<field name='name'>Bagmati Province</field>
+		<field name='name_np'>बागमती प्रदेश</field>
+		<field name='reference_id'>2003</field>
+		<field name='reference_code'>2003</field>
+	</record>
+	<record id='location_province_4' model='location.province'>
+		<field name='name'>Karnali Province</field>
+		<field name='name_np'>कर्णाली प्रदेश</field>
+		<field name='reference_id'>2006</field>
+		<field name='reference_code'>2006</field>
+	</record>
+	<record id='location_province_5' model='location.province'>
+		<field name='name'>Lumbini Province</field>
+		<field name='name_np'>लुम्बिनी प्रदेश</field>
+		<field name='reference_id'>2005</field>
+		<field name='reference_code'>2005</field>
+	</record>
+	<record id='location_province_6' model='location.province'>
+		<field name='name'>Madesh Province</field>
+		<field name='name_np'>मधेश प्रदेश</field>
+		<field name='reference_id'>2002</field>
+		<field name='reference_code'>2002</field>
+	</record>
+	<record id='location_province_7' model='location.province'>
+		<field name='name'>Koshi Province</field>
+		<field name='name_np'>कोशी प्रदेश</field>
+		<field name='reference_id'>2001</field>
+		<field name='reference_code'>2001</field>
+	</record>
+	</data>
+</odoo>

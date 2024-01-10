@@ -1,0 +1,35 @@
+<odoo>
+    <data>
+        <!-- Tree -->
+        <record id="my_requests_resubmit_tree_view" model="ir.ui.view">
+            <field name="name">All Requests (Tree)</field>
+            <field name="model">service.requests</field>
+            <field name="arch" type="xml">
+                <tree default_order="create_date asc">
+                    <field name="select_branch"/>
+                    <field name="description"/>
+                    <field name="remarks" string= "Comment"/>
+                    <field name="requested_by"/>
+                    <field name="request_state" string="State" widget="badge"  decoration-info="request_state == 'submitted'"
+                           decoration-warning="request_state in ('resubmit','refused')" decoration-success="request_state == 'approved'"/>
+                    <field name="newreq_attachments"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Action for the sublevel menu -->
+        <record id="action_service_requests_re_submit" model="ir.actions.act_window">
+            <field name="name">Edit Requests to Resubmit</field>
+            <field name="res_model">service.requests</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="my_requests_resubmit_tree_view"/>
+            <field name="domain">[('request_state', '=', 'resubmit')]</field>
+        </record>
+
+        <!-- 3nd menu under sub-level menu -->
+        <menuitem id="my_requests_to_resubmit" name="ReSubmit"
+                  parent="mainly_menu" sequence="3"
+                  action="action_service_requests_re_submit"
+        groups="service-approval.group_branch_users"/>
+    </data>
+</odoo>

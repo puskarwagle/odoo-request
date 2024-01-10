@@ -1,0 +1,15 @@
+.page{margin: 0 auto;width: 850px;}
+.center{text-align: center;}
+.left, .ml{float: left; clear: right;}
+.ml{margin-left: 2%;}
+.clear{clear: both;}
+.right{float: right;}
+
+p{text-wrap: nowrap;white-space: nowrap;}
+
+.flex{display:flex;}
+.flcl{flex-direction:column;}
+.justifycc{justify-content:space-between;}
+.alits{align-items:center;}
+.mb1{margin-bottom: 1rem;}
+.headTexts p {font-size:24px;}

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="service-approval.UserMenu" owl="1">
+        <t t-if="userallitem.active_fy_id">
+            <div class="o_MessagingMenu_toggler dropdown-toggle o-no-caret o-dropdown--narrow">
+                <t t-esc="'Fiscal Year: ' + userallitem.active_fy_id "/></div>
+         </t>
+         <t t-if="!this.userallitem.active_company_name_np">
+               <Dropdown class="'o_switch_company_menu d-none d-md-block'" position="'bottom-end'">
+                <t t-set-slot="toggler">
+                    <i class="fa fa-building d-lg-none"/>
+                    <span class="oe_topbar_name d-none d-lg-block" t-esc="currentCompany.name"/>
+                </t>
+                <t t-foreach="Object.values(companyService.availableCompanies).sort((c1, c2) => c1.sequence - c2.sequence)" t-as="company" t-key="company.id">
+                    <t t-call="web.SwitchCompanyItem">
+                        <t t-set="company" t-value="company" />
+                    </t>
+                </t>
+            </Dropdown>
+         </t>
+         <t t-else="this.userallitem.active_company_name_np">
+           <Dropdown class="'o_switch_company_menu d-none d-md-block'" position="'bottom-end'">
+            <t t-set-slot="toggler">
+                <i class="fa fa-building d-lg-none"/>
+                <span class="oe_topbar_name d-none d-lg-block" t-esc="currentCompany.active_company_name_np"/>
+            </t>
+            <t t-foreach="Object.values(companyService.availableCompanies).sort((c1, c2) => c1.sequence - c2.sequence)" t-as="company" t-key="company.id">
+                <t t-call="service-approval.SwitchCompanyItem">
+                    <t t-set="company" t-value="company" />
+                </t>
+            </t>
+        </Dropdown>
+         </t>
+
+         <Dropdown class="'o_user_menu d-none d-md-block pe-0'" togglerClass="'py-1 py-lg-0'">
+            <t t-set-slot="toggler">
+                <img class="rounded-circle o_user_avatar h-75 py-1" t-att-src="source" alt="User"/>
+                <span class="oe_topbar_name d-none d-lg-block ms-1">
+                   <t t-if="!this.userallitem.active_user_name_np">
+                       <t t-esc="user.name"/>
+                   </t>
+                    <t t-else="this.userallitem.active_user_name_np">
+                       <t t-esc="this.userallitem.active_user_name_np"/>
+                    </t>
+                    <t t-if="!this.userallitem.active_branch_name_np">
+                   </t>
+                    <t t-else="this.userallitem.active_branch_name_np">
+                       <t t-esc="' (' + userallitem.active_branch_name_np + ')'"/>
+                    </t>
+                   </span>
+            </t>
+            <t t-foreach="getElements()" t-as="element" t-key="element_index">
+                <t t-if="!element.hide">
+                    <DropdownItem
+                        t-if="element.type == 'item' || element.type == 'switch'"
+                        href="element.href"
+                        dataset="{ menu: element.id }"
+                        onSelected="element.callback"
+                    >
+                        <CheckBox
+                            t-if="element.type == 'switch'"
+                            value="element.isChecked"
+                            className="'form-switch d-flex flex-row-reverse justify-content-between p-0'"
+                            onChange="element.callback"
+                        >
+                            <t t-out="element.description"/>
+                        </CheckBox>
+                        <t t-else="" t-out="element.description"/>
+                    </DropdownItem>
+                    <div t-if="element.type == 'separator'" role="separator" class="dropdown-divider"/>
+                </t>
+            </t>
+        </Dropdown>
+
+    </t>
+    <t t-name="service-approval.SwitchCompanyItem" owl="1">
+        <DropdownItem class="'p-0 bg-white'">
+        <t t-set="isCompanySelected" t-value="selectedCompanies.includes(company.id)"/>
+        <t t-set="isCurrent" t-value="company.id === companyService.currentCompany.id"/>
+        <div class="d-flex" data-menu="company" t-att-data-company-id="company.id">
+            <div
+                role="menuitemcheckbox"
+                t-att-aria-checked="isCompanySelected ? 'true' : 'false'"
+                t-att-aria-label="company.name"
+                t-att-title="(isCompanySelected ? 'Hide ' : 'Show ') + company.name + ' content.'"
+                tabindex="0"
+                class="border-end toggle_company"
+                t-attf-class="{{isCurrent ? 'border-primary' : ''}}"
+                t-on-click.stop="() => this.toggleCompany(company.id)">
+
+                <span class="btn btn-light border-0 p-2">
+                    <i class="fa fa-fw py-2" t-att-class="isCompanySelected ? 'fa-check-square text-primary' : 'fa-square-o'"/>
+                </span>
+            </div>
+
+            <div
+                role="button"
+                t-att-aria-pressed="isCurrent ? 'true' : 'false'"
+                t-att-aria-label="'Switch to ' + company.name "
+                t-att-title="'Switch to ' + company.name "
+                tabindex="0"
+                class="d-flex flex-grow-1 align-items-center py-0 log_into ps-2"
+                t-att-class="isCurrent ? 'alert-primary ms-1 me-2' : 'btn btn-light fw-normal border-0'"
+                t-on-click="() => this.logIntoCompany(company.id)">
+
+                <span
+                    class='company_label pe-3'
+                    t-att-class="isCurrent ? 'text-900 fw-bold' : 'ms-1'">
+                    <t t-esc="company.name"/>
+                </span>
+            </div>
+        </div>
+    </DropdownItem>
+    </t>
+
+</templates>

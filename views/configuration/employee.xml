@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_hr_employee_kanban" model="ir.actions.act_window">
+        <field name="name">Employees</field>
+        <field name="res_model">hr.employee</field>
+        <field name="view_mode">kanban,form,tree</field>
+        <field name="view_id" ref="hr.hr_kanban_view_employees"/>
+    </record>
+
+    <menuitem id="employee_sub_menu" name="Employee" parent="configuration_submenu"/>
+    <menuitem id="menu_hr_employee_kanban" name="Employees" parent="employee_sub_menu" action="action_hr_employee_kanban"/>
+</odoo>

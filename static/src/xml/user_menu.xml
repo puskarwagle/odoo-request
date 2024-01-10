@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+   <t t-inherit="web.UserMenu" t-inherit-mode="extension" owl="1">
+        <xpath expr="//Dropdown" position="replace">
+
+        </xpath>
+    </t>
+       <t t-inherit="web.SwitchCompanyMenu" t-inherit-mode="extension" owl="1">
+        <xpath expr="//Dropdown" position="replace">
+
+        </xpath>
+    </t>
+     <t t-inherit="web.SwitchCompanyItem" t-inherit-mode="extension" owl="1">
+        <xpath expr="//DropdownItem" position="replace">
+
+        </xpath>
+    </t>
+</templates>

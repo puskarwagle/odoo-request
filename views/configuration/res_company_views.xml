@@ -1,0 +1,29 @@
+<odoo> 
+    <!-- inherite form view of res.company -->
+    <record id="view_request_res_company_domain_field" model="ir.ui.view">
+        <field name="name">Res Company Inherit to add domain field</field>
+        <field name="model">res.company</field>
+        <field name="inherit_id" ref="base.view_company_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="////div[@class='o_address_format']" position="after">
+                <field name="company_code"/>
+                <field name="fax_number"/>
+                <field name="pan_number"/>
+                 <separator name="full_address" string='Full Address'/>
+                    <field name="full_name_np"  options="{'no_create': True}"/>
+                    <field name="comp_province"  placeholder="Province.." options="{'no_create': True}" />
+                    <!-- <label string="District" for="district"/> -->
+                    <field name="comp_district"  placeholder="Disctrict.." domain="[('province_name', '=', comp_province)]" options="{'no_create': True}"/>
+
+
+                <!-- <label string="Palika" for="palika"/> -->
+                <field name="comp_palika"  placeholder="Palika.." domain="[('district_name', '=', comp_district)]" options="{'no_create': True}"/>
+                <!-- <label string="Ward Number" for="ward_no"/> -->
+                <field name="comp_ward_no"  placeholder="Ward.."/>
+                <!-- <label string="Tole" for="tole"/> -->
+                <field name="comp_tole"  placeholder="Street..." domain="[('palika_name', '=', comp_palika)]" options="{'no_create': True}"/>
+
+            </xpath>
+        </field>
+    </record>
+</odoo>

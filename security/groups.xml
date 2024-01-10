@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.module.category" id="module_category_cps">
+        <field name="name">CPS Groups</field>
+        <field name="description">CPS Groups access rights</field>
+    </record>
+
+    <record id="group_branch_users" model="res.groups">
+        <field name="name">branchUsers</field>
+        <field name="category_id" ref="module_category_cps"/>
+    </record>
+
+    <record id="group_central_users" model="res.groups">
+        <field name="name">centralApprovers</field>
+        <field name="category_id" ref="module_category_cps"/>
+    </record>
+
+</odoo>

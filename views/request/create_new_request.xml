@@ -1,0 +1,122 @@
+<odoo>
+    <data>
+        <!-- Tree view for the service.requests model TREE -->
+        <record id="create_new_requests_tree" model="ir.ui.view">
+            <field name="name">New Request</field>
+            <field name="model">service.requests</field>
+            <field name="arch" type="xml">
+                <tree default_order="create_date asc">
+                    <field name="create_uid"/>
+                    <field name="create_date"/>
+                    <field name="select_branch"/>
+                    <field name="requested_by"/>
+                    <field name="requestdate_bs"/>
+                    <field name="description"/>
+                   <field name="request_state" string="State" widget="badge"  decoration-info="request_state == 'submitted'"
+                           decoration-warning="request_state in ('resubmit','refused')" decoration-success="request_state == 'approved'"/>
+                    <field name="approved_by" readonly="1"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Form View -->
+        <record id="create_new_requests_form" model="ir.ui.view">
+            <field name="name">Edit Request</field>
+            <field name="model">service.requests</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button string="Submit" class="oe_highlight" type="object" name="set_submitted_new_requests"
+                                groups="service-approval.group_branch_users"/>
+                        <button string="Save" class="oe_highlight" type="object" name="set_to_submit_new_requests"
+                                groups="service-approval.group_branch_users"/>
+                        <button string="Approve" class="oe_highlight"
+                                attrs="{'invisible': [('request_state', 'in', ['approved', 'refused', 'resubmit'])]}" type="object"
+                                name="set_approved_new_requests" groups="service-approval.group_central_users"/>
+                        <button string="Refuse" class="oe_highlight"
+                                attrs="{'invisible': [('request_state', 'in', ['approved', 'refused', 'resubmit'])]}" type="object"
+                                name="set_refused_new_requests" groups="service-approval.group_central_users"/>
+                        <button string="Resubmit" class="oe_highlight"
+                                attrs="{'invisible': [('request_state', 'in', ['approved', 'refused', 'resubmit'])]}" type="object"
+                                name="set_resubmitted_new_requests" groups="service-approval.group_central_users"/>
+                        <field name="request_state" widget="statusbar" statusbar_visible="submitted,approved,refused,resubmit"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <field name="req_topic_links" string="Request"
+                            attrs="{'readonly': [('request_state', 'in', ['approved', 'refused', 'submitted'])]}"
+                            groups="service-approval.group_branch_users">
+                                <tree string="Sub-Topics" editable="top">
+                                    <field name="topic_id" options="{'no_create': True}"/>
+                                    <field name="amount" widget="float"/>
+                                    <field name="remaining_amount" readonly="1"/>
+                                    <field name="max_amount" readonly="1"/>
+                                    <field name="topic_account_id"/>
+                                    <field name="attachment_ids" widget="many2many_binary" string="Attachment"/>
+                                </tree>
+                            </field>
+                            <field name="req_topic_links" string="Request"
+                            attrs="{'readonly': [('request_state', 'in', ['approved', 'refused', 'submitted'])]}"
+                            groups="service-approval.group_central_users"
+                                   style="pointer-events:none;">
+                                <tree string="Sub-Topics" editable="top">
+                                    <field name="topic_id" options="{'no_create': True}"/>
+                                    <field name="amount" widget="float"/>
+                                    <field name="remaining_amount" readonly="1"/>
+                                    <field name="max_amount" readonly="1"/>
+                                    <field name="topic_account_id"/>
+                                    <field name="attachment_ids" widget="many2many_binary" string="Attachment"/>
+                                </tree>
+                            </field>
+                            <field name="request_title"
+                                   attrs="{'readonly': [('request_state', 'in', ['approved', 'refused', 'submitted'])]}"/>
+                            <field name="select_branch" readonly="1" style="pointer-events:none;"/>
+                            <field name="requestdate_ad" readonly="1"/>
+                            <field name="requestdate_bs" readonly="1"/>
+                            <field name="create_uid" invisible="1"/>
+                            <field name="create_date" invisible="1"/>
+                            <field name="request_state" invisible="1"/>
+                            <field name="is_centraluser" invisible="1"/>
+                        </group>
+                        <group>
+                            <field name="description" widget="text_area" attrs="{'readonly': ['|', ('is_centraluser', '=', True), ('request_state', 'in', ['approved', 'refused', 'submitted'])]}"/>
+                            <field name="requested_by" groups="service-approval.group_central_users"/>
+                            <field name="request_state" invisible="1"/>
+<!--                            <field name="newreq_attachments"-->
+<!--                                   widget="many2many_binary"/>-->
+                            <field name="approved_by" groups="service-approval.group_central_users"/>
+                            <field name="remarks" attrs="{'readonly': [('is_centraluser', '=', False)]}"/>
+                        </group>
+                    </sheet>
+<!--                    <div class="o_attachment_preview"/>-->
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="activity_ids"/>
+                        <field name="message_ids" options="{'post_refresh': 'always'}"/>
+                    </div>
+                </form>
+
+            </field>
+
+        </record>
+
+        <!-- Action for the sub-level menu -->
+        <record id="action_create_new_requests" model="ir.actions.act_window">
+            <field name="name">New Request</field>
+            <field name="res_model">service.requests</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="create_new_requests_form"/>
+        </record>
+
+        <!-- Sub-level menu under top-level menu -->
+<!--        <menuitem id="requests_sub_level"-->
+<!--                  name="Requests" parent="mainly_menu"-->
+<!--                  sequence="1" groups="service-approval.group_branch_users"/>-->
+
+        <!-- 3rd-level menu under sub-level menu -->
+        <menuitem id="create_new_requests_third_level" name="New Request"
+                  parent="mainly_menu" sequence="2"
+                  action="action_create_new_requests"
+                  groups="service-approval.group_branch_users"/>
+    </data>
+</odoo>

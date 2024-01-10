@@ -1,0 +1,140 @@
+<odoo>
+    <data>
+         <record id="view_location_province_form" model="ir.ui.view">
+            <field name="name">Location Province Form</field>
+            <field name="model">location.province</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="name_np"/>
+                            <field name="reference_id"/>
+                            <field name="reference_code"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!-- Configuration Location District Information Form View -->
+        <record id="view_location_district_form" model="ir.ui.view">
+            <field name="name">Location District Form</field>
+            <field name="model">location.district</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="province_name"/>
+                            <field name="district_name"/>
+                            <field name="district_name_np"/>
+                            <field name="reference_id"/>
+                            <field name="reference_code"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!-- Configuration Location Palika Information Form View -->
+        <record id="view_location_palika_form" model="ir.ui.view">
+            <field name="name">Location Palika Form</field>
+            <field name="model">location.palika</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="district_name"/>
+                            <field name="palika_name"/>
+                            <field name="palika_name_np"/>
+                            <field name="reference_id"/>
+                            <field name="reference_code"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>       
+        <!-- Configuration Location Tole Information Form View -->
+        <record id="view_location_tole_form" model="ir.ui.view">
+            <field name="name">Location Tole Form</field>
+            <field name="model">location.tole</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="palika_name"/>
+                            <field name="ward_number"/>
+                            <field name="tole_name"/>
+                            <field name="tole_name_np"/>
+                            <field name="reference_id"/>
+                            <field name="reference_code"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record> 
+        <!-- Configuration Location District Information Tree View -->
+        <record id="view_location_district_tree" model="ir.ui.view">
+            <field name="name">Location District Tree View</field>
+            <field name="model">location.district</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="province_name"/>
+                    <field name="district_name_np"/>
+                    <field name="district_name"/>
+                </tree>
+            </field>
+        </record>
+        <!-- Configuration Location Palika Information Tree View -->
+        <record id="view_location_palika_tree" model="ir.ui.view">
+            <field name="name">Location Palika Tree View</field>
+            <field name="model">location.palika</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="district_name"/>
+                    <field name="palika_name_np"/>
+                    <field name="palika_name"/>
+                    <field name="type"/>
+                </tree>
+            </field>
+        </record>
+        <!-- Configuration Location Tole Information Tree View -->
+        <record id="view_location_tole_tree" model="ir.ui.view">
+            <field name="name">Location Tole Tree View</field>
+            <field name="model">location.tole</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="palika_name"/>
+                    <field name="ward_number"/>
+                    <field name="tole_name_np"/>
+                    <field name="tole_name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="location_province" model="ir.actions.act_window">
+            <field name="name">Province</field>
+            <field name="res_model">location.province</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <!--Location District Information-->
+        <record id="location_district" model="ir.actions.act_window">
+            <field name="name">Location District</field>
+            <field name="res_model">location.district</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+        <!--Location Palika Information-->
+        <record id="location_palika" model="ir.actions.act_window">
+            <field name="name">Location Palika</field>
+            <field name="res_model">location.palika</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <!--Location Tole Information-->
+        <record id="location_tole" model="ir.actions.act_window">
+            <field name="name">Location Tole</field>
+            <field name="res_model">location.tole</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+    </data>
+</odoo>

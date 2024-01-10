@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <!-- Top-level menu -->
+        <menuitem id="mainly_menu" name="CPS Service"
+        web_icon="service-approval,static/description/icon.png"
+        sequence="1"/>
+        <!-- Sub-level menu under top-level menu -->
+            <menuitem id="topics_sub_level" name="Topics"
+            parent="mainly_menu" sequence="1"
+            groups="service-approval.group_central_users"/>
+
+                <menuitem id="menu_service_topictitle"
+                name="Topics"
+                parent="topics_sub_level"
+                sequence="1"
+                action="action_topictitle"/>
+
+                <menuitem id="requests_topics_third"
+                name="Sub-Topics"
+                parent="topics_sub_level"
+                sequence="2"
+                action="action_service_topics"/>
+
+            <menuitem id="configuration_submenu"
+            name="Configuration"
+            parent="mainly_menu"
+            groups="service-approval.group_central_users"
+            sequence="4"/>
+
+                <menuitem id="menu_request_config"
+                name="Settings"
+                action="action_request_config"
+                parent="configuration_submenu"
+                groups="base.group_system"/>
+
+                <menuitem id="menu_fiscal_year_tree"
+                name="Fiscal Year" parent="configuration_submenu"
+                sequence="1"
+                action="action_fiscal_year_topics_tree"/>
+
+                <menuitem id="branch_submenu"
+                name="Branch Management"
+                parent="configuration_submenu"
+                sequence="3"/>
+
+                    <!-- Sub-level menu under top-level menu -->
+                    <menuitem id="menu_service_branches_sub" name="Branches Management"
+                    parent="branch_submenu"
+                    action="action_service_branches"/>
+
+                <menuitem id="location_submenu"
+                name="Location"
+                parent="configuration_submenu" />
+
+                    <menuitem id="location_province_menu"
+                    name="Province"
+                    parent="location_submenu"
+                    action="location_province" />
+
+                    <menuitem id="location_district_menu"
+                    name="District"
+                    parent="location_submenu"
+                    action="location_district" />
+
+                    <menuitem id="location_palika_menu"
+                    name="Palika"
+                    parent="location_submenu"
+                    action="location_palika" />
+
+                    <menuitem id="location_tole_menu"
+                    name="Tole"
+                    parent="location_submenu"
+                    action="location_tole" />
+
+
+
+
+
+</odoo>

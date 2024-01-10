@@ -1,0 +1,66 @@
+<odoo>
+    <data>
+        <!-- Tree -->
+        <record id="my_requests_tree_view" model="ir.ui.view">
+            <field name="name">All Requests (Tree)</field>
+            <field name="model">service.requests</field>
+            <field name="arch" type="xml">
+                <tree default_order="create_date asc">
+                    <field name="req_topic_links"/>
+                    <field name="select_branch"/>
+                    <field name="description"/>
+                    <field name="remarks" string= "Comment"/>
+                    <field name="requested_by"/>
+                    <field name="request_state"/>
+                    <field name="newreq_attachments"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Kanban view for requests category -->
+        <record id="my_requests_kanban_view" model="ir.ui.view">
+            <field name="name">My Requests</field>
+            <field name="model">service.requests</field>
+            <field name="arch" type="xml">
+                <kanban create="false" default_group_by="request_state"
+                        records_draggable="false">
+                    <group expand="0" string="Kanban">
+                        <field name="request_state" widget="statusbar"/>
+                    </group>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_global_click d-flex">
+                                <div class="oe_kanban_content">
+                                    <div class="oe_kanban_global_right">
+                                        <strong>
+                                            <field name="requested_by"/>
+                                        </strong>
+                                        <ul>
+                                            <li><field name="req_topic_links"/></li>
+                                            <li><field name="request_title"/></li>
+                                            <li><field name="description"/></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <!-- Action for the sublevel menu -->
+        <record id="action_service_requests_kanban" model="ir.actions.act_window">
+            <field name="name">My Requests</field>
+            <field name="res_model">service.requests</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="view_id" ref="my_requests_kanban_view"/>
+        </record>
+
+        <!-- 3nd menu under sub-level menu -->
+        <menuitem id="my_requests_kanban_third"
+                  name="My Requests" parent="mainly_menu"
+                  sequence="1" action="action_service_requests_kanban"
+        groups="service-approval.group_branch_users"/>
+    </data>
+</odoo>

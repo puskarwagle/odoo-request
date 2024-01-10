@@ -1,0 +1,63 @@
+<odoo>
+    <data>
+        <!-- Tree view for the branches model -->
+        <record id="view_service_branches_tree" model="ir.ui.view">
+            <field name="name">Branches</field>
+            <field name="model">service.branches</field>
+            <field name="arch" type="xml">
+                <tree default_order="create_date asc">
+                    <field name="users_ids" widget="many2many_tags" string="Branch employees"
+                               options="{'no_create_edit': True}"
+                               domain="[('groups_id.name', '=', 'branchUsers')]"/>
+                    <field name="branch_name"/>
+
+                    <field name="location"/>
+                    <field name="phone"/>
+                    <field name="email"/>
+                    <field name="status"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_service_branches_form" model="ir.ui.view">
+            <field name="name">service.branches.form</field>
+            <field name="model">service.branches</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="branch_name" string="Name"/>
+                        <field name="branch_name_np"/>
+                        <field name="location"/>
+                        <field name="phone"/>
+                        <field name="email"/>
+                        <field name="contact_person" widget="many2many_tags" string="Representative"/>
+                        <field name="users_ids" widget="many2many_tags" string="Employees"
+                               options="{'no_create_edit': True}"
+                               domain="[('groups_id.name', '=', 'branchUsers')]"/>
+                        <field name="status" string="Status"/>
+                    </group>
+
+                    <separator name="adbl_branch_address" string="Address" colspan="2"/>
+                    <field name="farm_province" placeholder="Province.." options="{'no_create': True}"/>
+                    <field name="farm_district" placeholder="District.." domain="[('province_name', '=', farm_province)]"
+                           options="{'no_create': True}"/>
+                    <field name="farm_palika" placeholder="Palika.." domain="[('district_name', '=', farm_district)]"
+                           options="{'no_create': True}"/>
+                    <field name="farm_ward_no"/>
+                    <field name="farm_tole" placeholder="Tole.." domain="[('palika_name', '=', farm_palika)]" options="{'no_create': True}"/>
+
+                </form>
+            </field>
+        </record>
+
+
+        <!-- Action for the sublevel menu -->
+        <record id="action_service_branches" model="ir.actions.act_window">
+            <field name="name">Branch Management</field>
+            <field name="res_model">service.branches</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_service_branches_tree"/>
+        </record>
+
+    </data>
+</odoo>

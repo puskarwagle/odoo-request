@@ -1,0 +1,48 @@
+# Byte-compiled Python files
+__pycache__/
+*.pyc
+*.pyo
+
+# Odoo specific files and directories
+*.py[co]
+*.pyc
+*.pyo
+*.db
+*.log
+*.sqlite
+*.mo
+*.pot
+__pycache__/
+__manifest__.pyc
+__manifest__.pyo
+*.orig
+*.swp
+
+# Compiled files
+*.pyc
+*.pyo
+
+# Editor-specific files
+.vscode/
+.idea/
+
+# Backup files
+*~
+*.bak
+
+# Odoo build and temporary files
+/bin/
+/bdist/
+/build/
+/dist/
+/wkhtmltox/
+
+# Docker files
+Dockerfile
+docker-compose.yml
+.env
+
+# Configuration files
+*.conf
+*.ini
+*.env

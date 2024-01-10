@@ -1,0 +1,133 @@
+<odoo>
+    <data>
+        <!-- Tree view for Create new TOPICS -->
+        <record id="requests_topics_tree" model="ir.ui.view">
+            <field name="name">Service Topics</field>
+            <field name="model">service.topics</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <!--                    <field name="requested_by"/>-->
+<!--                    <field name="create_date"/>-->
+                    <field name="service_topic_id" string="Topic Title"/>
+                    <field name="request_sub_topic"/>
+                    <field name="account_id"/>
+                    <field name="max_amount"/>
+                    <field name="fiscal_year_id"/>
+                    <field name="description"/>
+                    <field name="start_date_bs"/>
+                    <field name="end_date_bs"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Form view for Create new TOPICS -->
+        <record id="requests_topics_form" model="ir.ui.view">
+            <field name="name">Service Topics Form</field>
+            <field name="model">service.topics</field>
+            <field name="arch" type="xml">
+                <form>
+                    <!--                    <header>-->
+                    <!--                        <button string="Submit"-->
+                    <!--                                class="oe_highlight"-->
+                    <!--                                type="object"-->
+                    <!--                                name="set_submitted_topics"-->
+                    <!--                                groups="service-approval.group_branch_users"-->
+                    <!--                                attrs="{'invisible': [('request_state', 'in', ['Approved', 'Refused'])]}"/>-->
+                    <!--                        <button string="Approve"-->
+                    <!--                                name="set_approved_topics"-->
+                    <!--                                type="object"-->
+                    <!--                                class="oe_highlight"-->
+                    <!--                                groups="service-approval.group_central_users"-->
+                    <!--                                attrs="{'invisible': [('request_state', 'in', ['Approved', 'Refused'])]}"/>-->
+                    <!--                        <button string="Refuse"-->
+                    <!--                                name="set_refused_topics"-->
+                    <!--                                type="object"-->
+                    <!--                                class="oe_highlight"-->
+                    <!--                                groups="service-approval.group_central_users"-->
+                    <!--                                attrs="{'invisible': [('request_state', 'in', ['Approved', 'Refused'])]}"/>-->
+                    <!--                        <field name="request_state" widget="statusbar"-->
+                    <!--                               statusbar_visible="submitted,Approved,Refused"/>-->
+                    <!--                    </header>-->
+                    <group>
+                        <group>
+                            <field name="service_topic_id" string="Topic Title" widget="many2one_tags" options="{'no_create': True}"/>
+                            <field name="max_amount" widget="float"/>
+                            <field name="start_date_bs" widget="nepali_datepicker"/>
+                            <field name="start_date_ad" widget="date"/>
+                            <field name="account_id"/>
+                        </group>
+                        <group>
+                            <field name="request_sub_topic"/>
+                            <field name="fiscal_year_id"/>
+                            <field name="end_date_bs" widget="nepali_datepicker"/>
+                            <field name="end_date_ad" widget="date"/>
+                        </group>
+                        <group>
+                            <field name="description" widget="text"/>
+                        </group>
+                        <field string="Topic image" name="file_uploads_topics" filename="file_name" widget="binary"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+
+        <!-- Kanban view for Create new TOPICS -->
+        <record id="requests_topics_kanban" model="ir.ui.view">
+            <field name="name">Service Topics</field>
+            <field name="model">service.topics</field>
+            <field name="arch" type="xml">
+                <kanban>
+                    <field name="id"/>
+                    <field name="service_topic_id"/>
+                    <field name="max_amount"/>
+                    <field name="file_uploads_topics"/>
+                    <field name="description"/>
+                    <field name="account_id"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_global_click d-flex">
+                                <div class="oe_kanban_details d-flex flex-column">
+                                    <strong>
+                                        <field name="service_topic_id"/>
+                                    </strong>
+                                    <ul>
+                                        <li>Max-amount:-
+                                            <field name="max_amount"/>
+                                        </li>
+                                        <li>Description:-
+                                            <field name="description"/>
+                                        </li>
+                                        <li>Account:-
+                                            <field name="account_id"/>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="o_kanban_image">
+                                    <img alt="Avatar"
+                                         t-att-src="kanban_image('service.topics', 'file_uploads_topics',record.id.raw_value)"/>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <!-- Action for the sub-level menu -->
+        <record id="action_service_topics" model="ir.actions.act_window">
+            <field name="name">Request Topics</field>
+            <field name="res_model">service.topics</field>
+            <field name="view_mode">tree,form,kanban</field>
+            <field name="view_id" ref="requests_topics_kanban"/>
+        </record>
+
+
+        <!-- 3rd-level menu under sub-level menu -->
+
+
+    </data>
+</odoo>
+
+
+

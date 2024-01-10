@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Tree View -->
+        <record id="view_topictitle_tree" model="ir.ui.view">
+            <field name="name">service.topictitle.tree</field>
+            <field name="model">service.topictitle</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="topic_title"/>
+                    <field name="topic_description"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Form View -->
+        <record id="view_topictitle_form" model="ir.ui.view">
+            <field name="name">service.topictitle.form</field>
+            <field name="model">service.topictitle</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="topic_title"/>
+                        <field name="topic_description"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <!-- Action -->
+        <record id="action_topictitle" model="ir.actions.act_window">
+            <field name="name">Topics</field>
+            <field name="res_model">service.topictitle</field>
+            <field name="view_mode">form,tree</field>
+            <field name="view_id" ref="view_topictitle_tree"/>
+        </record>
+    </data>
+</odoo>

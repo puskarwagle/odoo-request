@@ -1,0 +1,51 @@
+<odoo>
+    <data>
+
+        <!-- Tree -->
+        <record id="approved_requests_tree" model="ir.ui.view">
+            <field name="name">Approved Requests</field>
+            <field name="model">service.requests</field>
+            <field name="arch" type="xml">
+                <tree default_order="create_date asc">
+                    <field name="secure_sequence_id" string="Req No"/>
+                    <field name="select_branch"/>
+                    <field name="requested_by"/>
+                    <field name="requestdate_bs"/>
+                    <field name="request_state" string="State" widget="badge"  decoration-info="request_state == 'submitted'"
+                           decoration-warning="request_state in ('resubmit','refused')" decoration-success="request_state == 'approved'"/>
+                    <field name="approved_by"/>
+                    <field name="approved_date_bs"/>
+                    <field name="req_topic_links" widget="many2many_tags"/>
+                    <field name="description"/>
+                    <field name="journal_created"/>
+                    <button string="Journal" type="object" name="open_new_journal_entry_form"
+                            attrs="{'invisible': [('journal_created', '=', True)]}"/>
+                    <button string="Print" class="oe_highlight" type="object" name="print_report_data"
+                            groups="service-approval.group_central_users"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="service-approval.petty-cash-report" model="ir.actions.report">
+            <field name="name">Print Report</field>
+            <field name="model">service.requests</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">service-approval.petty-cash-report-template</field>
+            <field name="report_file">service-approval.petty-cash-report-template</field>
+        </record>
+
+        <!-- Action for the sublevel menu -->
+        <record id="approved_only_requests_to_approve" model="ir.actions.act_window">
+            <field name="name">Approved Requests</field>
+            <field name="res_model">service.requests</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="approved_requests_tree"/>
+            <field name="domain">[('request_state', '=', 'approved')]</field>
+        </record>
+
+        <!-- 3rd-level menu under sub-level menu -->
+        <menuitem id="approved_request_to_approve_third" name="Approved Requests" parent="approval_sub_level"
+                  sequence="4"
+                  action="approved_only_requests_to_approve"/>
+    </data>
+</odoo>

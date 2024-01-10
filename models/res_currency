@@ -1,0 +1,6 @@
+
+class Currency(models.Model):
+    _inherit = "res.currency"
+    _description = "Currency"
+    _rec_names_search = ['name', 'full_name']
+    _order = 'active desc, name'

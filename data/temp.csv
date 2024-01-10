@@ -1,0 +1,832 @@
+code	id	name	name_np	parent
+2481	3075	Basbariya Rural Municipality	बसबरिया गाउँपालिका	2026
+2482	3076	Kodena Rural Municipality	कोडैना गाउँपालिका	2026
+2483	3077	Parsa Rural Municipality	पर्सा गाउँपालिका	2026
+2374	2374	Manara Shisawa Municipaltiy	मनरा शिसवा नगरपालिका	2025
+2356	2356	Bardibas  Municipaltiy	बर्दिबास नगरपालिका	2025
+2375	2375	Matihani Municipaltiy	मटिहानी नगरपालिका	2025
+2104	2104	Maee Municipality	माई नगरपालिका	2010
+2112	2112	Mechinagar Municipality	मेचिनगर नगरपालिका	2019
+2113	2113	Kankai municipality	कन्काई नगरपालिका	2019
+2152	2152	Inaruwa Muncipality	ईनरूवा नगरपालिका	2021
+2155	2155	Ramdhuni Municipality	रामधुनी नगरपालिका	2021
+2506	2506	Barabise Municipality	बाह्रबिसे नगरपालिका	2034
+2507	2507	Melamchi Municipality	मेलम्ची नगरपालिका	2034
+3011	3011	Jaimini Municipality	जैमिनी नगरपालिका	2052
+2139	2139	Tulshipur SMC	तुल्सीपुर उप-महानगरपालिका	2063
+2145	2145	Ghorahi SMC	घोराही उप-महानगरपालिका	2063
+2170	2170	Nepalgunj SMC	नेपालगंज उप-महानगरपालिका	2064
+2675	2675	Dhangadi SMC	धनगढी उपमहानगरपालिका	2084
+2595	2595	Kathmandu Metropolian	काठमाण्डौ महानगरपालिका	2042
+2085	2085	Fungling Municipality	फुङलिङ नगरपालिका	2008
+2102	2102	Ilam  Municipaltiy	ईलाम नगरपालिका	2010
+2118	2118	Gauradaha Municipality	गौरादह नगरपालिका	2019
+2128	2128	Belbari Municipality	बेलबारी  नगरपालिका	2020
+2129	2129	Letang Municipality	लेटाङ नगरपालिका	2020
+2130	2130	Rangali Muncipality	रगेली नगरपालिका	2020
+2133	2133	Urlabari Municipaltiy	उर्लावारी नगरपालिका	2020
+2134	2134	Sundarharicha Muncipality	सुन्दरहरैचा नगरपालिका	2020
+2151	2151	Lamhi Municipality	लमही नगरपालिका	2063
+2164	2164	Pakhirbas  Municipaltiy	पाख्र्रीबास नगरपालिका	2013
+2172	2172	Kohalpur Municipality	कोहलपुर नगरपालिका	2064
+2444	2444	Jiri Municipality	जिरी नगरपालिका	2030
+2106	2106	Suryodaya Municipaltiy	सुर्योदय नगरपालिका	2010
+2218	2218	Shidhicharana Municipality	सिद्धिचरण नगरपालिका	2017
+2117	2117	Shivasataxi Municipality	शिबसताक्षी नगरपालिका	2019
+2120	2120	Birtamoda Municipality	बिर्तामोड नगरपालिका	2019
+2131	2131	Pathari Sanischare Municipality	पथरी शनीश्ररे नगरपालिका	2020
+2135	2135	Sunbarsi Municipality	सुनर्बषी नगरपालिका	2020
+2149	2149	Dharan Sub-Metropolitan City	धरान उप-महानगरपालिका	2021
+2328	2328	Janakpurdham Sub-Metropolitan City	जनकपुरधाम उपमहानगरपालिका	2024
+2317	2317	Butwal Sub-Metropolitan City	बुटवल उपमहानगरपालिका	2055
+2267	2267	Katari Municipality	कटारी नगरपालिका	2018
+2269	2269	Chaudadhigadi Municipality	चौदण्डीगढी नगरपालिका	2018
+2271	2271	Triyuga Municipality	त्रियुगा नगरपालिका	2018
+2272	2272	Belaka Municipality	वेलका नगरपालिका	2018
+2289	2289	Guleriya Municipality	गुलेरिया नगरपालिका	2065
+2292	2292	Barbardiya Municipality	बारबर्दिया नगरपालिका	2065
+2293	2293	MADHUBAN MUNICIPALITY	मधुवन नगरपालिका	2065
+2295	2295	RAJPUR MUNICIPALITY	राजापुर नगरपालिका	2065
+2298	2298	Thakurbaba Municipality	ठाकुरबाबा नगरपालिका	2065
+2301	2301	BANSGADHI MUNICIPALITY	बाँसगढी नगरपालिका	2065
+2314	2314	Pyuthan Municipality	प्यूठान नगरपालिका	2062
+2318	2318	Sorgadhawori Municipality	स्र्वगद्धारी नगरपालिका	2062
+2320	2320	Sukhipur Municipaltiy	सुखीपुर नगरपालिका	2023
+2323	2323	Devdaha Municipality	देवदह नगरपालिका	2055
+2327	2327	Lumbini Saskrit Municipality	लुम्बिनी सांस्कृतिक नगरपालिका	2055
+2330	2330	Sainamaina Municipality	सैनामैना नगरपालिका	2055
+2340	2340	ROLPA MUNICIPALITY	रोल्पा नगरपालिका	2061
+2365	2365	Siddharthanagar Municipality	सिद्धार्थनगर नगरपालिका	2055
+2366	2366	Tilottama Municipality	तिलोत्तमा नगरपालिका	2055
+2423	2423	MUSHIKOT MUNICIPALITY	मुसिकोट नगरपालिका	2059
+2424	2424	RESUNGA MUNICIPALITY	रेसुङ्गा नगरपालिका	2059
+2460	2460	Tansen Municipality	तानसेन नगरपालिका	2057
+2476	2476	Bardaghat Municipality	बर्दघाट नगरपालिका	2054
+2478	2478	Ramgram Municipality	रामग्राम नगरपालिका	2054
+2479	2479	Sunabol Municipality	सुनवल नगरपालिका	2054
+2495	2495	Buddhabhumi Municipality	बुद्धभुमी नगरपालिका	2056
+2496	2496	Shivaraj Municipality	शिवराज नगरपालिका	2056
+2497	2497	Maharajgunj Municipality	महाराजगंज नगरपालिका	2056
+2505	2505	Chautara Sangachowkgadi Municipality	चौतारा साँगाचोकगढी नगरपालिका	2034
+2509	2509	Amargadhi Municipality	अमरगढी नगरपालिका	2082
+2510	2510	Parshuram Municipaltiy	परशुराम नगरपालिका	2082
+2519	2519	Dashrathchand Muncipality	दशरथचन्द नगरपालिका	2081
+2520	2520	Patan Municipaltiy	पाटन नगरपालिका	2081
+2521	2521	Melauli Municipality	मेलौली नगरपालिका	2081
+2523	2523	Purchaudi Muncipality	पुर्चौडी नगरपालिका	2081
+2541	2541	Dhulikhel Municipality	धुलिखेल नगरपालिका	2033
+2542	2542	Banepa Municipaity	बनेपा नगरपालिका	2033
+2543	2543	Panuati Municipality	पनौती नगरपालिका	2033
+2544	2544	Pachakhal Municipality	पाँचखाल नगरपालिका	2033
+2058	2058	Arghakhanchi	अर्घाखाँची	2005
+2474	2474	Gaidakot Municipality	गैडाकोट नगरपालिका	2053
+2475	2475	Devchuli Municipality	देबचुली नगरपालिका	2053
+2477	2477	Madyabindu Municipality	मध्यविन्दु नगरपालिका	2053
+2409	2409	Krishnanagar Municipality	कृष्णनगर नगरपालिका	2056
+2413	2413	Banganga Municipality	बाणगंगा नगरपालिका	2056
+2494	2494	Kapilvastu Municipality	कपिलवस्तु नगरपालिका	2056
+2385	2385	Sandhikharka Municipality	सन्धीखर्क नगरपालिका	2058
+2388	2388	Sitaganga Municipality	शितगंगा नगरपालिका	2058
+2392	2392	Bhumikasthan Municipality	भुमीकास्थान नगरपालिका	2058
+2546	2546	Namabuddha  Municipality	नमोबुद्ध नगरपालिका	2033
+2571	2571	Mandandeupur Municipality	मण्डनदेउपुर नगरपालिका	2033
+2580	2580	Godhabari Municipality	गोदाबरी नगरपालिका	2041
+2581	2581	Mahalaxmi Municipality	महालक्ष्मी नगरपालिका	2041
+2584	2584	Badimalika Municipality	बडिमालीका नगरपालिका	2076
+2585	2585	Tribeni Municipality	त्रिवेणी नगरपालिका	2076
+2587	2587	Budignga Municipality	बुढीगंगा नगरपालिका	2076
+2588	2588	Chagunarayan Municipality	चाँगुनारायण नगरपालिका	2040
+2589	2589	Budhinanda Munucipality	बुढीनन्दा नगरपालिका	2076
+2592	2592	Madhyapur Thimi Municipality	मध्यपुर थिमी नगरपालिका	2040
+2597	2597	Kagesowari Manohara Municipality	कागेश्ररी मनोहरा नगरपालिका	2042
+2602	2602	Chadragiri Municipality	चन्द्रागिरी नगरपालिका	2042
+2603	2603	Tokha Municipality	टोखा नगरपालिका	2042
+2606	2606	Nagarjun Municipality	नागार्जुन नगरपालिका	2042
+2607	2607	JAYAPRITHVI MUNICIPALITY	जयपृथ्वी नगरपालिका	2077
+2625	2625	Budhanilakantha Municipality	बुढानिलकण्ठ नगरपालिका	2042
+2626	2626	BUNGAL MUNICIPALITY	बुंगल नगरपालिका	2077
+2627	2627	Sanrapur Municipality	शङरापुर नगरपालिका	2042
+2643	2643	Bidhur  Municipaltiy	बिदुर नगरपालिका	2036
+2645	2645	Mangalsen  Municipality	मंगलसेन नगरपालिका	2079
+2647	2647	Kamalbazar Municipality	कमलबजार नगरपालिका	2079
+2649	2649	Saphebazar Municipality	साँफेबजार नगरपालिका	2079
+2651	2651	Panchadebal Binayak Municipality	पंचदेवल विनायक नगरपालिका	2079
+2662	2662	Dipayal silgadi Municipality	दिपायल सिलगढी नगरपालिका	2078
+2664	2664	Shikhar Municipality	शिखर नगरपालिका	2078
+2677	2677	Tikapur   Municipality	टिकापुर नगरपालिका	2084
+2678	2678	Ghodaghodi Municipality	घोडाघोडी नगरपालिका	2084
+2681	2681	Lamkichuha Municipality	लम्किचुहा नगरपालिका	2084
+2683	2683	Bhajani Municipality	भजनी नगरपालिका	2084
+2685	2685	Godawari Municipality	गोदावरी नगरपालिका	2084
+2699	2699	Bhimdatta Municipality	भीमदत्त नगरपालिका	2083
+2701	2701	Punarbas Municipality	पुनर्वास नगरपालिका	2083
+2704	2704	Bedkot Municipality	बेदकोट नगरपालिका	2083
+2706	2706	Mahakali Municipality	माहाकाली नगरपालिका	2083
+2712	2712	Belauri Municipality	बेेलौरी नगरपालिका	2083
+2713	2713	Krishnapur Municipality	कृष्णपुर नगरपालिका	2083
+2719	2719	Mahakali Municipality	महाकाली नगरपालिका	2080
+2720	2720	Shailyashikhar Municipality	शैल्यशिखर नगरपालिका	2080
+2732	2732	Bharatpur  Metropolitian	भरतपुर महानगरपालिका	2038
+2735	2735	Kalika Municipality	कालिका नगरपालिका	2038
+2604	2604	Tarakeshowar Municipality	तारकेश्वर नगरपालिका	2042
+2547	2547	Churjahari  Municipality	चौरजहारी नगरपालिका	2066
+2568	2568	Aathabiskot Municipality	आठबिसकोट नगरपालिका	2066
+2644	2644	Belakotgadhi Municipality	बेलकोटगढी नगरपालिका	2036
+2674	2674	Dhunibeshi Municipality	धुनीर्बेशी नगरपालिका	2037
+2679	2679	Nilkandha Municipality	निलकण्ठ नगरपालिका	2037
+2736	2736	Khairahani Municipality	खैरहनी नगरपालिका	2038
+2590	2590	Bhaktapur Municipality	भक्तपुर नगरपालिका	2040
+2593	2593	Suryabinayak Municipality	सुर्यबिनायक नगरपालिका	2040
+2738	2738	Madhi  Municipaltiy	माडी नगरपालिका	2038
+2778	2778	Madhenepali Municipaltiy	मध्यनेपाल नगरपालिका	2044
+2784	2784	Berendranagar Municipality	वीरेन्द्रनगर नगरपालिका	2075
+2785	2785	Bheriganga Municipality	भेरीगंगा नगरपालिका	2075
+2788	2788	Gurbhakot Municipality	गुर्भाकोट नगरपालिका	2075
+2814	2814	Panshapuri Municipality	पश्रपुरी नगरपालिका	2075
+2817	2817	Lekbeshi Municipality	लेकबेशी नगरपालिका	2075
+2831	2831	Narayana Municipality	नारायण नगरपालिका	2074
+2832	2832	Dullu Municipality	दुल्लु नगरपालिका	2074
+2833	2833	Camunda bindrasaini Municipality	चामुण्डा विन्द्रासैनी नगरपालिका	2074
+2605	2605	Dakshinkali Municipality	दक्षिणकाली नगरपालिका	2042
+2834	2834	Aathabis Municipality	आठबिस नगरपालिका	2074
+2883	2883	Bheri Municipality	भेरी नगरपालिका	2073
+2884	2884	Chedagad Municipality	छेडागाड नगरपालिका	2073
+2895	2895	Thulibheri Municipality	ठुलीभेरी नगरपालिका	2068
+2896	2896	Tripurasundari Muncipality	त्रिपुरासुन्दरी नगरपालिका	2068
+2918	2918	Candannatha Municipality	चन्दननाथ नगरपालिका	2069
+2934	2934	Khadachakra Municipality	खाँडाचक्र नगरपालिका	2072
+2935	2935	Raskot Municipality	रास्कोट नगरपालिका	2072
+2936	2936	Tilagufa Municipality	तिलागुफा नगरपालिका	2072
+2983	2983	Kushma Municipality	कुश्मा नगरपालिका	2049
+2984	2984	Falebash Municipality	फलेवास नगरपालिका	2049
+2988	2988	Chayanatha rara Municipality	छायाँनाथ रारा नगरपालिका	2070
+3005	3005	Baglung Municipality	बागलुङ नगरपालिका	2052
+2579	2579	Lalitapur Metropolian	ललितपुर महानगरपालिका	2041
+2071	2071	Humla	हुम्ला	2006
+2059	2059	Gulmi	गुल्मी	2005
+2743	2743	Rapti Municipality	राप्ती नगरपालिका	2038
+2741	2741	Ratnanagar Municipality	रत्रनगर नगरपालिका	2038
+2751	2751	Palungatar  Municipality	पालुङटार नगरपालिका	2043
+2777	2777	Beshisahara Municipality	बेसीशहर नगरपालिका	2044
+2779	2779	Rainas Municipality	राईनास नगरपालिका	2044
+2780	2780	Sundarbazar Municipality	सुन्दरबजार नगरपालिका	2044
+2793	2793	Bhanu Municipality	भानु नगरपालिका	2045
+2856	2856	Galayanga Municipality	गल्याङ नगरपालिका	2050
+2874	2874	Chapakot Municipality	चापाकोट नगरपालिका	2050
+2877	2877	Putalibazzar Municipality	पुतलीबजार नगरपालिका	2050
+2881	2881	Virakot Municipality	भिरकोट नगरपालिका	2050
+2963	2963	Waling Municipality	बालिङ नगरपालिका	2050
+2072	2072	Kalikot	कालिकोट	2006
+2073	2073	Jajarkot	जाजरकोट	2006
+2074	2074	Dailekh	दैलेख	2006
+3021	3021	Carkheli  Rural Municipality	च	2071
+2008	2008	Taplejung	ताप्लेजुङ्ग	2001
+2009	2009	Panchthar	पाँचथर	2001
+2010	2010	Ilam	इलाम	2001
+2011	2011	Sankhuwasabha	संखुवासभा	2001
+2012	2012	Terhathum	तेह्रथुम	2001
+2013	2013	Dhankuta	धनकुटा	2001
+2014	2014	Bhojpur	भोजपुर	2001
+2015	2015	Khotang	खोटाङ	2001
+2016	2016	Solukhumbu	सोलुखुम्बु	2001
+2017	2017	Okhaldhunga	ओखलढुङ्गा	2001
+2018	2018	Udayapur	उदयपुर	2001
+2019	2019	Jhapa	झापा	2001
+2020	2020	Morang	मोरङ	2001
+2021	2021	Sunsari	सुनसरी	2001
+2022	2022	Saptari	सप्तरी	2002
+2023	2023	Siraha	सिराहा	2002
+2024	2024	Dhanusha	धनुषा	2002
+2025	2025	Mahottari	महोत्तरी	2002
+2026	2026	Sarlahi	सर्लाही	2002
+2027	2027	Rautahat	रौतहट	2002
+2028	2028	Bara	बारा	2002
+2029	2029	Parsa	पर्सा	2002
+2030	2030	Dolakha	दोलखा	2003
+2031	2031	Ramechhap	रामेछाप	2003
+2032	2032	Sindhuli	सिन्धुली	2003
+2033	2033	Kavrepalanchok	काभ्रेपलाञ्चोक	2003
+2034	2034	Sindhupalchok	सिन्धुपाल्चोक	2003
+2035	2035	Rasuwa	रसुवा	2003
+2036	2036	Nuwakot	नुवाकोट	2003
+2037	2037	Dhading	धादिङ	2003
+2038	2038	Chitwan	चितवन	2003
+2039	2039	Makawanpur	मकवानपुर	2003
+2040	2040	Bhaktapur	भक्तपुर	2003
+2041	2041	Lalitpur	ललितपुर	2003
+2043	2043	Gorkha	गोरखा	2004
+2044	2044	Lamjung	लमजुङ	2004
+2045	2045	Tanahun	तनहुँ	2004
+2046	2046	Kaski	कास्की	2004
+2047	2047	Manang	मनाङ	2004
+2048	2048	Mustang	मुस्ताङ	2004
+2049	2049	Parbat	पर्वत	2004
+2050	2050	Syangja	स्याङजा	2004
+2051	2051	Myagdi	म्याग्दी	2004
+2052	2052	Baglung	बाग्लुङ	2004
+2053	2053	Nawalparasi (Eastern Part from Bardaghat Susta)	नवलपरासी (बर्दघाट सुस्ता पूर्व)	2004
+2054	2054	Nawalparasi (Western Part from Bardaghat Susta)	नवलपरासी (बर्दघाट सुस्ता पश्चिम)	2005
+2055	2055	Rupandehi	रूपन्देही	2005
+2056	2056	Kapilvastu	कपिलबस्तु	2005
+2057	2057	Palpa	पाल्पा	2005
+2060	2060	Rukum (Eastern Part)	रूकुम (पूर्वी भाग)	2005
+2061	2061	Rolpa	रोल्पा	2005
+2062	2062	Pyuthan	प्यूठान	2005
+2063	2063	Dang	दाङ	2005
+2064	2064	Banke	बाँके	2005
+2065	2065	Bardiya	बर्दिया	2005
+2066	2066	Rukum (Western Part)	रूकुम (पश्चिम भाग)	2006
+2067	2067	Salyan	सल्यान	2006
+2068	2068	Dolpa	डोल्पा	2006
+2069	2069	Jumla	जुम्ला	2006
+2070	2070	Mugu	मुगु	2006
+2075	2075	Surkhet	सुर्खेत	2006
+2076	2076	Bajura	बाजुरा	2007
+2077	2077	Bajhang	बझाङ	2007
+2078	2078	Doti	डोटी	2007
+2079	2079	Achham	अछाम	2007
+2080	2080	Darchula	दार्चुला	2007
+2081	2081	Baitadi	बैतडी	2007
+2082	2082	Dadeldhura	डडेल्धुरा	2007
+2083	2083	Kanchanpur	कञ्चनपुर	2007
+2084	2084	Kailali	कैलाली	2007
+2087	2087	Sidingwa  Rural Municipaltiy	सिदिङवा गाउँपालिका	2008
+2088	2088	Phaktanglung Rural Municipaltiy	फक्ताङलुङ गाउँपालिका	2008
+2042	2042	Kathmandu	काठमाडौं	2003
+2089	2089	Mikwakhola Rural Municipaltiy	मिक्वाखोला गाउँपालिका	2008
+2090	2090	Meringden Rural Municipaltiy	मेिरङदेन गाउँपालिका	2008
+2094	2094	Shirijagha Rural Muncipality	सिरीजङा गाउँपालीका	2008
+2095	2095	Phalelung Rural Municipality	फालेलुङ गाउँपालिका	2009
+2096	2096	Hilihang Rural Municipality	हिलिहाङ गाउँपालिका	2009
+2098	2098	Kummayak Rural Municipality	कुम्मायक गाउँपालिका	2009
+2099	2099	Miklagung Rural Municipality	मिक्लाजुङ गाउँपालिका	2009
+2101	2101	Yangworak Rural Municipality	याङवरक गाउँपालिका	2009
+2105	2105	Phakpohkthum Rural Municipaltiy	फाकफोकथुम गाउँपालिका	2010
+2107	2107	Chulachuli Rural Municipaltiy	चुलाचुली गाउँपालिका	2010
+2108	2108	Maeejogmai  Rural Municipaltiy	माईजोगमाई गाउँपालिका	2010
+2109	2109	Mangsebung Rural Municipaltiy	माङसेवुङ गाउँपालिका	2010
+2110	2110	Rong Rural Municipaltiy	रोङ गाउँपालिका	2010
+2114	2114	Damka Muncipality	दमक नगरपालीका	2019
+2124	2124	Buddhashanti Rural Municipality	बुद्धशान्ती गाउँपालिका	2019
+2125	2125	Haldibari Rural Municipality	हल्दीवारी गाउँपालिका	2019
+2093	2093	Phidim Municipality	फिदिम नगरपालिका	2009
+2136	2136	Budhiganga  Rural Municipaltiy	बुढीगँगा गाउँपालिका	2020
+2137	2137	Dhanpalthan Rural Municipaity	धनपालथान गाउँपालिका	2020
+2140	2140	Jahada Rural Municipaltiy	जहदा गाउँपालिका	2020
+2092	2092	Pathivara Yankwarak Rural Municipaltiy	पाथीभरा याङवरक गाउँपालिका	2008
+2086	2086	Aathrai Tribeni Rural Municipaltiy	अठराई त्रिवेणी गाउँपालीका	2008
+2091	2091	Maiwakhola Rural Minicipality	मैवाखोला गाउँपालिका	2008
+2097	2097	Falgunanda Rural Minicipality	फाल्गुनन्द गाउँपालिका	2009
+2100	2100	Tumbewa Rural Minicipality	तुम्बेबा गाँउपालिका	2009
+2111	2111	Sandakpur Rural Minicipality	सन्दकपुर गाउँपालिका	2010
+2116	2116	Arjundhara Municipality	अजुर्नधारा नगरपालीका	2019
+2119	2119	Kamal Rural Municipality	कमल गाउँपालिका	2019
+2121	2121	Gauri Gunj Rural Municipality	गौरीगज गाउँपालिका	2019
+2122	2122	Baradashi Rural Municipality	बाह्रदशी गाउँपालिका	2019
+2123	2123	Jhapa Rural Municipality	झापा गाउँपालिका	2019
+2141	2141	kanepokhari Rural Municipaltiy	कानेपोखरी गाउँपालिका	2020
+2146	2146	Katahari Rural Municipaltiy	कटहरी गाउँपालीका	2020
+2147	2147	kerabari  Rural Municipaltiy	केराबारी गाउँपालिका	2020
+2148	2148	Miklagunj Rural Municipaltiy	मिक्लाजुङ गाउँपालिका	2020
+2154	2154	Banglachuli Rural Municipaltiy	बंगलाचुली गाउँपालिका	2063
+2157	2157	Dangisaran Rural Municipaltiy	दंगीशरण गाउँपालिका	2063
+2158	2158	Debanganja Rural Municipality	देवानगन्ज गाउँपालिका	2021
+2160	2160	Gadhawa Rural Municipaltiy	गढवा गाउँपालिका	2063
+2161	2161	Rajpur Rural Municipaltiy	राजपुर गाउँपालिका	2063
+2162	2162	Gadhi Rural Municipaltiy	गढी गाउँपालिका	2021
+2163	2163	Rapti Rural Municipaltiy	राप्ती गाउँपालिका	2063
+2165	2165	Barju Rural Municipaltiy	बर्जु गाउँपालिका	2021
+2166	2166	Shantinagar Rural Municipaltiy	शान्तिनगर गाउँपालिका	2063
+2167	2167	Babai Rural Municipaltiy	बबई गाउँपालिका	2063
+2169	2169	Dhankuta Municipality	धनकुटा नगरपालीका	2013
+2173	2173	Narainapur  Rural Municipality	नरैनापुर गाउँपालिका	2064
+2174	2174	Mahalaxmi Municipality	महालक्ष्मी नगरपालीका	2013
+2175	2175	Raptisonari  Rural Municipality	राप्तीसोनारी गाउँपालिका	2064
+2177	2177	Baijanath  Rural Municipality	बैजनाथ गाउँपालिका	2064
+2178	2178	Saguragadhi Rural Municipality	सागुँरीगढी गाउँपालिका	2013
+2179	2179	Laligurasa  Municipaltiy	लालीगुरास नगरपालीका	2012
+2180	2180	Khajura  Rural Municipality	खजुरा गाउँपालिका	2064
+2181	2181	Duduwa  Rural Municipality	डुडुवा गाउँपालिका	2064
+2182	2182	Aatharai Rural Municipaltiy	आठराई गाउँपालिका	2012
+2184	2184	Janaki  Rural Municipality	जानकी गाउँपालिका	2064
+2185	2185	Chathara Rural Municipaltiy	छथर गाउँपालिका	2012
+2132	2132	Ratuwamai Municipality	रतुवामाई नगरपालिका	2020
+2186	2186	Chhathar Jorpati Rural Municipality	छथर जोरपाटी गाउँपालिका	2013
+2187	2187	Fedapa Rural Municipaltiy	फेदाप गाउँपालिका	2012
+2188	2188	Chaubise Rural Municipality	चौबिसे गाउँपालिका	2013
+2190	2190	Chainpur Municipality	चैनपुर नगरपालीका	2011
+2192	2192	Dharma Devi Municipality	धर्म देवि नगरपालीका	2011
+2194	2194	Khadbariu  Municipaltiy	खादँबारी नगरपालीका	2011
+2195	2195	Madi  Municipaltiy	मादी नगरपालीका	2011
+2196	2196	Pachkhapan  Municipality	पाचँखपन नगरपालीका	2011
+2197	2197	Bhotekhola Rural Municipaltiy	भोटेखोला गाउँपालिका	2011
+2198	2198	Chichila Rural Municipaltiy	चिचिला गाउँपालिका	2011
+2200	2200	Makalu Rural Municipality	मकालु गाउँपालिका	2011
+2201	2201	Shabhapokhari Rural Municipality	सभापोखरी गाउँपालिका	2011
+2203	2203	Silichong Rural Municipality	सिलीचोङ गाउँपालिका	2011
+2204	2204	Arun Rural Municipaltiy	अरूण गाउँपालिका	2014
+2205	2205	Solidudhkunda Municipality	सोलुदुधकुण्ड नगरपालीका	2016
+2183	2183	Sahidbhumi Rural Municipality	सहिदभूमि गाउँपालिका	2013
+2202	2202	Ramprasad Darai Rural Municipality	रामप्रसादराई गाउँपालिका	2014
+2176	2176	Myanglung Municipality	म्याङलुङ नगरपालीका	2012
+2189	2189	Menchhayem Rural Municipality	मेन्छयायेम गाउँपालिका	2012
+2191	2191	Bhojpur Municipality	भोजपुर नगरपालीका	2014
+2159	2159	Koshi Rural Municipality	कोशी गाउँपालिका	2021
+2207	2207	Pauwadunma Rural Municipaltiy	पौबादुङमा गाउँपालिका	2014
+2210	2210	Nechsalyan Rural Municipality	नेचसल्यान गाउँपालिका	2016
+2213	2213	Mahakulung Rural Municipality	महाकुलुङ गाउँपालिका	2016
+2215	2215	Setang Rural Municipality	सेताङ गाउँपालिका	2016
+2217	2217	Halesitribachang Municipality	हलेसीतृवाचङ नगरपालीका	2015
+2222	2222	Chisakhugadhi Rural Municipaltiy	चिशंखुगढी गाउँपालिका	2017
+2225	2225	Jantedhunga Rural Municipality	जन्तेढुङगा गाउँपालिका	2015
+2226	2226	Khothang Rural Municipality	खोटेहाङ गाउँपालिका	2015
+2227	2227	Kopilasgadhi Rural Municipaltiy	कोपिलासगढी गाउँपालिका	2015
+2247	2247	Sakela Rural Municipaltiy	साकेला गाउँपालिका	2015
+2266	2266	Barahapokhari Rural Municipality	बराहपोखरी गाउँपालिका	2015
+2275	2275	Udayepurgadhi Rural Municipality	उदयपुरगढी गाउँपालिाका	2018
+2276	2276	Tapli Rural Municipality	ताप्ली गाउँपालिका	2018
+2279	2279	Raitamai Rural Municipality	रौतामाई गाउँपालिका	2018
+2290	2290	Shurugha Municipaltiy	सुरूङगा नगरपालीका	2022
+2291	2291	BADHAIYATAL RURAL MUNICIPALITY	बढैयाताल गाउँपालिका	2065
+2296	2296	Geruya Rural Municipality	गेरूवा गाउँपालिका	2065
+2297	2297	Lahan Municipality	लहान नगरपालीका	2023
+2300	2300	Dhangadimai Municipality	धनगढीमाई नगरपालीका	2023
+2303	2303	Siraha Municipality	सिरहा नगरपालीका	2023
+2304	2304	Golbazer Municipaltiy	गोलबजार नगरपालीका	2023
+2305	2305	Mahadewa Rural Municipaltiy	महादेवा गाउँपालिका	2022
+2307	2307	Mirchaya Municipality	मिर्चैया नगरपालीका	2023
+2209	2209	Thulung Dudhkoshi Rural Municipality	थुलुङ दुधकोशी गाउँपालिका	2016
+2223	2223	Aiselukharka Rural Municipality	ऐसेलुखर्क गाउँपालिका	2015
+2245	2245	Diprung Chuichumma Rural Municipality	दिप्रुङ चुइचुम्मा गाउँपालिका	2015
+2281	2281	Limchungbung Rural Municipality	लिम्चुङ्बुङ गाउँपालिका	2018
+2211	2211	Salpasilichho Rural Municipality	साल्पासिलिछो गाउँपालिका	2014
+2212	2212	Aamchok Rural Municipality	आमचोक गाउँपालिका	2014
+2221	2221	Diktel Rupakot  Majhugadhi Rural Municipaltiy	दिक्तेल रुपाकोट मझुवागढी नगरपालिका	2015
+2208	2208	Khumbu Pasanglamu Rural Minicipality	खुम्बु पासाङल्हामु गाउँपालिका	2016
+2214	2214	Likhu Pike Rural Municipaltiy	लिखु पिके गाउँपालिका	2016
+2219	2219	Khijudemba Rural Municipality	खिजीदेम्वा गाउँपालिका	2017
+2248	2248	Molung Rural Municipality	मोलुङ गाउँपालिका	2017
+2249	2249	Likhu Rural Municipality	लिखु गाउँपालिका	2017
+2265	2265	Sunkoshi Rural Municipality	सुनकोसी गाउँपालिका	2017
+2220	2220	Champadebi  Rural Municipality	चम्पादेवी गाउँपालिका	2017
+2274	2274	Kanchanrup  Municipality	कन्चनरूप नगरपालीका	2022
+2270	2270	Rajbiraj Municipality	राजबिराज नगरपालीका	2022
+2277	2277	Daknesrari Municipality	डाक्नेश्ररी नगरपालीका	2022
+2284	2284	Khadak Municipality	खडक नगरपालीका	2022
+2286	2286	Shambhunath Municipality	शम्भुनाथ नगरपालीका	2022
+2294	2294	Hanumannagar Kankaliny Municipality	हनुमाननगर कङकालिनी नगरपालिका	2022
+2299	2299	Krishnasabran Rural Municipality	कृष्णासबरन गाउँपालिका	2022
+2302	2302	Chhitramasta Rural Municipality	छित्रमस्ता गाउँपालिका	2022
+2308	2308	Tirahut Rural Municipality	तिरहुत गाउँपालिका	2022
+2309	2309	Kalyanpur Municipality	कल्याणपुर नगरपालीका	2023
+2310	2310	Bhagwanpur Rural Municipaltiy	भगवानपुर गाउँपालिका	2023
+2311	2311	TILATHI KOIDI RURAL MUNICIPALITY	तिलाठी कोईलाडी गाउँपालिका	2022
+2312	2312	Aurahi Rural Municipality	औरही गाउँपालिका	2023
+2313	2313	Rupani Rural Municipaltiy	रूपनी गाउँपालिका	2022
+2315	2315	Bishnupur Rural Municipality	विष्णुपुर गाउँपालिका	2023
+2319	2319	JHIMRUK RURAL MUNICIPALITY	भिमरूक गाउँपालिका	2062
+2321	2321	Bisnupur   Rural Municipaltiy	बिष्णुपुर गाउँपालिका	2022
+2324	2324	GAUMUKHI RURAL MUNICIPALITY	गौमुखी गाउँपालिका	2062
+2325	2325	Mandabi Rural Municipality	माण्डवी गाउँपालिका	2062
+2326	2326	Bariyarpatti Rural Municipality	वरियारपटी गाउँपालिका	2023
+2329	2329	Sarumarani  Rural Municipality	सरूमारानी गाउँपालिका	2062
+2331	2331	Laxmipur Patari Rural Municipality	लक्ष्मीपुर पतारी गाउँपालिका	2023
+2332	2332	MALLARANI RURAL MUNICIPALITY	मल्लारानी गाउँपालिका	2062
+2334	2334	NAUBAHINI RURAL MUNICIPALITY	नौबहिनी गाउँपालिका	2062
+2335	2335	Naraha Rural Municipality	नरहा गाउँपालिका	2023
+2338	2338	Yeraoti Rural Municipality	एेरावती गाउँपालिका	2062
+2353	2353	Jaleshwor Municipaltiy	जलेश्वर नगरपालीका	2025
+2342	2342	Tribeni  Rural Municipality	त्रिवेणी गाउँपालिका	2061
+2344	2344	Bideha  Municipaltiy	बिदेह नगरपालीका	2024
+2346	2346	Arnama Rural Municipality	अर्नमा गाउँपालिका	2023
+2347	2347	Madi  Rural Municipality	माडी गाउँपालिका	2061
+2348	2348	Mithila  Municipaltiy	मिथिला नगरपालीका	2024
+2349	2349	Nawaorajpur Rural Municipality	नवराजपुर गाउँपालिका	2023
+2350	2350	RUNTIGADHI RURAL MUNICIPALITY	रून्टीगढी गाउँपालिका	2061
+2352	2352	Lungri  Rural Municipality	लुङग्री गाउँपालिका	2061
+2358	2358	SUNACHHAHARI RURAL MUNICIPALITY	सुनछहरी गाउँपालिका	2061
+2361	2361	Jankanadine Rural Municipaltiy	जनकनन्दिनी गाउँपालिका	2024
+2362	2362	Thabang  Rural Municipality	थबाङ गाउँपालिका	2061
+2363	2363	Yekdara Rural Municipality	एकडारा गाउँपालिका	2025
+2359	2359	Gaushala Municipality	गौशाला नगरपालीका	2025
+2370	2370	Loharpatti Municipaltiy	लोहरपटी नगरपालिका	2025
+2369	2369	Samsi Rural Municipality	साम्सी गाउँपालिका	2025
+2372	2372	Mahottari Rural Municipality	महोत्तरी गाउँपालिका	2025
+2345	2345	Pariwartan  Rural Municipality	परिवर्तन गाउँपालिका	2061
+2355	2355	Gangadev Rural Municipality	गंगादेव गाउँपालिका	2061
+2336	2336	Ganeshman Charnath Municipality	गणेशमान चारनाथ नगरपालीका	2024
+2322	2322	Karjanha Municipality	कर्जन्हा नगरपालिका	2023
+2339	2339	Dhanusatham Municipality	धनुषाथाम नगरपालीका	2024
+2341	2341	Nagarain Municipality	नगराइन नगरपालीका	2024
+2354	2354	Sabaila Municipality	सबैला नगरपालीका	2024
+2357	2357	Kamala Municipality	कमला नगरपालिका	2024
+2364	2364	Bateswar Rural Municipality	बट्टेश्वर गाउँपालिका	2024
+2373	2373	Mukhiyapati  Mushaharmiya Rural Municipality	मुखियापटी मुसहरमिया गाउँपालिका	2024
+2371	2371	Ramgopalpur Municipality	रामगोपालपुर नगरपालिका	2025
+2387	2387	Laxminiya Rural Municipaltiy	लक्ष्मीनिया गाउँपालिका	2024
+2386	2386	Bhangaha Municipality	भँगाहा नगरपालिका	2025
+2389	2389	Balawa Municipality	बलवा नगरपालिका	2025
+2390	2390	Hansapur Rural Municipaltiy	हंसपुर गाउँपालिका	2024
+2391	2391	Pipara Rural Municipality	पिपरा गाउँपालिका	2025
+2439	2439	Bishnu Rural Municipality	विष्णु  गाउँपालिका	2026
+2397	2397	Ishworpur Municipality	इश्वरपुर नगरपालिका	2026
+2399	2399	Malangwa Municipality	मलंगवा नगरपालिका	2026
+2422	2422	Kabilasi Rural Municipaltiy	कविलासी गाउँपालिका	2026
+2406	2406	Haripur  Municipaltiy	हरीपुर नगरपालिका	2026
+2426	2426	Chakraghatta Rural Municipality	चक्रघटा गाउँपालिका	2026
+2427	2427	ESMA RURAL MUNICIPALITY	इस्मा गाउँपालिका	2059
+2428	2428	KALIGANDAGI RURAL MUNICIPALITY	कालीगण्डकी गाउँपालिका	2059
+2429	2429	ChandraNagar Rural Municipality	चन्द्रनगर गाउँपालिका	2026
+2430	2430	Dhankoul Rural Municipality	धनकौल गाउँपालिका	2026
+2431	2431	Fikkal Rural Municipaltiy	फिक्कल गाउँपालिका	2032
+2432	2432	GULMIDARBAR RURAL MUNICIPALITY	गुल्मीदरबार गाउँपालिका	2059
+2434	2434	Brahapuri Rural Municipaltiy	ब्रहापुरी गाउँपालिका	2026
+2435	2435	SATYAWATI RURAL MUNICIPALITY	सत्यवती गाउँपालिका	2059
+2437	2437	Ramnagar Rural Municipaltiy	रामनगर  गाउँपालिका	2026
+2438	2438	CHANDRAKOT RURAL MUNICIPALITY	चन्द्रकोट गाउँपालिका	2059
+2367	2367	Sonma Rural Municipaltiy	सोनमा गाउँपालिका	2025
+2441	2441	Manthali Municipality	मन्थली नगरपालीका	2031
+2443	2443	Ramechhap Municipality	रामेछाप नगरपालीका	2031
+2395	2395	Aaurahi Municipality	औरही नगरपालिका	2025
+2445	2445	CHHATRAKOT RURAL MUNICIPALITY	छत्रकोट गाउँपालिका	2059
+2446	2446	Umakunda Rural Municipality	उमाकुण्ड गाउँपालिका	2031
+2410	2410	Hariwan Municipality	हरिवन नगरपालिका	2026
+2411	2411	Barahthawa Municipality	बरहथवा नगरपालिका	2026
+2415	2415	Balara  Municipaltiy	बलरा नगरपालिका	2026
+2417	2417	Godaita  Municipaltiy	गोडैटा नगरपालिका	2026
+2418	2418	Bagmati Municipality	बागमती नगरपालिका	2026
+2408	2408	Haripurba Municipality	हरिपुर्वा नगरपालिका	2026
+2404	2404	Lalbandi  Municipaltiy	लालबन्दी नगरपालिका	2026
+2448	2448	DHURKOT RURAL MUNICIPALITY	धुर्कोट गाउँपालिका	2059
+2442	2442	Rurukshetra RURAL MUNICIPALITY	रुरुक्षेत्र गाउँपालिका	2059
+2405	2405	Dudhauli Municipality	दुधौली नगरपालीका	2032
+2412	2412	Golanjor Rural Municipality	गोलन्जोर गाउँपालिका	2032
+2421	2421	Ghyanlekh Rural Municipality	घ्याङलेख गाउँपालिका	2032
+2425	2425	Tinpatan Rural Municipality	तिनपाटन गाउँपालिका	2032
+2433	2433	Marin Rural Municipality	मरिण गाउँपालिका	2032
+2440	2440	Hariharpurgadhi Rural Municipality	हरिहरपुरगढी गाउँपालिका	2032
+2414	2414	Mayadevi Rural Municipality	मायादेवी गाउँपालिका	2056
+2394	2394	Chhatradev Rural Municipality	छत्रदेव गाउँपालिका	2058
+2396	2396	Panini Rural Municipality	पाणिनी गाउँपालिका	2058
+2398	2398	Malarani Rural Municipality	मालारानी गाउँपालिका	2058
+2449	2449	Khadadevi Rural Municipality	खाडादेवि  गाउँपालिका	2031
+2451	2451	MADANE RURAL MUNICIPALITY	मदाने गाउँपालिका	2059
+2452	2452	MAALIKA RURAL MUNICIPALITY	मालिका गाउँपालिका	2059
+2493	2493	Suddhodhan Rural Municipality	शुद्धोधन गाउँपालिका	2055
+2456	2456	Doramba Rural Municipaltiy	दोरम्बा गाउँपालिका	2031
+2461	2461	Nisdi Rural Municipality	निस्दी गाउँपालिका	2057
+2462	2462	Purbakhola Rural Municipality	पुर्वखोला गाउँपालिका	2057
+2463	2463	Rambha Rural Municipality	रम्भा गाउँपालिका	2057
+2464	2464	Gaidhawa Rural Municipality	गैडहवा गाउँपालिका	2055
+2465	2465	Mathagadhi Rural Municipality	माथागढी गाउँपालिका	2057
+2466	2466	Tinau Rural Municipality	तिनाउ गाउँपालिका	2057
+2467	2467	Bagnaskali Rural Municipality	बगनासकाली गाउँपालिका	2057
+2469	2469	Ribdikot Rural Municipality	रिब्दीकोट गाउँपालिका	2057
+2471	2471	Raina Rural Municipality	रैनादेवी गाउँपालिका	2057
+2485	2485	Kanchan Rural Municipality	कन्चन गाउँपालिका	2055
+2486	2486	Kotahimai Rural Muncipal	कोटहीमाई गाउँपालिका	2055
+2487	2487	Marchawari Rural Municipality	मर्चवारी गाउँपालिका	2055
+2488	2488	Mayadevi Rural Municipality	मायादेवी गाउँपालिका	2055
+2489	2489	Omsatiya Rural Municipality	ओमसतिया गाउँपालिका	2055
+2490	2490	Rohini Rural Municipality	रोहिणी गाउँपालिका	2055
+2491	2491	Sammarimari Rural Municipality	सम्मरीमाई गाउँपालिका	2055
+2492	2492	Siyari Rural Municipality	सियारी गाउँपालिका	2055
+2508	2508	Indrabati  Rural Municipality	ईन्द्राबती गाँउपालिका	2034
+2511	2511	Aalital Rural Municipaltiy	आलिताल गाउँपालिका	2082
+2512	2512	Bhageswar Rural Municipality	भागेश्वर गाउँपालिका	2082
+2513	2513	Nawadurga Rural Municipality	नवदुर्गा गाउँपालिका	2082
+2514	2514	Jugal Rural Minicipality	जुगल गाँउपालिका	2034
+2515	2515	Ajayameru Rural Municipality	अजयमेरू गाउँपालिका	2082
+2516	2516	Pachapokhari Thanpal Rural Minicipality	पाँचपोखरी थाङपाल गाउँपालिका	2034
+2517	2517	Ganyapdhura Rural Municipality	गन्यापधुरा गाउँपालिका	2082
+2518	2518	Balefi Rural Municipality	बलेफी गाउँपालिका	2034
+2522	2522	Bhotekoshi Rural Municipality	भाटेकोशी गाउँपालिका	2034
+2524	2524	Sunarya Rural Municipality	सुर्नया गाउँपालिका	2081
+2525	2525	Sigas Rural Municipality	सिगास गाउँपालिका	2081
+2526	2526	Shivanath Rural Municipality	शिवनाथ गाउँपालिका	2081
+2527	2527	Lisakhu pakhar Rural Municipality	लिसंखु पाखर गाउँपालिका	2034
+2528	2528	Pancheshwor Rural Municipality	पन्चेश्वर गाउँपालिका	2081
+2529	2529	Dogadakedar Rural Municipality	दोगडाकेदार गाउँपालिका	2081
+2530	2530	Dilasaini Rural Municipality	डिलासैनी गाउँपालिका	2081
+2531	2531	Sunkoshi Rural Municipality	सुनकोशी गाउँपालिका	2034
+2533	2533	Helambu Rular Municipality	हेलम्बु गाउँपालिका	2034
+2450	2450	Kalinchowok Rural Municipaltiy	कालिन्चोक गाउँपालिका	2030
+2453	2453	Gokul Ganga Rural Municipality	गोकुलगङगा  गाउँपालिका	2031
+2459	2459	Sunpati Rural Municipality	सुनापती गाउँपालिका	2031
+2458	2458	Likhu Tamakoshi Rural Municipality	लिखु तामाकोशी गाउँपालिका	2031
+2536	2536	Tirpurasundari Rural Municipality	त्रिपुरासुन्दरी गाउँपालिका	2034
+2548	2548	Khanikhola Rural Municipality	खानीखोला गाउँपालिका	2033
+2565	2565	Chaurideaurali Rural Municipality	चौरीदेउराली गाउँपालिका	2033
+2567	2567	Bethanchowok Rural Municipality	बेथानचोक गाउँपालिका	2033
+2569	2569	Bhumlu Rural Municipality	भुम्लु गाउँपालिका	2033
+2570	2570	Putha utarganga Rural Municipality	पुथा उत्तरगंगा गाउँपालिका	2060
+2572	2572	Bhume  Rural Municipality	भुमे गाउँपालिका	2060
+2582	2582	Konjyoshoma Rural Municipality	कोन्ज्योसोम गाउँपालिका	2041
+2583	2583	Bagmati Rural Municipality	बाग्मती गाउँपालिका	2041
+2586	2586	Mahanala Rural Municipality	महाङाल गाउँपालिका	2041
+2591	2591	Gaumul Rural Municipality	गौमुल गाउँपालिका	2076
+2599	2599	HIMALI RURAL MUNICIPALITY	हिमाली गाउँपालिका	2076
+2628	2628	TALKOT RURAL MUNICIPALITY	तलकोट गाउँपालिका	2077
+2629	2629	MASTA RURAL MUNICIPALITY	मष्टा गाउँपालिका	2077
+2631	2631	KHAPTADCHHATRA Rural Municipaltiy	खप्तडछात्रा गाउँपालिका	2077
+2633	2633	Thalara Rural Municipality	थलारा गाँउपालिका	2077
+2634	2634	Bitthadachir Rural Municipality	वित्थडचिर गाउँपालिका	2077
+2636	2636	Surma Rural Municipality	सूर्मा गाउँपालिका	2077
+2637	2637	Chabispathivera Rural Municipality	छबिसपाथीभेरा गाउँपालिका	2077
+2639	2639	Durgathali Rural Municipality	दुर्गाथली गाउँपालिका	2077
+2641	2641	Kedarsyun Rural Municipality	केदारस्युँ गाउँपालिका	2077
+2652	2652	Churpati Rural Municipality	चौरपाटी गाउँपालिका	2079
+2654	2654	Mellekha Rural Municipality	मेल्लेख गाउँपालिका	2079
+2655	2655	Batrigadi Jaygadi Rural Municipality	बात्रीगढी जयगढ गाउँपालिका	2079
+2537	2537	Bulintar Rural Municipaltiy	बुलीङटार गाउँपालिका	2053
+2540	2540	Hupsekot Rural Municipality	हुप्सेकोट गाउँपालिका	2053
+2539	2539	Sarabal Rural Municipaltiy	सरावल गाउँपालिका	2054
+2573	2573	Sisne  Rural Municipality	सिस्ने गाउँपालिका	2060
+2576	2576	Tribeni  Rural Municipality	त्रिवेणी गाउँपालिका	2066
+2575	2575	Mahavarat Rural Municipality	महाभारत गाउँपालिका	2033
+2577	2577	Roshi Rural Municipality	रोशी गाउँँपालिका	2033
+2656	2656	Dupcheshowar Rural Municipality	दुप्चेश्रर गाउँपालिका	2036
+2574	2574	Baphikot  Rural Municipality	बाँफिकोट गाउँपालिका	2066
+2578	2578	Sanibheri  Rural Municipality	सानीभेरी गाउँपालिका	2066
+2630	2630	Aautirgaya Rural Municipality	उतरगया गाउँपालिका	2035
+2827	2827	Chingad  Rural Municipality	चिङ्गाड गाउँपालिका	2075
+2594	2594	Jagannath RURAL MUNICIPALITY	जगन्‍नाथ गाउँपालिका	2076
+2596	2596	SWAMIKARTIK khapar RURAL MUNICIPALITY	स्वामीकार्तिक खापर गाउँपालिका	2076
+2598	2598	Khaptad Chhededaha MUNICIPALITY	खप्तड छेडेदह गाउँपालिका	2076
+2566	2566	Temal Rural Municipality	तेमाल गाउँपालिका	2033
+2646	2646	Kakani Rural Municipality	ककनी गाउँँपालिका	2036
+2632	2632	Kalika Rural Municipality	कालिका गाउँपालिका	2035
+2635	2635	Goshahikundha Rural Municipality	गोसाईकुण्ड गाउँपालिका	2035
+2638	2638	Naukundha Rural Municipality	नौकुन्ड गाउँपालिका	2035
+2640	2640	Aamachhodingmo Rular Municipality	आमाछोदिङमो गाउँपालिका	2035
+2650	2650	Tadi Rural Municipality	तादी गाउँपालिका	2036
+2653	2653	Tarakeshowar Rural Municipality	तारकेश्वर गाउँपालिका	2036
+2534	2534	Partappur Rural Municipality	प्रतापपुर गाउँपालिका	2054
+2657	2657	Ramaroshan Rural Municipality	रामारोशन गाउँपालिका	2079
+2658	2658	Dhakari Rural Municipality	ढकारी गाउँपालिका	2079
+2660	2660	Turmakhad Rural Municipality	तुर्माखाँद गाउँपालिका	2079
+2665	2665	Purbichuki Rural Municipality	पूर्वीचौकी गाउँपालिका	2078
+2667	2667	Badikedar Rural Municipality	बडिकेदार गाउँपालिका	2078
+2668	2668	Jorayal Rural Municipality	जोरायल गाउँपालिका	2078
+2669	2669	Sayal Rural Municipality	सायल गाउँपालिका	2078
+2670	2670	Aadarsha Rural Municipality	आर्दश गाउँपालिका	2078
+2672	2672	K.I.C Rural Municipality	कें.आई.सी गाउँपालिका	2078
+2687	2687	Gauriganga Municipality	गौरीगंगा नगरपालीका	2084
+2689	2689	Janaki  Rural Municipality	जानकी गाउँपालिका	2084
+2690	2690	Bardagoriya  Rural Municipality	बर्दगोरिया गाउँपालिका	2084
+2692	2692	Mohanyal  Rural Municipality	मोहन्याल गाउँपालिका	2084
+2693	2693	Kailali  Rural Municipality	कैलाली गाउँपालिका	2084
+2694	2694	Josipur  Rural Municipality	जोशीपुर गाउँपालिका	2084
+2696	2696	Chure  Rural Municipality	चुरे गाउँपालिका	2084
+2714	2714	Beldandi  Rural Municipality	बेलडाँडी गाउँपालिका	2083
+2715	2715	Chandrapur Muncipality	चन्द्रपुर नगरपालीका	2027
+2717	2717	Laljhadi  Rural Municipality	लालझाडी गाउँपालिका	2083
+2721	2721	Malikarjun  Rural Municipality	मालिकार्जुन गाउँपालिका	2080
+2724	2724	Apihimal  Rural Municipality	अपिहिमाल गाउँपालिका	2080
+2725	2725	Gaur Muncipality	गौर नगरपालीका	2027
+2726	2726	Duhu  Rural Municipality	दुहुँ गाउँपालिका	2080
+2676	2676	Hetauda Sub-Metropolitain	हेटौडा उप महानगरपालीका	2039
+2673	2673	Bogatan Phudsil Rural Municipality	बोगटान फुड्सिल गाउँपालिका	2078
+2661	2661	Likhu Rural Municipality	लिखु गाउँपालिका	2036
+2666	2666	Shivapuri Rural Municipality	शिबपुरी गाउँपालिका	2036
+2671	2671	Sureygadhi Rural Municipality	सुर्यगढी गाउँपालिका	2036
+2682	2682	Khaniyabasa Rural Municipality	खनियाबास गाउँपालिका	2037
+2686	2686	Gajuri Rural Municipality	गजुरी गाउँपालिका	2037
+2691	2691	Galchhi Rural Municipality	गल्छी गाउँपालिका	2037
+2680	2680	Taha Muncipality	थाहा नगरपालीका	2039
+2684	2684	Indrasarobar Rural Municipality	इन्द्रसरोवर गाउँपालिका	2039
+2688	2688	Kailash Rural Municipality	कैलास गाउँपालिका	2039
+2695	2695	Bakaiya Rural Municipality	बकैया गाउँपालिका	2039
+2698	2698	Bagmati Rural Municipality	वाग्मती गाउँपालिका	2039
+2702	2702	Bhimphadi Rural Municipality	भिमफेदी गाउँपालिका	2039
+2705	2705	Makwanpurgadhi Rural Municipality	मकवानपुरगढी गाउँपालीका	2039
+2707	2707	Manahari Rural Municipality	मनहरी गाउँपालीका	2039
+2710	2710	Rakshi Rang Rural Municipality	राक्सिराङ गाउपालीका	2039
+2727	2727	Naugad  Rural Municipality	नौगाड गाउँपालिका	2080
+2729	2729	Marma  Rural Municipality	मार्मा गाउँपालिका	2080
+2731	2731	Lekam  Rural Municipality	लेकम गाउँपालिका	2080
+2733	2733	Byas  Rural Municipality	ब्याँस गाउँपालिका	2080
+2737	2737	Durga bhanwoti Rular Muncipality	दुर्गा भगवती गाउँपालिका	2027
+2776	2776	Kalaiya submetropolitiancity	कलैया उपमहानगरपालीका	2028
+2783	2783	Jitpursimara Submetropolitiancity	जितपुरसिमारा उपमहानगरपालीका	2028
+2787	2787	Kohalbi Muncipality	कोहल्वी नगरपालीका	2028
+2790	2790	Nijgadha Muncipality	निजगढ नगरपालीका	2028
+2792	2792	Mahagadhimai Muncipality	महागढीमाई नगरपालीका	2028
+2797	2797	Adarsha kotwal Rural Muncipality	आर्दश कोटवाल गाउँपालीका	2028
+2799	2799	Karaiyamai Rural Muncipality	करैयामाई गाउँपालिका	2028
+2800	2800	Aabukhaireni Rural  Municipality	आँबुखैरेनी गाउँपालीका	2045
+2801	2801	Debtal Rural Muncipality	देवताल गाउँपालीका	2028
+2818	2818	Parwanipur Rural Muncipality	परवानीपुर गाउँपालीका	2028
+2819	2819	Chukune Rural Municipality	चौकुने गाउँपालिका	2075
+2820	2820	Ghiringa Rural Municipality	घिरिङ गाउँपालीका	2045
+2821	2821	Parsauni Rular Muncipality	प्रसौनी गाउँपालीका	2028
+2822	2822	Barahatal  Rural Municipality	बराहताल गाउँपालिका	2075
+2824	2824	Fetha Rular Muncipality	फेटा गाउँपालीका	2028
+2753	2753	Barpak Sulikot Rural Municipaltiy	बारपाक सुलिकोट गाउँपालिका	2043
+2775	2775	Sahid lakhan Rural Municipality	शहिद लखन गाउँपालिका	2043
+2758	2758	Chumanubi Rural Municipality	चुमनुबी गाउँपालीका	2030
+2745	2745	Icchakamana Rural Municipality	इच्छाकामना गाउँपालीका	2038
+2754	2754	Siranchowok Rural Municipality	सिरानचोक गाउँपालीका	2043
+2757	2757	Gandaki Rural Municipality	गण्डकी गाउँपालीका	2043
+2759	2759	Dhache Rural Municipality	धार्चे गाउँपालीका	2043
+2774	2774	Bhimsenthapa Rural Municipality	भिमसेनथापा गाउँपालिका	2043
+2728	2728	Baudhimai Muncipality	बौधीमाइ नगरपालीका	2027
+2730	2730	Brindaban Muncipality	बृदावन नगरपालिका	2027
+2734	2734	Debahi Gonahi Muncipality	देवाही गोनाही नगरपालिका	2027
+2739	2739	Gadhimai Muncipality	गढीमाई नगरपालिका	2027
+2740	2740	Gajura Muncipality	गँजुरा नगरपालिका	2027
+2744	2744	Madhav Naryana Muncipality	माधव नारायण नगरपालिका	2027
+2746	2746	Maulapur  Muncipality	मौलापुर नगरपालिका	2027
+2747	2747	Phatuwabijyapur  Muncipality	फतुवाविजउपुर नगरपालिका	2027
+2748	2748	Ishnath  Muncipality	ईसनाथ नगरपालिका	2027
+2750	2750	Paroha  Muncipality	परोहा नगरपालिका	2027
+2752	2752	Rajapur  Muncipality	राजपुर नगरपालिका	2027
+2781	2781	Kabholasothar  Rural Municipality	कव्होलासोथार गाउँपालीका	2044
+2782	2782	dudhapokhari Rural Municipality	दुधपोखरी गाउँपालीका	2044
+2786	2786	Dodri Rural Municipality	दोर्दी गाँउपालिका	2044
+2789	2789	Marsand Rural Municipality	मस्र्याङदी गाउँपालीका	2044
+2826	2826	Baragadhi Rural Muncipality	बारागढी गाउँपालीका	2028
+2830	2830	Simta  Rural Municipality	सिम्ता गाउँपालिका	2075
+2875	2875	Birgunj MetropolitanCity	वीरगंज महानगरपालिका	2029
+2854	2854	Bhagwatimae  Rural Municipality	भगवतीमाई गाउँपालिका	2074
+2855	2855	Guras  Rural Municipality	गुरास गाउँपालिका	2074
+2876	2876	Dungedhar  Rural Municipality	डुङ्गेधर गाउँपालिका	2074
+2878	2878	Naumule  Rural Municipality	नैमुले गाउँपालिका	2074
+2879	2879	Mahabu  Rural Municipality	महाबु गाउँपालिका	2074
+2880	2880	Bhirabi  Rural Municipality	भैरवी गाउँपालिका	2074
+2882	2882	Thatikadha  Rural Municipality	ठाँटीकाँध गाउँपालिका	2074
+2887	2887	Junicade  Rural Municipality	जुनीचाँदे गाउँपालिका	2073
+2888	2888	Barekot  Rural Municipality	बारेकोट गाउँपालिका	2073
+2889	2889	Pokharia Muncipality	पोखरीया नगरपालीका	2029
+2890	2890	Shibalaya  Rural Municipality	शिवालय गाउँपालिका	2073
+2897	2897	Jagarnathpur Rural Muncipality	जगरनाथपुर गाउँपालीका	2029
+2898	2898	Dhobini Rural Muncipality	धोबिनी गाउँपालीका	2029
+2899	2899	Dulpo duddha  Rural Municipality	डोल्पो वुद्ध गाउँपालिका	2068
+2900	2900	Chipaharmai Rural Muncipality	छिपहरमाई गाउँपालीका	2029
+2901	2901	She phoksundo  Rural Municipality	शे फोक्सुण्डो गाउँपालिका	2068
+2902	2902	Jagdulla Rural Municipality	जगदुल्ला गाउँपालिका	2068
+2903	2903	Pakaha Mainpur Rural Muncipality	पकाहा मैनपुर गाउँपालीका	2029
+2904	2904	Mudkecula  Rural Municipality	मुडकेचुला गाउँपालिका	2068
+2905	2905	Bindbasini Rural Muncipality	बिन्दबासिनी गाउँपालीका	2029
+2906	2906	Kaeke  Rural Municipality	काईके गाउँपालिका	2068
+2915	2915	Charka tanson  Rural Municipality	छार्का ताङसोङ गाउँपालिका	2068
+2919	2919	Sakhuwa Parsauni Rural Muncipality	सखुवा प्रसौनी गाउँपालीका	2029
+2920	2920	Kankasundari Rural Municipality	कनकासुन्दरी गाउँपालिका	2069
+2921	2921	Sreja  Rural Municipality	र्सिजा गाउँपालिका	2069
+2922	2922	Paterwa sugauli Rural Muncipality	पटेर्वा सुगौली गाउँपालीका	2029
+2923	2923	Hima  Rural Municipality	हिमा गाउँपालिका	2069
+2924	2924	Tila  Rural Municipality	तिला गाउँपालिका	2069
+2925	2925	Guthicaur  Rural Municipality	गुठिचौर गाउँपालिका	2069
+2926	2926	Tatopani  Rural Municipality	तातोपानी गाउँपालिका	2069
+2927	2927	Patarasi  Rural Municipality	पातारासी गाउँपालिका	2069
+2954	2954	Pachaljarana  Rural Municipality	पचालझरना गाउँपालिका	2072
+2956	2956	Satri tribeni  Rural Municipality	साञी ञिवेणी गाउँपालिका	2072
+2957	2957	Annapurna Rural Muncipality	अन्नपुर्ण गाउँपालीका	2046
+2958	2958	Narharinath  Rural Municipality	नरहरिनाथ गाउँपालिका	2072
+2959	2959	Machapuche Rural Muncipality	माछापुच्छे गाउँपालीका	2046
+2961	2961	Mahabai  Rural Municipality	महावै गाउँपालिका	2072
+2960	2960	Shuva Kalika Rural Municipality	शुभ कालीका गाउँपालिका	2072
+2917	2917	Parsagadhi Muncipality	पर्सागढी नगरपालिका	2029
+2894	2894	Jirabhawani Rural Muncipality	जिरा भवानी गाउँपालीका	2029
+2886	2886	Kuse  Rural Municipality	कुशे गाउँपालिका	2073
+2749	2749	Ghorakha Municipality	गोरखा नगरपालिका	2043
+2829	2829	Bandhipur Rural Municipality	बन्दिपुर गाउँपालीका	2045
+2962	2962	Madi Rural Muncipality	मादी गाउँपालीका	2046
+2964	2964	Palata  Rural Municipality	पलाता गाउँपालिका	2072
+2965	2965	Rupa Rural Muncipality	रूपा गाउँपालीका	2046
+2976	2976	Chame Rural Muncipality	चामे गाउँपालीका	2047
+2985	2985	Jaljala Rular Municipality	जलजला गाउँपालीका	2049
+2987	2987	Paiyu Rular Municipality	पैंयू गाउँपालीका	2049
+2995	2995	Mahashila Rular Municipality	महाशिला गाउँपालीका	2049
+2996	2996	Modi Rular Municipality	मोदी गाउँपालीका	2049
+2998	2998	Bihadi Rular Municipality	विहादी गाउँपालीका	2049
+3001	3001	Mugumakamarog  Rural Municipality	मुगुमकार्मार्रोग गाउँपालिका	2070
+3002	3002	Soru  Rural Municipality	सोरू गाउँपालिका	2070
+3004	3004	Khatyad  Rural Municipality	खत्याड गाउँपालिका	2070
+3006	3006	Simkot  Rural Municipality	सिमकोट गाउँपालिका	2071
+3007	3007	Galkota Municipality	गल्कोटा नगरपाकिला	2052
+3008	3008	Gharpaghang Rural Municipaltiy	घरपझोङ गाँउपालिका	2048
+3009	3009	Namkha  Rural Municipality	नाम्खा गाउँपालिका	2071
+3010	3010	Thasang Rural Muncipalicity	थासाङ गाउँपालीका	2048
+3014	3014	Khapunatha  Rural Municipality	खार्पुनाथ गाउँपालिका	2071
+3015	3015	Lemthang Rural Muncipality	लेमन्थाङ गाउँपालीका	2048
+3018	3018	Sarkegad  Rural Municipality	सर्केगाड गाउँपालिका	2071
+3023	3023	Aadanculi  Rural Municipality	अदानचुली गाउँपालिका	2071
+3025	3025	Tajakot  Rural Municipality	ताँजाकोट गाउँपालिका	2071
+3028	3028	Bagchaur Muncipality	बागचौर नगरपालीका	2067
+3030	3030	Kalimati Rural Muncipality	कालीमाटी गाउँपालीका	2067
+3031	3031	Tribeni Rural Muncipality	त्रिवेणी गाउँपालीका	2067
+3034	3034	Kapurkot  Rural Municipality	कपुरकोट गाउँपालिका	2067
+3035	3035	Chatredhari  Rural Municipality	छत्रेधरी गाउँपालिका	2067
+2978	2978	Narpa Bhumi Rural Muncipality	नार्पा भूमि गाउँपालिका	2047
+2974	2974	Aajunchaupari Rural Municipality	अजुर्नचौपारी गाउँपालिका	2050
+3017	3017	Varagung Muktichhetra Rural Municipality	वारागुङ मुक्तिक्षेत्र गाउँपालिका	2048
+3037	3037	Kumakh Rural Municipality	कुमाख गाउँपालिका	2067
+3036	3036	Siddha Kumakh Rural Municipality	सिद्ध कुमाख गाउँपालिका	2067
+2977	2977	Aadikhola Rural Municipality	आधिखोला गाउँपालिका	2050
+2997	2997	Biruba Rural Municipality	बिरूबा गाउँपालिका	2050
+3000	3000	Marinasa Rural Municipality	हरिनास गाउँपालिका	2050
+2966	2966	Beni Municipality	बेनी नगरपालिका	2051
+2975	2975	Annapurna Rural Municipality	अन्नपुर्ण गाउँपालीका	2051
+2979	2979	Dhaulagiri Rural Municipality	धवलागिरी गाउँपालीका	2051
+2980	2980	Mangala Rural Municipality	मंगला गाउँपालीका	2051
+2981	2981	Malika Rural Municipality	मालिका गाउंपाकिला	2051
+2982	2982	Raghu Rural Municipality	रघु गंगा गाउँपालीका	2051
+3016	3016	wareng Rural Municipality	वरेङ गाउँपालीका	2052
+3019	3019	Kathekhola Rural Municipality	काठेखोला गाउँपालीका	2052
+3020	3020	Tamankhola Rural Municipality	तमानखोला गाउँपालीका	2052
+3022	3022	Tarakhola Rural Municipality	ताराखोला गाउँपालीका	2052
+3024	3024	Nishikhola Rural Municipality	निसीखोला गाउँपालीका	2052
+3026	3026	Badigad Rural Municipality	वडिगाड गाउँपालीका	2052
+3054	3054	Darma  Rural Municipality	दार्मा गाउँपालिका	2067
+3012	3012	Dhorpatan Municipality	ढोरपाटन नगरपालिका	2052
+3027	3027	Sharadha municipality	सारदा नगरपालिका	2067
+3032	3032	Bangad kupende Municipality	बनगाड कुपेण्डे नगरपालिका	2067
+2473	2473	Kabasoti Municipality	कावासोती नगरपालिका	2053
+2103	2103	Deumai Municipality	देउमाई नगरपालीका	2010
+2815	2815	Pachrauta Municipality	पचरौता नगरपालिका	2028
+2601	2601	Gokanaswor Municipality	गोकर्णेश्वर नगरपालिका	2042
+2193	2193	Sadhananda Municipality	षडानन्द नगरपालीका	2014
+2828	2828	Suwarna Muncipality	सुवर्ण गाउँपालिका	2028
+2795	2795	Simmarngadha Muncipality	सिम्रौनगढ नगरपालिका	2028
+2709	2709	Shuklaphat Municipality	शुक्ला‌फाँटा नगरपालिका	2083
+2447	2447	Bhimeshwar  Municipaltiy	भीमेश्वर नगरपालिका	2030
+5050	3078	rajadevi municipality	राजदेवी नगरपालिका	2027
+2156	2156	Barahakshetra Municipaltiy	बराहक्षेत्र नगरपालिका	2021
+2316	2316	Rajgadh RURAL MUNICIPALITY	राजगढ गाउँपालिका	2022
+2999	2999	Nason Rural Muncipality	नासोँ गाउँपालिका	2047
+3003	3003	Manang Ngisyang Rural Muncipality	मनाङ ङिस्याङ गाउँपालिका	2047
+2538	2538	Binayi Tribeni Rural Municipality	विनयी-त्रिवेणी गाउँपालिका	2053
+2360	2360	SUNIL SMRITI RURAL MUNICIPALITY	सुनिल स्मृति गाउँपालिका	2061
+2885	2885	nalgad Municipality	नलगाड नगरपालिका	2073
+2642	2642	Saipal Rural Municipality	साइपाल गाउँपालिका	2077
+2955	2955	Pokhara Metropolitan City	पोखरा महानगरपालिका	2046
+2199	2199	Temkemaiyum Rural Municipality	टेम्केमैयुङ गाउँपालिका	2014
+2216	2216	Hatubagadhi Rural Municipality	हतुबागढी गाउँपालिका	2014
+2224	2224	Rawabesi Rural Municipality	रावाबेसी गाउँपालिका	2015
+2206	2206	Mapya Dudhakoshi Rural Municipality	माप्य दुधकोशी गाउँपालिका	2016
+2246	2246	Manebhanjyan Rural Municipaltiy	मानेभन्ज्याङ गाउँपालिका	2017
+2115	2115	Bhadrapur Municipality	भद्रपुर नगरपालिका	2019
+2126	2126	Kanachanakabal Rural Municipality	कचनकबल गाउँपालिका	2019
+2127	2127	Biratnagar Metropolitan City	विराटनगर महानगरपालिका	2020
+2138	2138	Gramthan Rural Municipality	ग्रामथान गाउँपालिका	2020
+2150	2150	Ithari Sub-Metropolitan City	ईटहरी उप-महानगरपालिका	2021
+2153	2153	Duhabi Municipality	दुहबी नगरपालिका	2021
+2168	2168	Bhokraha Narsingh Rural Municipality	भोक्राहा नरसिंह गाउँपालिका	2021
+2171	2171	Harinagar Rural Municipality	हरिनगर गाउँपालिका	2021
+2282	2282	Bodebarsain Municipality	बोदेबरसाईन नगरपालीका	2022
+2535	2535	Baudikali Rural Municipality	बौदीकाली गाउँपालिका	2053
+2532	2532	palhinnadan Rural Municipality	पाल्हीनन्दन गाउँपालिका	2054
+2306	2306	Saptakoshi Municipality	सप्तकोसी नगरपालिका	2022
+2343	2343	Sakhunankarakatti Rural Municipality	सखुवानान्कारकटी गाउँपालिका	2023
+2454	2454	Gaurisankar Rural Municipality	गौरिशंकर गाउँपालिका	2030
+2457	2457	Tamakoshi Rural Municipality	तामाकोशी गाउँपालिका	2030
+2468	2468	Sailung Rural Municipality	शैलुङ गाउँपालिका	2030
+2470	2470	Melunga Rural Municipality	मेलुङ गाउँपालिका	2030
+2472	2472	Baiteswar Rural Municipality	वैतेश्रर गाउँपालीका	2030
+3074	3074	Bigu Rural Municipality	विगु गाउँपालिका	2030
+2400	2400	Kamalamai Municipality	कमलामाई नगरपालीका	2032
+2436	2436	Sunkoshi Rural Municipaltiy	सुनकोसी गाउँपालिका	2032
+2648	2648	Kispanga Rural Municipality	किस्पाङ गाउँपालिका	2036
+2697	2697	Gangajamuna Rural Municipality	गंगाजमुना गाउँपालिका	2037
+2700	2700	Jawalamukhi Rural Municipality	ज्बालामुखी गाउँपालिका	2037
+2703	2703	Thakre Rural Municipality	थाक्र्रे गाउँपालिका	2037
+2708	2708	Netrawati Dabjong Rural Municipality	नेत्रावती डबजोङ गाउँपालिका	2037
+2711	2711	Benighat Roranga Rural Municipality	बेनीघाट रोराङ गाँउपालिका	2037
+2716	2716	Ruvi Valley Rural Municipality	रूवी भ्याली गाँउपालिका	2037
+2718	2718	Siddhalek Rural Municipality	सिद्धलेक गाँउपालिका	2037
+2723	2723	Tripurasundhari Rural Municipality	त्रिपुरासुन्दरी गाउँपालिका	2037
+2755	2755	Aajirkot Rural Municipality	अजिरकोट गाउँपालीका	2043
+2756	2756	Arughat Rural Municipality	आरूघाट गाउँपालीका	2043
+3776	3079	Chumanuwrimun Rural Municipality	चुमनुव्री गाउँपालिका	2043
+2794	2794	Bhimad Municipality	भिमाद नगरपालिका	2045
+2796	2796	Payasa Municipality	व्यास नगरपालिका	2045
+2798	2798	Suklagandaki Municipality	सुक्लागण्डकी नगरपालिका	2045
+2816	2816	Shisenga Rural Municipality	ऋषिङ गाउँपालीका	2045
+2823	2823	Debaghat Rural Municipality	देबघाट गाउँपालीका	2045
+2825	2825	Maygde Rural Municipality	म्याग्दे गाउँपालीका	2045
+3013	3013	Lo Ghekar Damodarkunda Rural Municipality	लो-घेकर दामोदरकुण्ड गाउँपालिका	2048
+2986	2986	Kaligandaki Rural Municipality	कालीगण्डकी गाउँपालिका	2050
+2994	2994	fedikhola Rural Municipality	फेदीखोला गाउँपालिका	2050
+2416	2416	Yashodhara Rural Municipality	यसोधरा गाउँपालिका	2056
+2419	2419	Suddhodhan Rural Municipality	शुद्धोधन गाउँपालिका	2056
+2420	2420	Bijayanagar Rural Municipality	विजयनगर गाँउपालिका	2056
+2455	2455	Rampur Municipality	रामपुर नगरपालिका	2057
+2393	2393	Balan Bihul Rural MUNICIPALITY	बलान विहुल गाउँपालिका	2022
+2545	2545	Musikot Municipality	मुसिकोट नगरपालिका	2066
+2480	2480	Susta Ruralmunicipality	सुस्ता गाउँपालिका	2054
+2600	2600	Kirtipur Municipality	कीर्तिपुर नगरपालिका	2042
+2333	2333	Chiresanata Rural Municipaltiy	क्षिरेश्वरनाथ नगरपालीका	2024
+2368	2368	Mithila Bihari  Municipality	मिथिला बिहारी नगरपालिका	2024
+3300	3081	Shahidnagar Municipality	शहिदनगर नगरपालिका	2024
+3301	3082	Aurahi Rural Municipality	औरही गाउँपालिका	2024
+2659	2659	Pansakanya Rural Municipality	पञ्चकन्या गाउँपालिका	2036
+3302	3083	Dhanauji Rural Municipality	धनौजी गाउँपालिका	2024
+2722	2722	Garuda Muncipality	गरूडा नगरपालीका	2027
+2742	2742	Katahariya Muncipality	कटहरीया नगरपालिका	2027
+5051	3084	Yamunamai Rural Municipality	यमुनामाई गाउँपालिका	2027
+3303	3085	Bisrampur Rural Municipality	विश्रामपुर गाउँपालिका	2028
+2914	2914	Bahudramai  Muncipality	बहुदरमाई नगरपालिका	2029
+3304	3080	thori Rural Municipality	ठोरी गाउँपालिका	2029
+2663	2663	Myagang Rural Municipality	म्यागङ गाउँपालिका	2036
+2916	2916	Kalikamai Rural Mumcipality	कालिकामाई गाउँपालीका	2029
